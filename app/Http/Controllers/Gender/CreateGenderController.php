@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Gender;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\StoreGenderRequest;
+use App\Models\Gender;
+use Illuminate\Http\RedirectResponse;
 use Inertia\Inertia;
 use Inertia\Response;
+use Str;
 
 class CreateGenderController extends Controller
 {
@@ -14,8 +17,15 @@ class CreateGenderController extends Controller
         return Inertia::render('Genders/Create');
     }
 
-    public function store(Request $request)
+    public function store(StoreGenderRequest $request): RedirectResponse
     {
+        $validatedData = $request->validated();
 
+        Gender::create([
+            'id' => (string) Str::uuid(),
+            'name' => $validatedData['name']
+        ]);
+
+        return redirect(route('dashboard', absolute: false));
     }
 }

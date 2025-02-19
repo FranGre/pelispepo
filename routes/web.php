@@ -25,6 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/genders/create', [CreateGenderController::class, 'create'])->name('genders.create');
+    Route::post('/genders/store', [CreateGenderController::class, 'store'])->name('genders.store');
 });
 
 require __DIR__ . '/auth.php';

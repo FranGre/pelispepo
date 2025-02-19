@@ -7,7 +7,7 @@ const form = useForm({
 });
 
 const submit = () => {
-    form.post(route('genders.store'));
+    form.post(route('admin.genders.store'));
 }
 </script>
 

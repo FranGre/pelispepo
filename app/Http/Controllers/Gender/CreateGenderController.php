@@ -14,7 +14,7 @@ class CreateGenderController extends Controller
 {
     public function create(): Response
     {
-        return Inertia::render('Genders/Create');
+        return Inertia::render('Admin/Genders/Create');
     }
 
     public function store(StoreGenderRequest $request): RedirectResponse

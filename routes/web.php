@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Gender\CreateGenderController;
+use App\Http\Controllers\Gender\EditGenderController;
 use App\Http\Controllers\Gender\GetGenderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -28,6 +29,9 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/genders/create', [CreateGenderController::class, 'create'])->name('admin.genders.create');
     Route::post('admin/genders/store', [CreateGenderController::class, 'store'])->name('admin.genders.store');
     Route::get('admin/genders', GetGenderController::class)->name('admin.genders.index');
+    Route::get('admin/genders/{genderId}/edit', [EditGenderController::class, 'edit'])->name('admin.genders.edit');
+    Route::patch('admin/genders/{genderId}', [EditGenderController::class, 'update'])->name('admin.genders.update');
+
 });
 
 require __DIR__ . '/auth.php';

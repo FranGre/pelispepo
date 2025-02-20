@@ -29,18 +29,22 @@ class StoreFilmController extends Controller
 
         $film->genders()->attach($selectedGenderIds);
 
-        $temporalPath = storage_path('/app/tmp/fimls');
+        $temporalPath = storage_path('/app/tmp/films');
 
-        $film = File::allFiles($temporalPath)[0];
+        $filmAbsolutePath = File::allFiles($temporalPath)[0];
 
         $definitePath = storage_path('/app/films');
 
-        if (!Storage::directoryExists($definitePath)) {
-            Storage::makeDirectory($definitePath);
+        if (!File::exists($definitePath)) {
+            File::makeDirectory($definitePath);
         }
 
+        $extension = pathinfo($filmAbsolutePath, PATHINFO_EXTENSION);
+
+        $filename = "$film->id.$extension";
+
         //Storage::move($film, $definitePath);
-        File::move($film, $definitePath);
+        File::move($filmAbsolutePath, $definitePath . "/$filename");
 
         return redirect(route('admin.films.index'));
     }

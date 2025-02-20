@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->uuid('id')->primary();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->string('title');
-            $table->string('description');
+            $table->string('description', 600);
             $table->date('release_date');
             $table->timestamps();
         });

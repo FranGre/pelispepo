@@ -11,5 +11,5 @@ class FilmGender extends Model
 
     public $incrementing = false;
     protected $keyType = 'string';
-    protected $fillable = ['id', 'film_id', 'gender_id'];
+    protected $fillable = ['film_id', 'gender_id'];
 }

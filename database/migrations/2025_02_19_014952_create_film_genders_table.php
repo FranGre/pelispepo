@@ -11,10 +11,10 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('film_genders', function (Blueprint $table) {
-            $table->uuid('id')->primary();
             $table->foreignUuid('film_id')->references('id')->on('films');
             $table->foreignUuid('gender_id')->references('id')->on('genders');
-            $table->timestamps();
+
+            $table->primary(['film_id', 'gender_id']);
         });
     }
 

@@ -5,6 +5,7 @@ use App\Http\Controllers\FilePond\PostFilmController;
 use App\Http\Controllers\Film\CreateFilmController;
 use App\Http\Controllers\Film\IndexFilmController;
 use App\Http\Controllers\Film\StoreFilmController;
+use App\Http\Controllers\FilmNoAdmin\ShowFilmController;
 use App\Http\Controllers\Gender\CreateGenderController;
 use App\Http\Controllers\Gender\EditGenderController;
 use App\Http\Controllers\Gender\GetGenderController;
@@ -49,6 +50,9 @@ Route::middleware('auth')->group(function () {
 
     Route::post('admin/films/post', PostFilmController::class)->name('admin.films.post');
     Route::patch('admin/films/patch/{id}', PatchFilmController::class)->name('admin.films.patch');
+
+    Route::get('films', \App\Http\Controllers\FilmNoAdmin\IndexFilmController::class)->name('films.index');
+    Route::get('films/watch/{filmId}', ShowFilmController::class)->name('films.show');
 });
 
 require __DIR__ . '/auth.php';

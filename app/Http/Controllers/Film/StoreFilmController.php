@@ -7,7 +7,6 @@ use App\Models\Film;
 use File;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Storage;
 use Str;
 
 class StoreFilmController extends Controller
@@ -33,7 +32,7 @@ class StoreFilmController extends Controller
 
         $filmAbsolutePath = File::allFiles($temporalPath)[0];
 
-        $definitePath = storage_path('/app/films');
+        $definitePath = public_path('storage/films');
 
         if (!File::exists($definitePath)) {
             File::makeDirectory($definitePath);

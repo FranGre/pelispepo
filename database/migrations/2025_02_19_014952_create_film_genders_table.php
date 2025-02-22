@@ -11,8 +11,8 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('film_genders', function (Blueprint $table) {
-            $table->foreignUuid('film_id')->references('id')->on('films');
-            $table->foreignUuid('gender_id')->references('id')->on('genders');
+            $table->foreignUuid('film_id')->references('id')->on('films')->onDelete('cascade');
+            $table->foreignUuid('gender_id')->references('id')->on('genders')->onDelete('cascade');
 
             $table->primary(['film_id', 'gender_id']);
         });

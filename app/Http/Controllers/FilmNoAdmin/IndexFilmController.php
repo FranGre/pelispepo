@@ -10,10 +10,17 @@ use Inertia\Response;
 
 class IndexFilmController extends Controller
 {
-    public function __invoke(): Response
+    public function __invoke(Request $request): Response
     {
-        $films = Film::select('id', 'title')->get();
+        $query = Film::query();
+        $title = $request->query('title');
 
-        return Inertia::render('Films/Index', ['films' => $films]);
+        if ($title != null) {
+            $query = $query->where('title', 'LIKE', "%$title%");
+        }
+
+        $query = $query->select('id', 'title')->get();
+
+        return Inertia::render('Films/Index', ['films' => $query]);
     }
 }

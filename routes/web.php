@@ -6,9 +6,11 @@ use App\Http\Controllers\Film\CreateFilmController;
 use App\Http\Controllers\Film\IndexFilmController;
 use App\Http\Controllers\Film\StoreFilmController;
 use App\Http\Controllers\FilmNoAdmin\ShowFilmController;
+use App\Http\Controllers\Films\DestoryFilmController;
 use App\Http\Controllers\Gender\CreateGenderController;
 use App\Http\Controllers\Gender\EditGenderController;
 use App\Http\Controllers\Gender\GetGenderController;
+use App\Http\Controllers\HolaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -44,6 +46,7 @@ Route::middleware('auth')->group(function () {
 
     ## Films ##  
     Route::get('admin/films', IndexFilmController::class)->name('admin.films.index');
+    Route::delete('admin/films/destroy/{filmId}', DestoryFilmController::class)->name('admin.films.destroy');
 
     Route::get('admin/films/create', CreateFilmController::class)->name('admin.films.create');
     Route::post('admin/films/store', StoreFilmController::class)->name('admin.films.store');

@@ -26,6 +26,6 @@ class CreateGenderController extends Controller
             'name' => $validatedData['name']
         ]);
 
-        return redirect(route('dashboard', absolute: false));
+        return redirect(route('admin.genders.index', absolute: false));
     }
 }

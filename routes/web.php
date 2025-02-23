@@ -3,6 +3,7 @@
 use App\Http\Controllers\FilePond\PatchFilmController;
 use App\Http\Controllers\FilePond\PostFilmController;
 use App\Http\Controllers\Film\CreateFilmController;
+use App\Http\Controllers\Film\EditFilmController;
 use App\Http\Controllers\Film\IndexFilmController;
 use App\Http\Controllers\Film\StoreFilmController;
 use App\Http\Controllers\FilmNoAdmin\ShowFilmController;
@@ -10,7 +11,6 @@ use App\Http\Controllers\Films\DestoryFilmController;
 use App\Http\Controllers\Gender\CreateGenderController;
 use App\Http\Controllers\Gender\EditGenderController;
 use App\Http\Controllers\Gender\GetGenderController;
-use App\Http\Controllers\HolaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -50,6 +50,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('admin/films/create', CreateFilmController::class)->name('admin.films.create');
     Route::post('admin/films/store', StoreFilmController::class)->name('admin.films.store');
+
+    Route::get('admin/films/{filmId}/edit', [EditFilmController::class, 'edit'])->name('admin.films.edit');
+    Route::patch('admin/films/{filmId}', [EditFilmController::class, 'update'])->name('admin.films.update');
 
     Route::post('admin/films/post', PostFilmController::class)->name('admin.films.post');
     Route::patch('admin/films/patch/{id}', PatchFilmController::class)->name('admin.films.patch');

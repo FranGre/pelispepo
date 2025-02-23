@@ -2,5 +2,5 @@ export interface Film {
     id: string,
     title: string,
     description: string,
-    releaseDate: Date,
+    release_date: Date,
 }

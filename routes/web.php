@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Favorite\FilmFavoriteController;
 use App\Http\Controllers\FilePond\PatchFilmController;
 use App\Http\Controllers\FilePond\PostFilmController;
 use App\Http\Controllers\Film\CreateFilmController;
@@ -11,6 +12,7 @@ use App\Http\Controllers\Films\DestoryFilmController;
 use App\Http\Controllers\Gender\CreateGenderController;
 use App\Http\Controllers\Gender\EditGenderController;
 use App\Http\Controllers\Gender\GetGenderController;
+use App\Http\Controllers\Like\FilmLikeController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -59,6 +61,9 @@ Route::middleware('auth')->group(function () {
 
     Route::get('films', \App\Http\Controllers\FilmNoAdmin\IndexFilmController::class)->name('films.index');
     Route::get('films/watch/{filmId}', ShowFilmController::class)->name('films.show');
+
+    Route::post('films/likes', FilmLikeController::class)->name('films.like');
+    Route::post('films/favorites', FilmFavoriteController::class)->name('films.favorite');
 });
 
 require __DIR__ . '/auth.php';

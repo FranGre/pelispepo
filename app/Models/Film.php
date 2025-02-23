@@ -18,4 +18,9 @@ class Film extends Model
     {
         return $this->belongsToMany(Gender::class, 'film_genders');
     }
+
+    public function likes(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'film_user_likes');
+    }
 }

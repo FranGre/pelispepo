@@ -2,12 +2,19 @@
 import { Film } from '@/types/Film';
 import { Gender } from '@/types/Gender';
 import { useForm } from '@inertiajs/vue3';
+import vueFilePond from 'vue-filepond';
+import 'filepond/dist/filepond.min.css';
+
 
 const props = defineProps<{
     film: Film,
     selectedGenderIds: string[]
-    genders: Gender[]
+    genders: Gender[],
+    hasVideo: boolean,
+    csrfToken: string
 }>();
+
+const FilePond = vueFilePond();
 
 const form = useForm({
     id: props.film.id,
@@ -29,6 +36,14 @@ const handleGender = (genderId: string) => {
 
     form.selectedGenderIds.push(genderId)
 }
+
+function removeVideo(filmId: string) {
+    const formremove = useForm({
+        filmId: props.film.id
+    });
+
+    formremove.delete(route('admin.films.video.destroy'));
+}
 </script>
 
 <template>
@@ -39,6 +54,27 @@ const handleGender = (genderId: string) => {
         <div>
             <label>Título</label>
             <input v-model="form.title">
+        </div>
+
+        <div>
+            <button v-if="hasVideo" type="button" @click="removeVideo(film.id)">Eliminar Video</button>
+
+            <file-pond v-else name="film" ref="pond" required="true" chunkUploads="true" :server="{
+                process: {
+                    url: route('admin.films.post'),
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': props.csrfToken
+                    }
+                },
+                patch: {
+                    url: route('admin.films.patch', { id: 'a893bdcb-6214-4a01-a107-7a9931d2ce81' }),
+                    method: 'PATCH',
+                    headers: {
+                        'X-CSRF-TOKEN': props.csrfToken
+                    }
+                }
+            }"></file-pond>
         </div>
 
         <div>

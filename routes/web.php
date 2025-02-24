@@ -5,6 +5,7 @@ use App\Http\Controllers\FilePond\PatchFilmController;
 use App\Http\Controllers\FilePond\PostFilmController;
 use App\Http\Controllers\Film\CreateFilmController;
 use App\Http\Controllers\Film\EditFilmController;
+use App\Http\Controllers\Film\FilmVideoDeleteController;
 use App\Http\Controllers\Film\IndexFilmController;
 use App\Http\Controllers\Film\StoreFilmController;
 use App\Http\Controllers\FilmNoAdmin\ShowFilmController;
@@ -66,6 +67,8 @@ Route::middleware('auth')->group(function () {
     Route::post('films/favorites', FilmFavoriteController::class)->name('films.favorite');
 
     Route::get('films/favorites', \App\Http\Controllers\Film\FilmFavoriteController::class)->name('films.favorites');
+
+    Route::delete('admin/films/video/destroy', FilmVideoDeleteController::class)->name('admin.films.video.destroy');
 });
 
 require __DIR__ . '/auth.php';

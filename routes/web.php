@@ -64,6 +64,8 @@ Route::middleware('auth')->group(function () {
 
     Route::post('films/likes', FilmLikeController::class)->name('films.like');
     Route::post('films/favorites', FilmFavoriteController::class)->name('films.favorite');
+
+    Route::get('films/favorites', \App\Http\Controllers\Film\FilmFavoriteController::class)->name('films.favorites');
 });
 
 require __DIR__ . '/auth.php';

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Film;
 
 use App\Http\Controllers\Controller;
 use App\Models\Film;
+use App\Services\Film\FilmStorageService;
+use App\Services\Film\FilmTemporaryStorageService;
 use File;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -11,6 +13,14 @@ use Str;
 
 class StoreFilmController extends Controller
 {
+    protected FilmTemporaryStorageService $filmTemporaryStorageService;
+    protected FilmStorageService $filmStorageService;
+    public function __construct(FilmTemporaryStorageService $filmTemporaryStorageService, FilmStorageService $filmStorageService)
+    {
+        $this->filmTemporaryStorageService = $filmTemporaryStorageService;
+        $this->filmStorageService = $filmStorageService;
+    }
+
     public function __invoke(Request $request): RedirectResponse
     {
         $title = $request->input('title');
@@ -28,11 +38,11 @@ class StoreFilmController extends Controller
 
         $film->genders()->attach($selectedGenderIds);
 
-        $temporalPath = storage_path('/app/tmp/films');
+        $temporalPath = $this->filmTemporaryStorageService->temporalPath;
 
         $filmAbsolutePath = File::allFiles($temporalPath)[0];
 
-        $definitePath = public_path('storage/films');
+        $definitePath = $this->filmStorageService->definitivePath;
 
         if (!File::exists($definitePath)) {
             File::makeDirectory($definitePath);

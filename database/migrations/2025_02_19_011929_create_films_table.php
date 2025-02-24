@@ -13,6 +13,7 @@ return new class extends Migration {
         Schema::create('films', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->foreignId('user_id')->references('id')->on('users');
+            $table->boolean('is_activated');
             $table->string('title');
             $table->string('description', 600);
             $table->date('release_date');

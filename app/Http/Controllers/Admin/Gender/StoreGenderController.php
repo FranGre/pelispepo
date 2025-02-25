@@ -1,23 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Gender;
+namespace App\Http\Controllers\Admin\Gender;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreGenderRequest;
 use App\Models\Gender;
-use Illuminate\Http\RedirectResponse;
-use Inertia\Inertia;
-use Inertia\Response;
 use Str;
 
-class CreateGenderController extends Controller
+class StoreGenderController extends Controller
 {
-    public function create(): Response
-    {
-        return Inertia::render('Admin/Genders/Create');
-    }
-
-    public function store(StoreGenderRequest $request): RedirectResponse
+    public function __invoke(StoreGenderRequest $request)
     {
         $validatedData = $request->validated();
 

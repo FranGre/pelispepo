@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Like;
+namespace App\Http\Controllers\Film;
 
 use App\Http\Controllers\Controller;
-use App\Models\Film;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Str;
 
-class FilmLikeController extends Controller
+class LikeFilmController extends Controller
 {
     public function __invoke(Request $request)
     {

@@ -1,18 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Film;
+namespace App\Http\Controllers\Admin\Film;
 
 use App\Http\Controllers\Controller;
 use App\Models\Film;
-use App\Models\Gender;
 use App\Services\Film\FilmStorageService;
 use App\Services\Film\FilmTemporaryStorageService;
 use File;
 use Illuminate\Http\Request;
-use Inertia\Inertia;
-use Inertia\Response;
 
-class EditFilmController extends Controller
+class UpdateFilmController extends Controller
 {
     protected FilmStorageService $filmStorageService;
     protected FilmTemporaryStorageService $filmTemporaryStorageService;
@@ -23,19 +20,7 @@ class EditFilmController extends Controller
         $this->filmTemporaryStorageService = $filmTemporaryStorageService;
     }
 
-    public function edit(string $filmId): Response
-    {
-        $film = Film::select('id', 'user_id', 'is_activated', 'title', 'description', 'release_date')->findOrFail($filmId);
-        $film->is_activated = $film->is_activated == 1 ? true : false;
-        $selectedGenderIds = $film->genders->pluck('id');
-        $genders = Gender::select('id', 'name')->get();
-        $hasVideo = glob($this->filmStorageService->definitivePath . "/$film->id.*") != null ? true : false;
-        $csrfToken = csrf_token();
-
-        return Inertia::render('Admin/Films/Show', ['film' => $film, 'selectedGenderIds' => $selectedGenderIds, 'genders' => $genders, 'hasVideo' => $hasVideo, 'csrfToken' => $csrfToken]);
-    }
-
-    public function update(Request $request)
+    public function __invoke(Request $request)
     {
         // validar la request antes de que llegue
         $id = $request->input('id');

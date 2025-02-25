@@ -30,7 +30,7 @@ function searchFilms() {
     </div>
 
     <div>
-        <Link v-for="film in props.films" :key="film.id" :href="route('films.show', film.id)">
+        <Link v-for="film in props.films" :key="film.id" :href="route('films.watch', film.id)">
         {{ film.title }}
         </Link>
     </div>

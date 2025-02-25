@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Favorite;
+namespace App\Http\Controllers\Film;
 
 use App\Http\Controllers\Controller;
 use DB;
 use Illuminate\Http\Request;
 use Str;
 
-class FilmFavoriteController extends Controller
+class FavoriteFilmController extends Controller
 {
     public function __invoke(Request $request)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\FilmNoAdmin;
+namespace App\Http\Controllers\Client\Film;
 
 use App\Http\Controllers\Controller;
 use App\Models\Film;
@@ -21,6 +21,6 @@ class IndexFilmController extends Controller
 
         $query = $query->select('id', 'title')->get();
 
-        return Inertia::render('Films/Index', ['films' => $query]);
+        return Inertia::render('Films/Films', ['films' => $query]);
     }
 }

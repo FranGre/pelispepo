@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\FilmNoAdmin;
+namespace App\Http\Controllers\Client\Film;
 
 use App\Http\Controllers\Controller;
 use App\Models\Film;
@@ -8,7 +8,7 @@ use DB;
 use Inertia\Inertia;
 use Inertia\Response;
 
-class ShowFilmController extends Controller
+class WatchFilmController extends Controller
 {
     public function __invoke(string $filmId): Response
     {
@@ -32,6 +32,6 @@ class ShowFilmController extends Controller
             $favoriteMsg = 'Agregar en favs';
         }
 
-        return Inertia::render('Films/Show', ['film' => $film, 'path' => $filmUrl, 'likesCounter' => $likesCounter, 'likeMsg' => $likeMsg, 'favoriteMsg' => $favoriteMsg]);
+        return Inertia::render('Films/Watch', ['film' => $film, 'path' => $filmUrl, 'likesCounter' => $likesCounter, 'likeMsg' => $likeMsg, 'favoriteMsg' => $favoriteMsg]);
     }
 }

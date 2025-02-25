@@ -1,14 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Film;
+namespace App\Http\Controllers\Client\Film;
 
 use App\Http\Controllers\Controller;
-use App\Models\Film;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
-class FilmFavoriteController extends Controller
+class FavoriteFilmController extends Controller
 {
     public function __invoke(Request $request)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Gender;
+namespace App\Http\Controllers\Admin\Gender;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gender;
@@ -8,7 +8,7 @@ use Inertia\Response;
 use Inertia\Inertia;
 
 
-class GetGenderController extends Controller
+class IndexGenderController extends Controller
 {
     public function __invoke(): Response
     {

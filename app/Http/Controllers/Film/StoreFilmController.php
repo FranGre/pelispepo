@@ -27,10 +27,12 @@ class StoreFilmController extends Controller
         $description = $request->input('description');
         $releaseDate = $request->input('releaseDate');
         $selectedGenderIds = $request->input('selectedGenderIds');
+        $is_activated = $request->input('is_activated');
 
         $film = Film::create([
             'id' => (string) Str::uuid(),
             'user_id' => auth()->id(),
+            'is_activated' => $is_activated,
             'title' => $title,
             'description' => $description,
             'release_date' => $releaseDate

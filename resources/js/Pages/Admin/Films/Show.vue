@@ -21,7 +21,8 @@ const form = useForm({
     title: props.film.title,
     description: props.film.description,
     selectedGenderIds: props.selectedGenderIds,
-    release_date: props.film.release_date
+    release_date: props.film.release_date,
+    is_activated: props.film.is_activated
 });
 
 function submit() {
@@ -99,6 +100,11 @@ function removeVideo(filmId: string) {
                     {{ gender.name }}
                 </button>
             </div>
+        </div>
+
+        <div>
+            <label>Visible</label>
+            <input type="checkbox" v-model="form.is_activated">
         </div>
 
         <button type="submit">Guardar</button>

@@ -4,6 +4,7 @@ import { Gender } from '@/types/Gender';
 import { useForm } from '@inertiajs/vue3';
 import vueFilePond from 'vue-filepond';
 import 'filepond/dist/filepond.min.css';
+import Checkbox from '@/Components/Checkbox.vue';
 
 
 const props = defineProps<{
@@ -12,6 +13,7 @@ const props = defineProps<{
 }>();
 
 const form = useForm({
+    is_activated: true,
     title: '',
     description: '',
     releaseDate: '',
@@ -90,6 +92,11 @@ const submit = () => {
                     {{ gender.name }}
                 </button>
             </div>
+        </div>
+
+        <div>
+            <label>Activado</label>
+            <input type="checkbox" v-model="form.is_activated">
         </div>
 
         <button type="submit">Crear</button>

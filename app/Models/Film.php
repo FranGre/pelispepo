@@ -12,7 +12,7 @@ class Film extends Model
 
     public $incrementing = false;
     protected $keyType = 'string';
-    protected $fillable = ['id', 'user_id', 'title', 'description', 'release_date'];
+    protected $fillable = ['id', 'user_id', 'is_activated', 'title', 'description', 'release_date'];
 
     public function genders(): BelongsToMany
     {

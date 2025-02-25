@@ -3,4 +3,5 @@ export interface Film {
     title: string,
     description: string,
     release_date: Date,
+    is_activated: boolean
 }

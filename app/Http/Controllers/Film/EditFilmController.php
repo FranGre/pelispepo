@@ -25,7 +25,8 @@ class EditFilmController extends Controller
 
     public function edit(string $filmId): Response
     {
-        $film = Film::select('id', 'user_id', 'title', 'description', 'release_date')->findOrFail($filmId);
+        $film = Film::select('id', 'user_id', 'is_activated', 'title', 'description', 'release_date')->findOrFail($filmId);
+        $film->is_activated = $film->is_activated == 1 ? true : false;
         $selectedGenderIds = $film->genders->pluck('id');
         $genders = Gender::select('id', 'name')->get();
         $hasVideo = glob($this->filmStorageService->definitivePath . "/$film->id.*") != null ? true : false;
@@ -49,12 +50,20 @@ class EditFilmController extends Controller
         $release_date = $request->input('release_date');
         $film->release_date = $release_date;
 
+        $is_activated = $request->input('is_activated');
+        $film->is_activated = $is_activated == true ? 1 : 0;
+
         $film->save();
 
         $selectedGendersIds = $request->input('selectedGenderIds');
 
+        // genders
         $film->genders()->sync($selectedGendersIds);
 
+        // films
+        if (count(File::allFiles($this->filmTemporaryStorageService->temporalPath)) == 0) {
+            return redirect(route('admin.films.index'));
+        }
         $filmAbsolutePath = File::allFiles($this->filmTemporaryStorageService->temporalPath)[0];
 
         $definitePath = $this->filmStorageService->definitivePath;

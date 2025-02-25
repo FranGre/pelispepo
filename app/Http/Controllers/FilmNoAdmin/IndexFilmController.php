@@ -12,7 +12,7 @@ class IndexFilmController extends Controller
 {
     public function __invoke(Request $request): Response
     {
-        $query = Film::query();
+        $query = Film::where('is_activated', '=', 1);
         $title = $request->query('title');
 
         if ($title != null) {

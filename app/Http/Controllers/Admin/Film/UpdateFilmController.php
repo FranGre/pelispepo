@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Film;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UpdateFilmRequest;
 use App\Models\Film;
 use App\Services\Film\FilmStorageService;
 use App\Services\Film\FilmTemporaryStorageService;
@@ -20,25 +21,12 @@ class UpdateFilmController extends Controller
         $this->filmTemporaryStorageService = $filmTemporaryStorageService;
     }
 
-    public function __invoke(Request $request)
+    public function __invoke(UpdateFilmRequest $request)
     {
-        // validar la request antes de que llegue
         $id = $request->input('id');
         $film = Film::findOrFail($id);
 
-        $title = $request->input('title');
-        $film->title = $title;
-
-        $description = $request->input('description');
-        $film->description = $description;
-
-        $release_date = $request->input('release_date');
-        $film->release_date = $release_date;
-
-        $is_activated = $request->input('is_activated');
-        $film->is_activated = $is_activated == true ? 1 : 0;
-
-        $film->save();
+        $film->update($request->validated());
 
         $selectedGendersIds = $request->input('selectedGenderIds');
 

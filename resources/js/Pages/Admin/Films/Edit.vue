@@ -4,6 +4,7 @@ import { Gender } from '@/types/Gender';
 import { useForm } from '@inertiajs/vue3';
 import vueFilePond from 'vue-filepond';
 import 'filepond/dist/filepond.min.css';
+import InputError from '@/Components/InputError.vue';
 
 
 const props = defineProps<{
@@ -55,6 +56,7 @@ function removeVideo(filmId: string) {
         <div>
             <label>Título</label>
             <input v-model="form.title">
+            <InputError :message="form.errors.title"></InputError>
         </div>
 
         <div>
@@ -81,11 +83,13 @@ function removeVideo(filmId: string) {
         <div>
             <label>Descripción</label>
             <input v-model="form.description">
+            <InputError :message="form.errors.description"></InputError>
         </div>
 
         <div>
             <label>Fecha lanzamiento</label>
             <input type="date" v-model="form.release_date">
+            <InputError :message="form.errors.release_date"></InputError>
         </div>
 
 
@@ -100,11 +104,13 @@ function removeVideo(filmId: string) {
                     {{ gender.name }}
                 </button>
             </div>
+            <InputError :message="form.errors.selectedGenderIds"></InputError>
         </div>
 
         <div>
             <label>Visible</label>
             <input type="checkbox" v-model="form.is_activated">
+            <InputError :message="form.errors.is_activated"></InputError>
         </div>
 
         <button type="submit">Guardar</button>

@@ -29,12 +29,33 @@ function remove(filmId: string) {
     </div>
 
     <div>
-        <div v-for="film in props.films" :key="film.id">
-            <p>{{ film.title }}</p>
-
-            <BtnEdit @click="goToEdit(film.id)">Editar</BtnEdit>
-
-            <BtnRemove @click="remove(film.id)" />
+        <div class="overflow-x-auto">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Visible</th>
+                        <th>Creado Por</th>
+                        <th>Fecha Lanzamiento</th>
+                        <th>Likes</th>
+                        <th>Favoritos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="bg-base-200" v-for="film in props.films" :key="film.id">
+                        <td>{{film.title}}</td>
+                        <td>{{film.is_activated}}</td>
+                        <td>{{film.user_id}}</td>
+                        <td>{{film.release_date}}</td>
+                        <td>100 likes</td>
+                        <td>100 favoritos</td>
+                        <td>
+                            <BtnEdit @click="goToEdit(film.id)">Editar</BtnEdit>
+                            <BtnRemove @click="remove(film.id)" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </template>

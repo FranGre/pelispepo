@@ -5,6 +5,7 @@ import { useForm } from '@inertiajs/vue3';
 import vueFilePond from 'vue-filepond';
 import 'filepond/dist/filepond.min.css';
 import InputError from '@/Components/InputError.vue';
+import InputText from '@/Components/InputText.vue';
 
 
 const props = defineProps<{
@@ -56,7 +57,7 @@ function removeVideo(filmId: string) {
     <form @submit.prevent="submit" enctype="multipart/form-data">
         <div>
             <label>Título</label>
-            <input v-model="form.title">
+            <InputText v-model="form.title"/>
             <InputError :message="form.errors.title"></InputError>
         </div>
 

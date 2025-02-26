@@ -2,6 +2,7 @@
 import { Gender } from '@/types/Gender';
 import { useForm } from '@inertiajs/vue3';
 import InputError from '@/Components/InputError.vue';
+import InputText from '@/Components/InputText.vue';
 
 const props = defineProps<{
     gender: Gender
@@ -26,7 +27,7 @@ const submit = () => {
 
             <div>
                 <label>Nombre</label>
-                <input v-model="form.name">
+                <InputText v-model="form.name" />
                 <InputError class="mt-2" :message="form.errors.name" />
             </div>
 

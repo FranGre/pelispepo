@@ -5,6 +5,7 @@ import { useForm } from '@inertiajs/vue3';
 import vueFilePond from 'vue-filepond';
 import 'filepond/dist/filepond.min.css';
 import InputText from '@/Components/InputText.vue';
+import Label from '@/Components/Label.vue';
 
 
 const props = defineProps<{
@@ -46,13 +47,13 @@ const submit = () => {
 
     <form @submit.prevent="submit" enctype="multipart/form-data">
         <div>
-            <label>Título</label>
+            <Label text="Título" />
             <InputText v-model="form.title" />
             <InputError :message="form.errors.title"></InputError>
         </div>
 
         <div>
-            <label>Pelicula</label>
+            <Label text="Pelicula" />
             <file-pond name="film" ref="pond" required="true" chunkUploads="true" :server="{
                 process: {
                     url: route('admin.films.post'),
@@ -72,19 +73,19 @@ const submit = () => {
         </div>
 
         <div>
-            <label>Descripción</label>
+            <Label text="Descripción" />
             <input v-model="form.description">
             <InputError :message="form.errors.description"></InputError>
         </div>
 
         <div>
-            <label>Fecha lanzamiento</label>
+            <Label text="Fecha lanzamiento" />
             <input type="date" v-model="form.release_date">
             <InputError :message="form.errors.release_date"></InputError>
         </div>
 
         <div>
-            <label>Generos</label>
+            <Label text="Generos" />
             <div>
                 <button v-for="gender in props.genders" :key="gender.id" @click="handleGender(gender.id)" type="button"
                     :class="{
@@ -97,7 +98,7 @@ const submit = () => {
         </div>
 
         <div>
-            <label>Activado</label>
+            <Label text="Activado" />
             <input type="checkbox" v-model="form.is_activated">
         </div>
 

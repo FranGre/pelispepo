@@ -30,6 +30,8 @@ class CreateFilmController extends Controller
         $genders = Gender::select('id', 'name')->get();
         $csrfToken = csrf_token();
 
-        return Inertia::render('Admin/Films/Create', ['genders' => $genders, 'csrfToken' => $csrfToken]);
+        $user_id = auth()->id();
+
+        return Inertia::render('Admin/Films/Create', ['genders' => $genders, 'csrfToken' => $csrfToken, 'user_id' => $user_id]);
     }
 }

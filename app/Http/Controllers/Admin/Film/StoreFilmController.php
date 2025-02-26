@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Admin\Film;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StoreFilmRequest;
 use App\Models\Film;
 use App\Services\Film\FilmStorageService;
 use App\Services\Film\FilmTemporaryStorageService;
 use File;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
-use Str;
 
 class StoreFilmController extends Controller
 {
@@ -21,24 +20,12 @@ class StoreFilmController extends Controller
         $this->filmStorageService = $filmStorageService;
     }
 
-    public function __invoke(Request $request): RedirectResponse
+    public function __invoke(StoreFilmRequest $request): RedirectResponse
     {
-        $title = $request->input('title');
-        $description = $request->input('description');
-        $releaseDate = $request->input('releaseDate');
-        $selectedGenderIds = $request->input('selectedGenderIds');
-        $is_activated = $request->input('is_activated');
+        $film = Film::create($request->validated());
 
-        $film = Film::create([
-            'id' => (string) Str::uuid(),
-            'user_id' => auth()->id(),
-            'is_activated' => $is_activated,
-            'title' => $title,
-            'description' => $description,
-            'release_date' => $releaseDate
-        ]);
-
-        $film->genders()->attach($selectedGenderIds);
+        // deberia comprobar si le llegan generos
+        $film->genders()->attach($request->input('selectedGenderIds'));
 
         $temporalPath = $this->filmTemporaryStorageService->temporalPath;
 

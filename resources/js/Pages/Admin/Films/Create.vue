@@ -10,15 +10,17 @@ import Checkbox from '@/Components/Checkbox.vue';
 const props = defineProps<{
     genders: Gender[]
     csrfToken: string
+    user_id: number
 }>();
 
 const form = useForm({
     is_activated: true,
     title: '',
     description: '',
-    releaseDate: '',
+    release_date: '',
     selectedGenderIds: [] as string[],
-    film: null
+    film: null,
+    user_id: props.user_id
 });
 
 const FilePond = vueFilePond();
@@ -77,8 +79,8 @@ const submit = () => {
 
         <div>
             <label>Fecha lanzamiento</label>
-            <input type="date" v-model="form.releaseDate">
-            <InputError :message="form.errors.releaseDate"></InputError>
+            <input type="date" v-model="form.release_date">
+            <InputError :message="form.errors.release_date"></InputError>
         </div>
 
         <div>

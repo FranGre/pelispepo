@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import CardFilm from '@/Components/Cards/CardFilm.vue';
 import { Film } from '@/types/Film';
-import { Link, useForm } from '@inertiajs/vue3';
+import { Link, router, useForm } from '@inertiajs/vue3';
 import axios from 'axios';
 import { ref } from 'vue';
 
@@ -18,6 +19,10 @@ function searchFilms() {
     }).catch();
 }
 
+function goToWatch(filmId: string) {
+    router.visit(route('films.watch', filmId));
+}
+
 </script>
 
 <template>
@@ -30,9 +35,7 @@ function searchFilms() {
     </div>
 
     <div>
-        <Link v-for="film in props.films" :key="film.id" :href="route('films.watch', film.id)">
-        {{ film.title }}
-        </Link>
+        <CardFilm v-for="film in props.films" :key="film.id" @click="goToWatch(film.id)" :film="film" />
     </div>
 
 </template>

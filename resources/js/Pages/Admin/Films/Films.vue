@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import BtnEdit from '@/Components/Buttons/BtnEdit.vue';
+import BtnRemove from '@/Components/Buttons/BtnRemove.vue';
 import { Film } from '@/types/Film';
-import { Link, router, useForm } from '@inertiajs/vue3';
+import { router, useForm } from '@inertiajs/vue3';
 
 const props = defineProps<{
     films: Film[]
@@ -9,7 +11,7 @@ const props = defineProps<{
 const form = useForm({});
 
 function goToEdit(filmId: string) {
-    route('adim.films.edit', filmId)
+    router.visit(route('admin.films.edit', filmId))
 }
 
 function remove(filmId: string) {
@@ -29,8 +31,10 @@ function remove(filmId: string) {
     <div>
         <div v-for="film in props.films" :key="film.id">
             <p>{{ film.title }}</p>
-            <Link :href="route('admin.films.edit', film.id)">Editar</Link>
-            <button type="button" @click="remove(film.id)">Eliminar</button>
+
+            <BtnEdit @click="goToEdit(film.id)">Editar</BtnEdit>
+
+            <BtnRemove @click="remove(film.id)" />
         </div>
     </div>
 </template>

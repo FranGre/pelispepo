@@ -26,11 +26,13 @@ class UpdateFilmRequest extends FormRequest
 
         return [
             'id' => 'required|uuid|exists:films',
+            'user_id' => 'required|integer|exists:users,id',
             'title' => 'required|string|max:50',
             'description' => 'required|string|max:600',
             'release_date' => "nullable|date|after:1950-01-01|before_or_equal:$maxDate",
             'is_activated' => 'required|boolean',
-            'selectedGenderIds' => 'nullable|array'
+            'selectedGenderIds' => 'nullable|array',
+            'selectedGenderIds.*' => 'uuid'
         ];
     }
 }

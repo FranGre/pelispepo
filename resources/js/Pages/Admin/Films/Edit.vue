@@ -19,6 +19,7 @@ const FilePond = vueFilePond();
 
 const form = useForm({
     id: props.film.id,
+    user_id: props.film.user_id,
     title: props.film.title,
     description: props.film.description,
     selectedGenderIds: props.selectedGenderIds,

@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Film;
 use App\Models\Gender;
 use App\Services\Film\FilmStorageService;
-use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
 

@@ -9,6 +9,7 @@ import InputText from '@/Components/InputText.vue';
 import Label from '@/Components/Label.vue';
 import BtnSave from '@/Components/Buttons/BtnSave.vue';
 import Textarea from '@/Components/Textarea.vue';
+import Toggle from '@/Components/Toggle.vue';
 
 
 const props = defineProps<{
@@ -113,8 +114,7 @@ function removeVideo(filmId: string) {
         </div>
 
         <div>
-            <Label text="Visible" />
-            <input type="checkbox" v-model="form.is_activated">
+            <Toggle label="Visible" v-model="form.is_activated" />
             <InputError :message="form.errors.is_activated"></InputError>
         </div>
 

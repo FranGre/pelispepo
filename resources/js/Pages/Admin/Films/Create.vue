@@ -8,6 +8,7 @@ import InputText from '@/Components/InputText.vue';
 import Label from '@/Components/Label.vue';
 import BtnSave from '@/Components/Buttons/BtnSave.vue';
 import Textarea from '@/Components/Textarea.vue';
+import Toggle from '@/Components/Toggle.vue';
 
 
 const props = defineProps<{
@@ -101,7 +102,7 @@ const submit = () => {
 
         <div>
             <Label text="Activado" />
-            <input type="checkbox" v-model="form.is_activated">
+            <Toggle label="Visible" v-model="form.is_activated" />
         </div>
 
         <BtnSave text="Crear" />

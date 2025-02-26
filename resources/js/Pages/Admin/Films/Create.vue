@@ -7,6 +7,7 @@ import 'filepond/dist/filepond.min.css';
 import InputText from '@/Components/InputText.vue';
 import Label from '@/Components/Label.vue';
 import BtnSave from '@/Components/Buttons/BtnSave.vue';
+import Textarea from '@/Components/Textarea.vue';
 
 
 const props = defineProps<{
@@ -75,7 +76,7 @@ const submit = () => {
 
         <div>
             <Label text="Descripción" />
-            <input v-model="form.description">
+            <Textarea v-model="form.description" />
             <InputError :message="form.errors.description"></InputError>
         </div>
 

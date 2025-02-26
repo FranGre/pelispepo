@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import BtnEdit from '@/Components/Buttons/BtnEdit.vue';
 import BtnRemove from '@/Components/Buttons/BtnRemove.vue';
+import BtnPrimary from '@/Components/Buttons/BtnPrimary.vue';
 import { Film } from '@/types/Film';
 import { router, useForm } from '@inertiajs/vue3';
 
@@ -9,6 +10,10 @@ const props = defineProps<{
 }>();
 
 const form = useForm({});
+
+function goToCreate(){
+    router.visit(route('admin.films.create'));
+}
 
 function goToEdit(filmId: string) {
     router.visit(route('admin.films.edit', filmId))
@@ -25,7 +30,7 @@ function remove(filmId: string) {
     <Head title="Films"></Head>
 
     <div>
-        <Link :href="route('admin.films.create')">Crear</Link>
+        <BtnPrimary text="+ Película" @click="goToCreate" />
     </div>
 
     <div>

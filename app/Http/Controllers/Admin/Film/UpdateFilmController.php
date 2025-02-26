@@ -8,7 +8,6 @@ use App\Models\Film;
 use App\Services\Film\FilmStorageService;
 use App\Services\Film\FilmTemporaryStorageService;
 use File;
-use Illuminate\Http\Request;
 
 class UpdateFilmController extends Controller
 {

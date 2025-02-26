@@ -11,11 +11,8 @@ class UpdateGenderController extends Controller
 {
     public function __invoke(UpdateGenderRequest $request): RedirectResponse
     {
-        $validatedData = $request->validated();
-
-        $gender = Gender::findOrFail($validatedData['id']);
-        $gender->name = $validatedData['name'];
-        $gender->save();
+        $gender = Gender::findOrFail($request->input('id'));
+        $gender->update($request->validated());
 
         return redirect(route('admin.genders.index', absolute: false));
     }

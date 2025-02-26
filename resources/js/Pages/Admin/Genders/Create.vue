@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import BtnSave from '@/Components/Buttons/BtnSave.vue';
 import InputError from '@/Components/InputError.vue';
 import InputText from '@/Components/InputText.vue';
 import Label from '@/Components/Label.vue';
@@ -26,7 +27,7 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.name" />
             </div>
 
-            <button type="submit" class="btn btn-success">Crear</button>
+            <BtnSave text="Crear" />
         </form>
     </AuthenticatedLayout>
 </template>

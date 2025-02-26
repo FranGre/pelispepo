@@ -6,6 +6,7 @@ import vueFilePond from 'vue-filepond';
 import 'filepond/dist/filepond.min.css';
 import InputText from '@/Components/InputText.vue';
 import Label from '@/Components/Label.vue';
+import BtnSave from '@/Components/Buttons/BtnSave.vue';
 
 
 const props = defineProps<{
@@ -102,6 +103,6 @@ const submit = () => {
             <input type="checkbox" v-model="form.is_activated">
         </div>
 
-        <button type="submit">Crear</button>
+        <BtnSave text="Crear" />
     </form>
 </template>

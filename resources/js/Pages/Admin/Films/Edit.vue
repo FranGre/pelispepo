@@ -7,6 +7,7 @@ import 'filepond/dist/filepond.min.css';
 import InputError from '@/Components/InputError.vue';
 import InputText from '@/Components/InputText.vue';
 import Label from '@/Components/Label.vue';
+import BtnSave from '@/Components/Buttons/BtnSave.vue';
 
 
 const props = defineProps<{
@@ -116,6 +117,6 @@ function removeVideo(filmId: string) {
             <InputError :message="form.errors.is_activated"></InputError>
         </div>
 
-        <button type="submit">Guardar</button>
+        <BtnSave text="Guardar" />
     </form>
 </template>

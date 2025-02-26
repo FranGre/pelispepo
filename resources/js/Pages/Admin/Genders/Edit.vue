@@ -4,6 +4,7 @@ import { useForm } from '@inertiajs/vue3';
 import InputError from '@/Components/InputError.vue';
 import InputText from '@/Components/InputText.vue';
 import Label from '@/Components/Label.vue';
+import BtnSave from '@/Components/Buttons/BtnSave.vue';
 
 const props = defineProps<{
     gender: Gender
@@ -32,7 +33,7 @@ const submit = () => {
                 <InputError class="mt-2" :message="form.errors.name" />
             </div>
 
-            <button type="submit">Guardar</button>
+            <BtnSave text="Guardar" />
         </form>
     </AuthenticatedLayout>
 </template>

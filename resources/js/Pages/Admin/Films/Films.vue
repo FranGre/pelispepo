@@ -5,6 +5,7 @@ import BtnPrimary from '@/Components/Buttons/BtnPrimary.vue';
 import { Film } from '@/types/Film';
 import { router, useForm } from '@inertiajs/vue3';
 import Toggle from '@/Components/Toggle.vue';
+import InputText from '@/Components/InputText.vue';
 
 const props = defineProps<{
     films: Film[]
@@ -32,11 +33,24 @@ function handleActivated(filmId: string) {
     router.patch(route('admin.films.toggle.activation', filmId));
 }
 
+let search = ''
+
+function searchFilms() {
+    const f = useForm({
+        title: search
+    })
+
+    f.get(route('admin.films.index'));
+}
+
 </script>
 
 <template>
 
     <Head title="Films"></Head>
+
+    <InputText v-model="search"></InputText>
+    <button type="button" @click="searchFilms">buscar</button>
 
     <div>
         <BtnPrimary text="+ Película" @click="goToCreate" />

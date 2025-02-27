@@ -33,14 +33,12 @@ function handleActivated(filmId: string) {
     router.patch(route('admin.films.toggle.activation', filmId));
 }
 
-let search = ''
+const searchForm = useForm({
+    title: ''
+});
 
 function searchFilms() {
-    const f = useForm({
-        title: search
-    })
-
-    f.get(route('admin.films.index'));
+    searchForm.get(route('admin.films.index'));
 }
 
 </script>
@@ -49,7 +47,7 @@ function searchFilms() {
 
     <Head title="Films"></Head>
 
-    <InputText v-model="search"></InputText>
+    <InputText v-model="searchForm.title"></InputText>
     <button type="button" @click="searchFilms">buscar</button>
 
     <div>

@@ -4,6 +4,7 @@ import BtnRemove from '@/Components/Buttons/BtnRemove.vue';
 import BtnPrimary from '@/Components/Buttons/BtnPrimary.vue';
 import { Film } from '@/types/Film';
 import { router, useForm } from '@inertiajs/vue3';
+import Toggle from '@/Components/Toggle.vue';
 
 const props = defineProps<{
     films: Film[]
@@ -11,7 +12,7 @@ const props = defineProps<{
 
 const form = useForm({});
 
-function goToCreate(){
+function goToCreate() {
     router.visit(route('admin.films.create'));
 }
 
@@ -21,6 +22,14 @@ function goToEdit(filmId: string) {
 
 function remove(filmId: string) {
     form.delete(route('admin.films.destroy', filmId))
+}
+
+function goToViewLikes(filmId: string) {
+    router.visit(route('admin.films.likes', filmId))
+}
+
+function handleActivated(filmId: string) {
+    router.patch(route('admin.films.toggle.activation', filmId));
 }
 
 </script>
@@ -48,11 +57,15 @@ function remove(filmId: string) {
                 </thead>
                 <tbody>
                     <tr class="bg-base-200" v-for="film in props.films" :key="film.id">
-                        <td>{{film.title}}</td>
-                        <td>{{film.is_activated}}</td>
-                        <td>{{film.user_id}}</td>
-                        <td>{{film.release_date}}</td>
-                        <td>100 likes</td>
+                        <td>{{ film.title }}</td>
+                        <td>
+                            <Toggle v-model="film.is_activated" @update:model-value="handleActivated(film.id)"></Toggle>
+                        </td>
+                        <td>{{ film.user_id }}</td>
+                        <td>{{ film.release_date }}</td>
+                        <td>
+                            <button class="btn btn-link" @click="goToViewLikes(film.id)">{{ film.likes_count }}</button>
+                        </td>
                         <td>100 favoritos</td>
                         <td>
                             <BtnEdit @click="goToEdit(film.id)">Editar</BtnEdit>

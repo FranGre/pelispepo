@@ -12,7 +12,9 @@ class IndexFilmController extends Controller
 {
     public function __invoke(): Response
     {
-        $films = Film::all();
+        // likes
+        // favorites
+        $films = Film::select('id', 'user_id', 'is_activated', 'title', 'release_date')->withCount('likes')->get();
 
         return Inertia::render('Admin/Films/Films', ['films' => $films]);
     }

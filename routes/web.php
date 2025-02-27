@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\Film\DestroyVideoController;
 use App\Http\Controllers\Admin\Film\EditFilmController;
+use App\Http\Controllers\Admin\Film\ToggleActivationFilmController;
 use App\Http\Controllers\Admin\Film\UpdateFilmController;
 use App\Http\Controllers\Admin\Gender\IndexGenderController;
 use App\Http\Controllers\Admin\Gender\StoreGenderController;
@@ -71,6 +72,8 @@ Route::middleware('auth')->group(function () {
     Route::get('films/favorites', \App\Http\Controllers\Client\Film\FavoriteFilmController::class)->name('films.favorites');
 
     Route::delete('admin/films/video/destroy', DestroyVideoController::class)->name('admin.films.video.destroy');
+
+    Route::patch('admin/films/{filmId}/toggle-activation', ToggleActivationFilmController::class )->name('admin.films.toggle.activation');
 });
 
 require __DIR__ . '/auth.php';

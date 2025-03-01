@@ -73,7 +73,7 @@ function searchFilms() {
                         <td>
                             <Toggle v-model="film.is_activated" @update:model-value="handleActivated(film.id)"></Toggle>
                         </td>
-                        <td>{{ film.user_id }}</td>
+                        <td>{{ film.creator.email }}</td>
                         <td>{{ film.release_date }}</td>
                         <td>
                             <button class="btn btn-link" @click="goToViewLikes(film.id)">{{ film.likes_count }}</button>

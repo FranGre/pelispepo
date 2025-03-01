@@ -19,7 +19,7 @@ class IndexFilmController extends Controller
             $filmsQuery = $filmsQuery->where('title', 'LIKE', "%$title%");
         }
         // favorites
-        $filmsQuery = $filmsQuery->select('id', 'user_id', 'is_activated', 'title', 'release_date')->withCount('likes')->orderBy('title')->get();
+        $filmsQuery = $filmsQuery->with(['creator' => function($query) { $query->select('id', 'email'); } ])->select('id', 'user_id', 'is_activated', 'title', 'release_date')->withCount('likes')->orderBy('title')->get();
 
         return Inertia::render('Admin/Films/Films', ['films' => $filmsQuery]);
     }

@@ -12,8 +12,7 @@ class IndexGenderController extends Controller
 {
     public function __invoke(): Response
     {
-        $genders = Gender::select('id', 'name')->get();
-
+        $genders = Gender::select('id', 'name')->withCount('films')->get();
         return Inertia::render('Admin/Genders/Genders', ['genders' => $genders]);
     }
 }

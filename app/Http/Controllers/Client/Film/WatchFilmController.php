@@ -21,17 +21,17 @@ class WatchFilmController extends Controller
         $likesCounter = (int) $film->likes()->count();
         $like = DB::table('film_user_likes')->where('film_id', '=', $filmId)->where('user_id', '=', auth()->id())->first();
 
-        $likeMsg = 'Quitar Like';
+        $hasLike = true;
         if ($like == null) {
-            $likeMsg = 'Dar Like';
+            $hasLike = false;
         }
 
         $favorite = DB::table('film_user_favorites')->where('film_id', '=', $filmId)->where('user_id', '=', auth()->id())->first();
-        $favoriteMsg = 'Quitar Favs';
+        $hasFavorite = true;
         if ($favorite == null) {
-            $favoriteMsg = 'Agregar en favs';
+            $hasFavorite = false;
         }
 
-        return Inertia::render('Films/Watch', ['film' => $film, 'path' => $filmUrl, 'likesCounter' => $likesCounter, 'likeMsg' => $likeMsg, 'favoriteMsg' => $favoriteMsg]);
+        return Inertia::render('Films/Watch', ['film' => $film, 'path' => $filmUrl, 'likesCounter' => $likesCounter, 'hasLike' => $hasLike, 'hasFavorite' => $hasFavorite]);
     }
 }

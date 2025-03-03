@@ -64,3 +64,4 @@ class User extends Authenticatable
         return $this->belongsToMany(Film::class, 'film_user_favorites');
     }
 }
+

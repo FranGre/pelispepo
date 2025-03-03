@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\User\ChangeUserRoleUserController;
+use App\Http\Controllers\Admin\User\IndexUserController;
 use App\Http\Controllers\Admin\Film\DestroyVideoController;
 use App\Http\Controllers\Admin\Film\EditFilmController;
 use App\Http\Controllers\Admin\Film\ToggleActivationFilmController;
@@ -17,6 +20,7 @@ use App\Http\Controllers\Admin\Film\DestroyFilmController;
 use App\Http\Controllers\Admin\Gender\CreateGenderController;
 use App\Http\Controllers\Admin\Gender\EditGenderController;
 use App\Http\Controllers\Film\FavoriteFilmController;
+use App\Http\Controllers\GenderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -41,6 +45,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     ### Admin ###
+    Route::get('admin/users', IndexUserController::class)->name('admin.users.index');
+
     ## Genders ##
     Route::get('admin/genders', IndexGenderController::class)->name('admin.genders.index');
 
@@ -73,7 +79,13 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('admin/films/video/destroy', DestroyVideoController::class)->name('admin.films.video.destroy');
 
-    Route::patch('admin/films/{filmId}/toggle-activation', ToggleActivationFilmController::class )->name('admin.films.toggle.activation');
+    Route::patch('admin/films/{filmId}/toggle-activation', ToggleActivationFilmController::class)->name('admin.films.toggle.activation');
+
+    Route::get('admin', AdminController::class)->name('admin');
+
+    Route::patch('admin/users/change/role', ChangeUserRoleUserController::class)->name('admin.users.change.role');
+
+    Route::get('genders', GenderController::class)->name('genders');
 });
 
 require __DIR__ . '/auth.php';

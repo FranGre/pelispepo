@@ -1,11 +1,12 @@
 <template>
-    <button type="button" class="btn btn-active" v-bind="$attrs" @click="handleClick">{{props.text}}</button>
+    <button type="button" class="btn btn-active" v-bind="$attrs" @click="handleClick">
+        <slot></slot>
+    </button>
 </template>
 
 <script setup lang="ts">
 const props = defineProps({
-    id: String,
-    text: String
+    id: String
 });
 
 const emit = defineEmits(['click']);

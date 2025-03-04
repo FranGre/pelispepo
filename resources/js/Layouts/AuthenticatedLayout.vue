@@ -1,15 +1,3 @@
-<script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import ApplicationLogo from '@/Components/ApplicationLogo.vue';
-import Dropdown from '@/Components/Dropdown.vue';
-import DropdownLink from '@/Components/DropdownLink.vue';
-import NavLink from '@/Components/NavLink.vue';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
-import { Link } from '@inertiajs/vue3';
-
-const showingNavigationDropdown = ref(false);
-</script>
-
 <template>
     <div>
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
@@ -28,7 +16,8 @@ const showingNavigationDropdown = ref(false);
 
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                                <NavLink :href="route('admin')" :active="route().current('admin')">
+                                <NavLink v-if="page.props.auth.role.name == 'ADMIN'" :href="route('admin')"
+                                    :active="route().current('admin')">
                                     Admin
                                 </NavLink>
 
@@ -148,3 +137,17 @@ const showingNavigationDropdown = ref(false);
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+import { onMounted, ref } from 'vue';
+import ApplicationLogo from '@/Components/ApplicationLogo.vue';
+import Dropdown from '@/Components/Dropdown.vue';
+import DropdownLink from '@/Components/DropdownLink.vue';
+import NavLink from '@/Components/NavLink.vue';
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import { Link, usePage } from '@inertiajs/vue3';
+
+const showingNavigationDropdown = ref(false);
+
+const page = usePage();
+</script>

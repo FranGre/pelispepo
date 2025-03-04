@@ -4,9 +4,21 @@
 
             <H1 text="Usuarios" />
 
-            <div class="flex justify-end mb-8">
-                <InputText v-model="inputText" />
-                <BtnSearch @click="search()"> </BtnSearch>
+            <div class="flex justify-between mb-8">
+                <BtnPrimary @click="goToCreate()" class="text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 5l0 14" />
+                        <path d="M5 12l14 0" />
+                    </svg> Usuario
+                </BtnPrimary>
+
+                <div class="flex">
+                    <InputText v-model="inputText" />
+                    <BtnSearch @click="search()"> </BtnSearch>
+                </div>
             </div>
 
             <div v-if="props.users.length == 0" class="flex justify-center items-center">
@@ -70,6 +82,7 @@ import { Role } from '@/types/Role'
 import { Link, router, useForm } from '@inertiajs/vue3';
 import BtnSearch from '@/Components/Buttons/BtnSearch.vue'
 import H2 from '@/Components/Titles/H2.vue'
+import BtnPrimary from '@/Components/Buttons/BtnPrimary.vue'
 
 const props = defineProps<{
     users: User[],
@@ -93,4 +106,7 @@ function goToViewUserLikes(userId: number) {
     router.visit(route('admin.users.likes', userId))
 }
 
+function goToCreate() {
+    router.visit(route('admin.users.create'));
+}
 </script>

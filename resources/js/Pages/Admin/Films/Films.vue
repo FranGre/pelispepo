@@ -77,7 +77,7 @@
 
 <script setup lang="ts">
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head } from '@inertiajs/vue3';
+import { Head, usePage } from '@inertiajs/vue3';
 import H1 from '@/Components/Titles/H1.vue';
 import BtnEdit from '@/Components/Buttons/BtnEdit.vue';
 import BtnRemove from '@/Components/Buttons/BtnRemove.vue';
@@ -92,6 +92,10 @@ import H2 from '@/Components/Titles/H2.vue';
 const props = defineProps<{
     films: Film[]
 }>();
+
+const page = usePage();
+
+console.log(page.props)
 
 const form = useForm({});
 

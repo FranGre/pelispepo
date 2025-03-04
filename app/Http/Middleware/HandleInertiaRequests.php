@@ -2,6 +2,8 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -33,7 +35,8 @@ class HandleInertiaRequests extends Middleware
             ...parent::share($request),
             'auth' => [
                 'user' => $request->user(),
-            ],
+                'role' => Role::find(auth()->user()?->role_id)
+            ]
         ];
     }
 }

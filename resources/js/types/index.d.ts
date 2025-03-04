@@ -1,4 +1,5 @@
 export interface User {
+    films_likes_count: number;
     id: number;
     name: string;
     email: string;

@@ -44,7 +44,14 @@
                                         </option>
                                     </select>
                                 </td>
-                                <td>{{ user.films_likes_count }}</td>
+                                <td>
+                                    <button type="button" class="link link-hover" @click="goToViewUserLikes(user.id)"
+                                        v-if="user.films_likes_count >= 1">
+                                        {{ user.films_likes_count }}
+                                    </button>
+
+                                    <p v-else>0</p>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -60,7 +67,7 @@ import InputText from '@/Components/InputText.vue'
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
 import { User } from '@/types'
 import { Role } from '@/types/Role'
-import { useForm } from '@inertiajs/vue3';
+import { Link, router, useForm } from '@inertiajs/vue3';
 import BtnSearch from '@/Components/Buttons/BtnSearch.vue'
 import H2 from '@/Components/Titles/H2.vue'
 
@@ -82,5 +89,8 @@ function changeUserRole(userId: number, roleId: string) {
     form.patch(route('admin.users.change.role'))
 }
 
+function goToViewUserLikes(userId: number) {
+    router.visit(route('admin.users.likes', userId))
+}
 
 </script>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\Film\LikesFilmContoller;
 use App\Http\Controllers\Admin\User\ChangeUserRoleUserController;
 use App\Http\Controllers\Admin\User\IndexUserController;
 use App\Http\Controllers\Admin\Film\DestroyVideoController;
@@ -10,6 +11,7 @@ use App\Http\Controllers\Admin\Film\UpdateFilmController;
 use App\Http\Controllers\Admin\Gender\IndexGenderController;
 use App\Http\Controllers\Admin\Gender\StoreGenderController;
 use App\Http\Controllers\Admin\Gender\UpdateGenderController;
+use App\Http\Controllers\Admin\User\LikesUserContoller;
 use App\Http\Controllers\Client\Film\WatchFilmController;
 use App\Http\Controllers\FilePond\PatchFilmController;
 use App\Http\Controllers\FilePond\PostFilmController;
@@ -20,6 +22,8 @@ use App\Http\Controllers\Admin\Film\DestroyFilmController;
 use App\Http\Controllers\Admin\Gender\CreateGenderController;
 use App\Http\Controllers\Admin\Gender\EditGenderController;
 use App\Http\Controllers\Film\FavoriteFilmController;
+use App\Http\Controllers\Film\FavoritesFilmController;
+use App\Http\Controllers\Film\LikeFilmController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -86,6 +90,11 @@ Route::middleware('auth')->group(function () {
     Route::patch('admin/users/change/role', ChangeUserRoleUserController::class)->name('admin.users.change.role');
 
     Route::get('genders', GenderController::class)->name('genders');
+
+    Route::get('admin/users/{userId}/likes', LikesUserContoller::class)->name('admin.users.likes');
+    Route::get('admin/films/{filmId}/likes', LikesFilmContoller::class)->name('admin.films.likes');
+
+    Route::get('films/favorites', FavoritesFilmController::class)->name('films.favorites');
 });
 
 require __DIR__ . '/auth.php';

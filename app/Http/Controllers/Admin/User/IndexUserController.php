@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Role;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Inertia\Inertia;
@@ -22,7 +23,11 @@ class IndexUserController extends Controller
         }
 
         $usersQuery = $usersQuery->select(['id', 'role_id', 'name', 'email'])
-            ->withCount('filmsLikes')->get();
+            ->withCount([
+                'filmsLikes' => function (Builder $query) {
+                    $query->where('is_activated', true);
+                }
+            ])->get();
 
         $roles = Role::select('id', 'name')->get();
 

@@ -23,9 +23,9 @@
             <H2 text="No hay peliculas" />
         </div>
 
-        <div v-else class="flex gap-7">
+        <ul v-else class="flex gap-7">
             <CardFilm v-for="film in props.films" :key="film.id" @click="goToWatch(film.id)" :film="film" />
-        </div>
+        </ul>
     </AuthenticatedLayout>
 
 </template>

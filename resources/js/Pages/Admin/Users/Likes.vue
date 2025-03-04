@@ -1,10 +1,13 @@
 <template>
+
+    <Head>Películas</Head>
     <AuthenticatedLayout>
-        <H1 text="Mis películas favoritas" />
+        <H1 text="Películas" />
+        <H2 :text="`que le han gustado a ${props.user.name}`" class="font-light" />
 
         <div class="flex justify-end mb-6">
             <InputText v-model="form.search" />
-            <BtnSearch @click="searchFilms"></BtnSearch>
+            <BtnSearch @click="searchFilms()"></BtnSearch>
         </div>
 
         <div v-if="props.films.length == 0" class="flex justify-center items-center">
@@ -20,36 +23,38 @@
             <H2 text="No hay peliculas" />
         </div>
 
-        <ul v-else class="flex gap-7">
+        <div v-else class="flex gap-7">
             <CardFilm v-for="film in props.films" :key="film.id" @click="goToWatch(film.id)" :film="film" />
-        </ul>
+        </div>
     </AuthenticatedLayout>
 </template>
 
 <script setup lang="ts">
-import BtnSearch from '@/Components/Buttons/BtnSearch.vue'
-import CardFilm from '@/Components/Cards/CardFilm.vue'
-import InputText from '@/Components/InputText.vue'
+import BtnSearch from '@/Components/Buttons/BtnSearch.vue';
+import CardFilm from '@/Components/Cards/CardFilm.vue';
+import InputText from '@/Components/InputText.vue';
 import H1 from '@/Components/Titles/H1.vue'
-import H2 from '@/Components/Titles/H2.vue'
+import H2 from '@/Components/Titles/H2.vue';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
-import { Film } from '@/types/Film'
-import { Link, router, useForm } from '@inertiajs/vue3'
+import { User } from '@/types';
+import { Film } from '@/types/Film';
+import { Head, router, useForm } from '@inertiajs/vue3'
+
 
 const props = defineProps<{
-    films: Film[]
-}>();
+    films: Film[],
+    user: User
+}>()
 
 const form = useForm({
     search: ''
-});
+})
 
 function searchFilms() {
-    form.get(route('films.favorites'))
+    form.get(route('admin.users.likes', props.user.id))
 }
 
 function goToWatch(filmId: string) {
     router.visit(route('films.watch', filmId));
 }
-
 </script>

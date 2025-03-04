@@ -58,8 +58,9 @@
                             <td>{{ film.creator.email }}</td>
                             <td>{{ film.release_date }}</td>
                             <td>
-                                <button class="btn btn-link" @click="goToViewLikes(film.id)">{{ film.likes_count
-                                    }}</button>
+                                <button class="link link-hover" @click="goToViewLikes(film.id)">
+                                    {{ film.likes_count }}
+                                </button>
                             </td>
                             <td>100 favoritos</td>
                             <td class="flex gap-3">

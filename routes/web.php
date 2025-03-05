@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\Film\LikesFilmContoller;
 use App\Http\Controllers\Admin\User\ChangeUserRoleUserController;
+use App\Http\Controllers\Admin\User\CreateUserController;
 use App\Http\Controllers\Admin\User\IndexUserController;
 use App\Http\Controllers\Admin\Film\DestroyVideoController;
 use App\Http\Controllers\Admin\Film\EditFilmController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\Admin\Gender\IndexGenderController;
 use App\Http\Controllers\Admin\Gender\StoreGenderController;
 use App\Http\Controllers\Admin\Gender\UpdateGenderController;
 use App\Http\Controllers\Admin\User\LikesUserContoller;
+use App\Http\Controllers\Admin\User\StoreUserController;
 use App\Http\Controllers\Client\Film\WatchFilmController;
 use App\Http\Controllers\FilePond\PatchFilmController;
 use App\Http\Controllers\FilePond\PostFilmController;
@@ -95,6 +97,9 @@ Route::middleware('auth')->group(function () {
     Route::get('admin/films/{filmId}/likes', LikesFilmContoller::class)->name('admin.films.likes');
 
     Route::get('films/favorites', FavoritesFilmController::class)->name('films.favorites');
+
+    Route::get('admin/users/create', CreateUserController::class)->name('admin.users.create');
+    Route::post('admin/users/store', StoreUserController::class)->name('admin.users.store');
 });
 
 require __DIR__ . '/auth.php';

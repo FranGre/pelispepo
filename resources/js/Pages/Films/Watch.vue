@@ -58,7 +58,7 @@
             </div>
 
             <div class="flex justify-center">
-                <video :src="path" controls="true"></video>
+                <video :src="path" controls="true" class="aspect-video"></video>
             </div>
 
         </div>

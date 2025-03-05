@@ -12,11 +12,12 @@ class IndexFilmController extends Controller
 {
     public function __invoke(Request $request): Response
     {
+        $search = $request->query('search');
         $filmsQuery = Film::query();
-        $title = $request->query('title');
 
-        if ($title) {
-            $filmsQuery = $filmsQuery->where('title', 'LIKE', "%$title%");
+        if ($search) {
+            $filmsQuery = $filmsQuery->where('title', 'LIKE', "%$search%")
+                ->orWhere('release_date', 'LIKE', "%$search%");
         }
         // favorites
         $filmsQuery = $filmsQuery->with([

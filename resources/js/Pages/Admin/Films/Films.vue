@@ -17,7 +17,7 @@
             </BtnPrimary>
 
             <div class="flex">
-                <InputText v-model="searchForm.title"></InputText>
+                <InputText v-model="searchForm.search"></InputText>
                 <BtnSearch @click="searchFilms()"></BtnSearch>
             </div>
         </div>
@@ -120,7 +120,7 @@ function handleActivated(filmId: string) {
 }
 
 const searchForm = useForm({
-    title: ''
+    search: ''
 });
 
 function searchFilms() {

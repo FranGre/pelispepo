@@ -17,9 +17,18 @@
             </BtnPrimary>
 
             <div class="flex">
+                <Label text="Creado por"></Label>
+                <select class="select" v-model="searchForm.createdBy" @change="searchFilms()">
+                    <option value="">Todos</option>
+                    <option v-for="admin in props.admins" :value="admin.id">{{ admin.name }}</option>
+                </select>
+            </div>
+
+            <div class="flex">
                 <InputText v-model="searchForm.search"></InputText>
                 <BtnSearch @click="searchFilms()"></BtnSearch>
             </div>
+
         </div>
 
         <div v-if="props.films.length == 0" class="flex justify-center items-center">
@@ -76,26 +85,27 @@
 </template>
 
 <script setup lang="ts">
-import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
-import { Head, usePage } from '@inertiajs/vue3';
-import H1 from '@/Components/Titles/H1.vue';
-import BtnEdit from '@/Components/Buttons/BtnEdit.vue';
-import BtnRemove from '@/Components/Buttons/BtnRemove.vue';
-import BtnPrimary from '@/Components/Buttons/BtnPrimary.vue';
-import { Film } from '@/types/Film';
-import { router, useForm } from '@inertiajs/vue3';
-import Toggle from '@/Components/Toggle.vue';
-import InputText from '@/Components/InputText.vue';
-import BtnSearch from '@/Components/Buttons/BtnSearch.vue';
-import H2 from '@/Components/Titles/H2.vue';
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
+import { Head, usePage } from '@inertiajs/vue3'
+import H1 from '@/Components/Titles/H1.vue'
+import BtnEdit from '@/Components/Buttons/BtnEdit.vue'
+import BtnRemove from '@/Components/Buttons/BtnRemove.vue'
+import BtnPrimary from '@/Components/Buttons/BtnPrimary.vue'
+import { Film } from '@/types/Film'
+import { router, useForm } from '@inertiajs/vue3'
+import Toggle from '@/Components/Toggle.vue'
+import InputText from '@/Components/InputText.vue'
+import BtnSearch from '@/Components/Buttons/BtnSearch.vue'
+import H2 from '@/Components/Titles/H2.vue'
+import { User } from '@/types'
+import Label from '@/Components/Label.vue'
 
 const props = defineProps<{
-    films: Film[]
+    films: Film[],
+    admins: User[]
 }>();
 
-const page = usePage();
-
-console.log(page.props)
+const urlParams = new URLSearchParams(window.location.search)
 
 const form = useForm({});
 
@@ -120,7 +130,8 @@ function handleActivated(filmId: string) {
 }
 
 const searchForm = useForm({
-    search: ''
+    search: urlParams.get('search') || '',
+    createdBy: urlParams.get('createdBy') || '',
 });
 
 function searchFilms() {

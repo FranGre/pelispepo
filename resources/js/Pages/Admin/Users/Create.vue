@@ -30,6 +30,11 @@
                     </select>
                     <InputError :message="form.errors.role_id" />
                 </div>
+
+                <div class="flex items-center gap-3">
+                    <Label text="Activado" />
+                    <Toggle v-model="form.is_activated"></Toggle>
+                </div>
             </div>
 
             <div class="mt-12 flex justify-end">
@@ -45,6 +50,7 @@ import InputError from '@/Components/InputError.vue'
 import InputText from '@/Components/InputText.vue'
 import Label from '@/Components/Label.vue'
 import H1 from '@/Components/Titles/H1.vue'
+import Toggle from '@/Components/Toggle.vue'
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
 import { Role } from '@/types/Role'
 import { useForm } from '@inertiajs/vue3'
@@ -57,7 +63,8 @@ const form = useForm({
     name: '',
     email: '',
     password: '',
-    role_id: ''
+    role_id: '',
+    is_activated: true
 })
 
 function submit() {

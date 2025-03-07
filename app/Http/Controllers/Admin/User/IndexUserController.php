@@ -16,13 +16,19 @@ class IndexUserController extends Controller
         $usersQuery = User::query();
 
         $search = $request->input('search');
-
         if ($search) {
-            $usersQuery = $usersQuery->where('name', 'LIKE', "%$search%")
-                ->orWhere('email', 'LIKE', "%$search%");
+            $usersQuery = $usersQuery->where(function (Builder $query) use ($search) {
+                $query->where('name', 'LIKE', "%$search%")
+                    ->orWhere('email', 'LIKE', "%$search%");
+            });
         }
 
-        $usersQuery = $usersQuery->select(['id', 'role_id', 'name', 'email'])
+        $role = $request->input('role');
+        if ($role) {
+            $usersQuery = $usersQuery->where('role_id', '=', $role);
+        }
+
+        $usersQuery = $usersQuery->select(['id', 'role_id', 'name', 'email', 'is_activated'])
             ->withCount([
                 'filmsLikes' => function (Builder $query) {
                     $query->where('is_activated', true);

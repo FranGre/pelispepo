@@ -4,6 +4,7 @@ export interface User {
     name: string;
     email: string;
     email_verified_at?: string;
+    is_activated: boolean
 }
 
 export type PageProps<

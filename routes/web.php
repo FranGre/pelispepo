@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\Film\LikesFilmContoller;
 use App\Http\Controllers\Admin\User\ChangeUserRoleUserController;
 use App\Http\Controllers\Admin\User\CreateUserController;
+use App\Http\Controllers\Admin\User\DestroyUserController;
 use App\Http\Controllers\Admin\User\IndexUserController;
 use App\Http\Controllers\Admin\Film\DestroyVideoController;
 use App\Http\Controllers\Admin\Film\EditFilmController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\Admin\Gender\StoreGenderController;
 use App\Http\Controllers\Admin\Gender\UpdateGenderController;
 use App\Http\Controllers\Admin\User\LikesUserContoller;
 use App\Http\Controllers\Admin\User\StoreUserController;
+use App\Http\Controllers\Admin\User\ToggleActivationUserController;
 use App\Http\Controllers\Client\Film\WatchFilmController;
 use App\Http\Controllers\FilePond\PatchFilmController;
 use App\Http\Controllers\FilePond\PostFilmController;
@@ -100,6 +102,10 @@ Route::middleware('auth')->group(function () {
 
     Route::get('admin/users/create', CreateUserController::class)->name('admin.users.create');
     Route::post('admin/users/store', StoreUserController::class)->name('admin.users.store');
+
+    Route::patch('admin/users/{userId}/toogle-activation', ToggleActivationUserController::class)->name('admin.users.toggle.activation');
+
+    Route::delete('admin/users/{userId}/destroy', DestroyUserController::class)->name('admin.users.destroy');
 });
 
 require __DIR__ . '/auth.php';

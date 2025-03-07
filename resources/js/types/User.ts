@@ -3,4 +3,5 @@ export interface User {
     role_id: string,
     name: string,
     email: string,
+    is_activated: boolean
 }

@@ -16,7 +16,15 @@
                 </BtnPrimary>
 
                 <div class="flex">
-                    <InputText v-model="inputText" />
+                    <Label text="Roles" />
+                    <select class="select" v-model="searchForm.role" @change="search()">
+                        <option value="">Todos</option>
+                        <option v-for="role in props.roles" :key="role.id" :value="role.id">{{ role.name }}</option>
+                    </select>
+                </div>
+
+                <div class="flex">
+                    <InputText v-model="searchForm.search" />
                     <BtnSearch @click="search()"> </BtnSearch>
                 </div>
             </div>
@@ -40,6 +48,7 @@
                         <thead class="text-lg font-bold">
                             <tr>
                                 <th>Nombre</th>
+                                <th>Activo</th>
                                 <th>Email</th>
                                 <th>Role</th>
                                 <th>Likes</th>
@@ -48,6 +57,10 @@
                         <tbody>
                             <tr class="bg-base-200" v-for="user in props.users" :key="user.id">
                                 <td>{{ user.name }}</td>
+                                <td>
+                                    <Toggle v-model="user.is_activated" @update:model-value="handleActivated(user.id)">
+                                    </Toggle>
+                                </td>
                                 <td>{{ user.email }}</td>
                                 <td>
                                     <select class="select" @change="changeUserRole(user.id, $event.target.value)">
@@ -64,6 +77,9 @@
 
                                     <p v-else>0</p>
                                 </td>
+                                <td>
+                                    <BtnRemove @click="remove(user.id)" />
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -79,22 +95,27 @@ import InputText from '@/Components/InputText.vue'
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
 import { User } from '@/types'
 import { Role } from '@/types/Role'
-import { Link, router, useForm } from '@inertiajs/vue3';
+import { router, useForm } from '@inertiajs/vue3';
 import BtnSearch from '@/Components/Buttons/BtnSearch.vue'
 import H2 from '@/Components/Titles/H2.vue'
 import BtnPrimary from '@/Components/Buttons/BtnPrimary.vue'
+import Toggle from '@/Components/Toggle.vue'
+import Label from '@/Components/Label.vue'
+import BtnRemove from '@/Components/Buttons/BtnRemove.vue'
 
 const props = defineProps<{
     users: User[],
     roles: Role[]
 }>()
 
-let inputText = ''
+const urlParams = new URLSearchParams(window.location.search)
+const searchForm = useForm({
+    search: urlParams.get('search') || '',
+    role: urlParams.get('role') || ''
+});
 
 function search() {
-    const form = useForm({ search: inputText })
-
-    form.get(route('admin.users.index'))
+    searchForm.get(route('admin.users.index'))
 }
 
 function changeUserRole(userId: number, roleId: string) {
@@ -108,5 +129,17 @@ function goToViewUserLikes(userId: number) {
 
 function goToCreate() {
     router.visit(route('admin.users.create'));
+}
+
+function handleActivated(userId: string) {
+    router.patch(route('admin.users.toggle.activation', userId));
+}
+
+function remove(userId: string) {
+    const removeForm = useForm({
+        userId
+    })
+
+    removeForm.delete(route('admin.users.destroy', removeForm.userId));
 }
 </script>

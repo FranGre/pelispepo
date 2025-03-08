@@ -25,7 +25,7 @@ class IndexFilmController extends Controller
                     $query->select(['id', 'film_id', 'extension']);
                 }
             ])
-            ->select('id', 'title')
+            ->select(['id', 'title', 'release_date'])
             ->get();
 
         return Inertia::render('Films/Films', ['films' => $queryFilms]);

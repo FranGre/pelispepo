@@ -1,8 +1,13 @@
 <template>
-    <li class="card p-2 rounded-2xl hover:bg-base-200 bg-base-100 w-52 h-64 max-w-52 max-h-64 shadow-md cursor-pointer text-center"
+    <li class="card rounded-2xl hover:bg-base-200 bg-base-100 w-full h-full max-w-52 max-h-68 shadow-md cursor-pointer text-center"
         @click="handleClick">
-        <img alt="cover" :src="src" class="object-fill">
-        <div class="p-1">
+
+        <div class="max-h-54 relative">
+            <small class="badge absolute top-2 left-2">{{ props.film.release_date }}</small>
+            <img alt="cover" :src="src" class="h-full w-full rounded-t-2xl">
+        </div>
+
+        <div class="py-3">
             <h2 class="card-title justify-center">{{ film.title }}</h2>
         </div>
     </li>

@@ -2,9 +2,9 @@
     <AuthenticatedLayout>
         <H1 text="Admin" />
 
-        <div class="flex justify-around">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
             <div @click="goToViewFilms()"
-                class="card bg-base-100 w-96 shadow-sm hover:cursor-pointer hover:bg-base-200">
+                class="card bg-base-100 md:max-w-72 lg:max-w-96 w-full shadow-sm hover:cursor-pointer hover:bg-base-200">
                 <div class="card-body">
                     <div class="flex justify-between">
                         <div class="flex gap-1 text-lg">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div @click="goToViewGenders()"
-                class="card bg-base-100 w-96 shadow-sm hover:cursor-pointer hover:bg-base-200">
+                class="card bg-base-100 md:max-w-72 lg:max-w-96 w-full shadow-sm hover:cursor-pointer hover:bg-base-200">
                 <div class="card-body">
                     <div class="flex justify-between">
                         <div class="flex gap-1 text-lg">
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div @click="goToViewUsers()"
-                class="card bg-base-100 w-96 shadow-sm hover:cursor-pointer hover:bg-base-200">
+                class="card bg-base-100 md:max-w-72 lg:max-w-96 w-full shadow-sm hover:cursor-pointer hover:bg-base-200">
                 <div class="card-body">
                     <div class="flex justify-between">
                         <div class="flex gap-1 text-lg">

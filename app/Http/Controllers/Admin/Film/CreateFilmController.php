@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Film;
 
 use App\Http\Controllers\Controller;
 use App\Models\Gender;
+use App\Services\Cover\CoverTemporaryStorageService;
 use App\Services\Film\FilmTemporaryStorageService;
 use File;
 use Inertia\Inertia;
@@ -12,20 +13,27 @@ use Inertia\Response;
 class CreateFilmController extends Controller
 {
     protected FilmTemporaryStorageService $filmTemporaryStorageService;
+    protected CoverTemporaryStorageService $coverTemporaryStorageService;
 
-    public function __construct(FilmTemporaryStorageService $filmTemporaryStorageService)
+    public function __construct(FilmTemporaryStorageService $filmTemporaryStorageService, CoverTemporaryStorageService $coverTemporaryStorageService)
     {
         $this->filmTemporaryStorageService = $filmTemporaryStorageService;
+        $this->coverTemporaryStorageService = $coverTemporaryStorageService;
     }
 
     public function __invoke(): Response
     {
-        $temporalPath = $this->filmTemporaryStorageService->temporalPath;
-        if (File::exists($temporalPath)) {
-            File::deleteDirectory($temporalPath);
+        $temporalFilmPath = $this->filmTemporaryStorageService->temporalPath;
+        if (File::exists($temporalFilmPath)) {
+            File::deleteDirectory($temporalFilmPath);
         }
+        File::makeDirectory($temporalFilmPath);
 
-        File::makeDirectory($temporalPath);
+        $temporalCoverPath = $this->coverTemporaryStorageService->temporalPath;
+        if (File::exists($temporalCoverPath)) {
+            File::deleteDirectory($temporalCoverPath);
+        }
+        File::makeDirectory($temporalCoverPath);
 
         $genders = Gender::select('id', 'name')->get();
         $csrfToken = csrf_token();

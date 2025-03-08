@@ -1,22 +1,25 @@
 <template>
-    <li class="card bg-base-100 max-w-48 w-auto shadow-md cursor-pointer hover:bg-base-200 text-center"
+    <li class="card p-2 rounded-2xl hover:bg-base-200 bg-base-100 w-52 h-64 max-w-52 max-h-64 shadow-md cursor-pointer text-center"
         @click="handleClick">
-        <div class="card-body">
+        <img alt="cover" :src="src" class="object-fill">
+        <div class="p-1">
             <h2 class="card-title justify-center">{{ film.title }}</h2>
         </div>
     </li>
 </template>
 
 <script setup lang="ts">
-import { Film } from "@/types/Film";
+import { Film } from "@/types/Film"
 
 const props = defineProps<{
     film: Film
 }>()
 
-const emit = defineEmits(['click']);
+const src = `storage/covers/${props.film.cover.id}.${props.film.cover.extension}`
+
+const emit = defineEmits(['click'])
 
 function handleClick() {
-    emit('click', props.film.id);
+    emit('click', props.film.id)
 }
 </script>

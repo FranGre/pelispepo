@@ -12,15 +12,22 @@ class IndexFilmController extends Controller
 {
     public function __invoke(Request $request): Response
     {
-        $query = Film::where('is_activated', '=', 1);
+        $queryFilms = Film::where('is_activated', '=', 1);
         $title = $request->query('title');
 
-        if ($title != null) {
-            $query = $query->where('title', 'LIKE', "%$title%");
+        if ($title) {
+            $queryFilms = $queryFilms->where('title', 'LIKE', "%$title%");
         }
 
-        $query = $query->select('id', 'title')->get();
+        $queryFilms = $queryFilms
+            ->with([
+                'cover' => function ($query) {
+                    $query->select(['id', 'film_id', 'extension']);
+                }
+            ])
+            ->select('id', 'title')
+            ->get();
 
-        return Inertia::render('Films/Films', ['films' => $query]);
+        return Inertia::render('Films/Films', ['films' => $queryFilms]);
     }
 }

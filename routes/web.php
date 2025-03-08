@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\Cover\PostCoverController;
 use App\Http\Controllers\Admin\Film\LikesFilmContoller;
 use App\Http\Controllers\Admin\User\ChangeUserRoleUserController;
 use App\Http\Controllers\Admin\User\CreateUserController;
@@ -106,6 +107,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('admin/users/{userId}/toogle-activation', ToggleActivationUserController::class)->name('admin.users.toggle.activation');
 
     Route::delete('admin/users/{userId}/destroy', DestroyUserController::class)->name('admin.users.destroy');
+
+    Route::post('admin/covers/post',PostCoverController::class )->name('admin.covers.post');
 });
 
 require __DIR__ . '/auth.php';

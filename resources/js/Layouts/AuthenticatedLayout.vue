@@ -131,7 +131,7 @@
             </header>
 
             <!-- Page Content -->
-            <main class="mx-16">
+            <main class="mx-10 sm:mx-16 md:mx-16">
                 <slot />
             </main>
         </div>

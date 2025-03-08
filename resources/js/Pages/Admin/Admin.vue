@@ -4,7 +4,7 @@
 
         <div class="flex justify-around">
             <div @click="goToViewFilms()"
-                class="card bg-base-200 w-96 shadow-sm hover:cursor-pointer hover:bg-base-300">
+                class="card bg-base-100 w-96 shadow-sm hover:cursor-pointer hover:bg-base-200">
                 <div class="card-body">
                     <div class="flex justify-between">
                         <div class="flex gap-1 text-lg">
@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div @click="goToViewGenders()"
-                class="card bg-base-200 w-96 shadow-sm hover:cursor-pointer hover:bg-base-300">
+                class="card bg-base-100 w-96 shadow-sm hover:cursor-pointer hover:bg-base-200">
                 <div class="card-body">
                     <div class="flex justify-between">
                         <div class="flex gap-1 text-lg">
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div @click="goToViewUsers()"
-                class="card bg-base-200 w-96 shadow-sm hover:cursor-pointer hover:bg-base-300">
+                class="card bg-base-100 w-96 shadow-sm hover:cursor-pointer hover:bg-base-200">
                 <div class="card-body">
                     <div class="flex justify-between">
                         <div class="flex gap-1 text-lg">

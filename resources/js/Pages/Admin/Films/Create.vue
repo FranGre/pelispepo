@@ -5,7 +5,7 @@
     <AuthenticatedLayout>
         <H1 text="Películas" />
 
-        <form @submit.prevent="submit" enctype="multipart/form-data" class="mx-32">
+        <form @submit.prevent="submit" enctype="multipart/form-data">
             <div role="alert" class="alert mb-6">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                     class="stroke-info h-6 w-6 shrink-0">
@@ -15,53 +15,67 @@
                 <span>No clickes en Crear hasta que la película se haya subido</span>
             </div>
 
-            <div>
+            <div class="columns-2 gap-10 mb-6">
                 <div>
                     <Label text="Pelicula" />
-                    <file-pond name="film" ref="pond" required="true" chunkUploads="true" :server="{
-                        process: {
-                            url: route('admin.films.post'),
-                            method: 'POST',
-                            headers: {
-                                'X-CSRF-TOKEN': props.csrfToken
+                    <file-pond name="film" ref="pond" required="true" chunkUploads="true"
+                        labelIdle='Arrastra la pelicula o <span class="filepond--label-action"> Buscala </span>'
+                        :server="{
+                            process: {
+                                url: route('admin.films.post'),
+                                method: 'POST',
+                                headers: {
+                                    'X-CSRF-TOKEN': props.csrfToken
+                                }
+                            },
+                            patch: {
+                                url: route('admin.films.patch', { id: 'a893bdcb-6214-4a01-a107-7a9931d2ce81' }),
+                                method: 'PATCH',
+                                headers: {
+                                    'X-CSRF-TOKEN': props.csrfToken
+                                }
                             }
-                        },
-                        patch: {
-                            url: route('admin.films.patch', { id: 'a893bdcb-6214-4a01-a107-7a9931d2ce81' }),
-                            method: 'PATCH',
-                            headers: {
-                                'X-CSRF-TOKEN': props.csrfToken
+                        }"></file-pond>
+                </div>
+
+                <div class="form-control">
+                    <Label text="Título" />
+                    <InputText v-model="form.title" class="w-96" />
+                    <InputError :message="form.errors.title"></InputError>
+                </div>
+
+                <div class="form-control mt-6">
+                    <Label text="Fecha lanzamiento" />
+                    <input type="date" class="input w-44" v-model="form.release_date">
+                    <InputError :message="form.errors.release_date"></InputError>
+                </div>
+
+                <div>
+                    <Label text="Portada" />
+                    <file-pond name="cover" required="true" allowFileTypeValidation="true"
+                        acceptedFileTypes="['image/webp']" labelFileTypeNotAllowed="Extensión inválida"
+                        fileValidateTypeLabelExpectedTypesMap="{ 'image/webp': '.webp' }"
+                        fileValidateTypeLabelExpectedTypes='Se esperaba .webp'
+                        labelIdle='Arrastra la portada o <span class="filepond--label-action"> Buscala </span>' :server="{
+                            process: {
+                                url: route('admin.covers.post'),
+                                method: 'POST',
+                                headers: {
+                                    'X-CSRF-TOKEN': props.csrfToken
+                                }
                             }
-                        }
-                    }"></file-pond>
+                        }">
+                    </file-pond>
+                </div>
+
+                <div>
+                    <Label text="Descripción" />
+                    <Textarea v-model="form.description" class="h-40" />
+                    <InputError :message="form.errors.description"></InputError>
                 </div>
             </div>
 
-            <div class="grid grid-flow-col grid-rows-2 mt-6">
-                <div class="row-span-2">
-                    <div class="form-control">
-                        <Label text="Título" />
-                        <InputText v-model="form.title" class="w-96" />
-                        <InputError :message="form.errors.title"></InputError>
-                    </div>
-
-                    <div class="form-control mt-6">
-                        <Label text="Fecha lanzamiento" />
-                        <input type="date" class="input w-44" v-model="form.release_date">
-                        <InputError :message="form.errors.release_date"></InputError>
-                    </div>
-                </div>
-
-                <div class="row-span-2">
-                    <div>
-                        <Label text="Descripción" />
-                        <Textarea v-model="form.description" class="h-40" />
-                        <InputError :message="form.errors.description"></InputError>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-6">
+            <div>
                 <Label text="Generos" />
                 <GenderTag v-for="gender in props.genders" :key="gender.id" :gender="gender" @click="handleGender"
                     :is-selected="form.selectedGenderIds.includes(gender.id)"></GenderTag>
@@ -85,6 +99,7 @@ import { Gender } from '@/types/Gender';
 import { useForm } from '@inertiajs/vue3';
 import vueFilePond from 'vue-filepond';
 import 'filepond/dist/filepond.min.css';
+import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 import InputText from '@/Components/InputText.vue';
 import BtnSave from '@/Components/Buttons/BtnSave.vue';
 import Textarea from '@/Components/Textarea.vue';
@@ -111,7 +126,7 @@ const form = useForm({
     user_id: props.user_id
 });
 
-const FilePond = vueFilePond();
+const FilePond = vueFilePond(FilePondPluginFileValidateType);
 
 const handleGender = (genderId: string) => {
     if (form.selectedGenderIds.includes(genderId)) {

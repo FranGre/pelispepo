@@ -31,13 +31,13 @@
                 <div class="row-span-2">
                     <div class="form-control">
                         <Label text="Título" />
-                        <InputText v-model="film.title" class="w-96" />
+                        <InputText v-model="form.title" class="w-96" />
                         <InputError :message="form.errors.title"></InputError>
                     </div>
 
                     <div class="form-control mt-6">
                         <Label text="Fecha lanzamiento" />
-                        <input type="date" class="input w-44" v-model="film.release_date">
+                        <input type="date" class="input w-44" v-model="form.release_date">
                         <InputError :message="form.errors.release_date"></InputError>
                     </div>
                 </div>

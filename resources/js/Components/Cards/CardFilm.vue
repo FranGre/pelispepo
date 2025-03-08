@@ -3,7 +3,7 @@
         @click="handleClick">
 
         <div class="max-h-54 relative">
-            <small class="badge absolute top-2 left-2">{{ props.film.release_date }}</small>
+            <small class="badge absolute top-2 left-2">{{ new Date(props.film.release_date).getFullYear() }}</small>
             <img alt="cover" :src="src" class="h-full w-full rounded-t-2xl">
         </div>
 

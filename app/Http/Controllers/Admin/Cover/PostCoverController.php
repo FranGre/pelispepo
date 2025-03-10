@@ -22,9 +22,11 @@ class PostCoverController extends Controller
     {
         $file = $request->file('cover');
 
-        if (!$file->extension() == 'webp') {
-            return response('Solo se permite la extensión .webp', 400);
+        if ($file->extension() != 'webp') {
+            return response('Solo se admiten .webp', 400);
         }
+
+        // validar le size del file
 
         $temporalPath = $this->coverTemporaryStorageService->temporalPath;
 

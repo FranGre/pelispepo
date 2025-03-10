@@ -16,14 +16,16 @@ class DestroyFilmController extends Controller
         DB::table('film_user_likes')->where('film_id', '=', $filmId)->delete();
         DB::table('film_user_favorites')->where('film_id', '=', $filmId)->delete();
 
-        $cover = Cover::where('film_id', '=', $filmId)->firstOrFail();
 
-        // remove cover local
-        $coversFolder = public_path('storage/covers');
-        $coverPath = glob("$coversFolder/$cover->id.*");
-        File::delete($coverPath);
+        $cover = Cover::where('film_id', '=', $filmId)->first();
 
-        $cover->delete();
+        if ($cover) {
+            // remove cover local
+            $coversFolder = public_path('storage/covers');
+            $coverPath = glob("$coversFolder/$cover->id.*");
+            File::delete($coverPath);
+            $cover->delete();
+        }
 
         $film = Film::find($filmId);
         // remove film local

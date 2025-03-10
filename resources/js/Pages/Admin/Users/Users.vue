@@ -1,89 +1,86 @@
 <template>
     <AuthenticatedLayout>
-        <div class="mx-20">
+        <H1 text="Usuarios" />
 
-            <H1 text="Usuarios" />
-
-            <div class="flex justify-between mb-8">
-                <BtnPrimary @click="goToCreate()" class="text-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M12 5l0 14" />
-                        <path d="M5 12l14 0" />
-                    </svg> Usuario
-                </BtnPrimary>
-
-                <div class="flex">
-                    <Label text="Roles" />
-                    <select class="select" v-model="searchForm.role" @change="search()">
-                        <option value="">Todos</option>
-                        <option v-for="role in props.roles" :key="role.id" :value="role.id">{{ role.name }}</option>
-                    </select>
-                </div>
-
-                <div class="flex">
-                    <InputText v-model="searchForm.search" />
-                    <BtnSearch @click="search()"> </BtnSearch>
-                </div>
-            </div>
-
-            <div v-if="props.users.length == 0" class="flex justify-center items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+        <div class="flex justify-between mb-8">
+            <BtnPrimary @click="goToCreate()" class="text-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="icon icon-tabler icons-tabler-outline icon-tabler-mood-empty">
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-plus">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
-                    <path d="M9 10l.01 0" />
-                    <path d="M15 10l.01 0" />
-                    <path d="M9 15l6 0" />
-                </svg>
-                <H2 text="No hay usuarios" />
+                    <path d="M12 5l0 14" />
+                    <path d="M5 12l14 0" />
+                </svg> Usuario
+            </BtnPrimary>
+
+            <div class="flex">
+                <Label text="Roles" />
+                <select class="select" v-model="searchForm.role" @change="search()">
+                    <option value="">Todos</option>
+                    <option v-for="role in props.roles" :key="role.id" :value="role.id">{{ role.name }}</option>
+                </select>
             </div>
 
-            <div v-else>
-                <div class="overflow-x-auto">
-                    <table class="table text-lg text-center">
-                        <thead class="text-lg font-bold">
-                            <tr>
-                                <th>Nombre</th>
-                                <th>Activo</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th>Likes</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="bg-base-200" v-for="user in props.users" :key="user.id">
-                                <td>{{ user.name }}</td>
-                                <td>
-                                    <Toggle v-model="user.is_activated" @update:model-value="handleActivated(user.id)">
-                                    </Toggle>
-                                </td>
-                                <td>{{ user.email }}</td>
-                                <td>
-                                    <select class="select" @change="changeUserRole(user.id, $event.target.value)">
-                                        <option v-for="role in props.roles" :key="role.id"
-                                            :selected="role.id == user.role_id" :value="role.id">{{ role.name }}
-                                        </option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <button type="button" class="link link-hover" @click="goToViewUserLikes(user.id)"
-                                        v-if="user.films_likes_count >= 1">
-                                        {{ user.films_likes_count }}
-                                    </button>
+            <div class="flex">
+                <InputText v-model="searchForm.search" />
+                <BtnSearch @click="search()"> </BtnSearch>
+            </div>
+        </div>
 
-                                    <p v-else>0</p>
-                                </td>
-                                <td>
-                                    <BtnRemove @click="remove(user.id)" />
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <div v-if="props.users.length == 0" class="flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-mood-empty">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                <path d="M9 10l.01 0" />
+                <path d="M15 10l.01 0" />
+                <path d="M9 15l6 0" />
+            </svg>
+            <H2 text="No hay usuarios" />
+        </div>
+
+        <div v-else>
+            <div class="overflow-x-auto">
+                <table class="table text-lg text-center">
+                    <thead class="text-lg font-bold">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Activo</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Likes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-base-200" v-for="user in props.users" :key="user.id">
+                            <td>{{ user.name }}</td>
+                            <td>
+                                <Toggle v-model="user.is_activated" @update:model-value="handleActivated(user.id)">
+                                </Toggle>
+                            </td>
+                            <td>{{ user.email }}</td>
+                            <td>
+                                <select class="select" @change="changeUserRole(user.id, $event.target.value)">
+                                    <option v-for="role in props.roles" :key="role.id"
+                                        :selected="role.id == user.role_id" :value="role.id">{{ role.name }}
+                                    </option>
+                                </select>
+                            </td>
+                            <td>
+                                <button type="button" class="link link-hover" @click="goToViewUserLikes(user.id)"
+                                    v-if="user.films_likes_count >= 1">
+                                    {{ user.films_likes_count }}
+                                </button>
+
+                                <p v-else>0</p>
+                            </td>
+                            <td>
+                                <BtnRemove @click="remove(user.id)" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </AuthenticatedLayout>

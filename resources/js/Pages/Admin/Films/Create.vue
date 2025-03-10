@@ -52,9 +52,9 @@
 
                 <div>
                     <Label text="Portada" />
-                    <file-pond name="cover" required="true" allowFileTypeValidation="true"
-                        acceptedFileTypes="['image/webp']" labelFileTypeNotAllowed="Extensión inválida"
-                        fileValidateTypeLabelExpectedTypesMap="{ 'image/webp': '.webp' }"
+                    <file-pond name="cover" required="true" allowFileTypeValidation="false"
+                        :acceptedFileTypes="['image/webp']" labelFileTypeNotAllowed="Extensión inválida"
+                        :fileValidateTypeLabelExpectedTypesMap="{ 'image/webp': '.webp' }"
                         fileValidateTypeLabelExpectedTypes='Se esperaba .webp'
                         labelIdle='Arrastra la portada o <span class="filepond--label-action"> Buscala </span>' :server="{
                             process: {

@@ -40,6 +40,7 @@ class StoreFilmController extends Controller
         $film->genders()->attach($request->input('selectedGenderIds'));
 
         // film
+        /*
         if (File::allFiles($this->filmTemporaryStorageService->temporalPath)[0] != null) {
             $filmTemporalPath = $this->filmTemporaryStorageService->temporalPath;
             $filmAbsolutePath = File::allFiles($filmTemporalPath)[0];
@@ -68,6 +69,7 @@ class StoreFilmController extends Controller
             $coverFilename = $cover->id . "." . $coverAbsolutePath->getExtension();
             File::move($coverAbsolutePath, $coverDefinitePath . "/$coverFilename");
         }
+        */
 
 
         return redirect(route('admin.films.index'));

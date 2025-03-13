@@ -61,7 +61,7 @@
                             </td>
                             <td>{{ user.email }}</td>
                             <td>
-                                <select class="select" @change="changeUserRole(user.id, $event.target.value)">
+                                <select class="select" @change="changeUserRole(user.id, $event.target?.value)">
                                     <option v-for="role in props.roles" :key="role.id"
                                         :selected="role.id == user.role_id" :value="role.id">{{ role.name }}
                                     </option>

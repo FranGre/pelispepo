@@ -115,12 +115,12 @@ function search() {
     searchForm.get(route('admin.users.index'))
 }
 
-function changeUserRole(userId: number, roleId: string) {
+function changeUserRole(userId: string, roleId: string) {
     const form = useForm({ userId, roleId })
     form.patch(route('admin.users.change.role'))
 }
 
-function goToViewUserLikes(userId: number) {
+function goToViewUserLikes(userId: string) {
     router.visit(route('admin.users.likes', userId))
 }
 

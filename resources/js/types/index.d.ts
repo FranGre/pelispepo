@@ -1,10 +1,13 @@
+import { Role } from "./Role";
+
 export interface User {
     films_likes_count: number;
     id: number;
     name: string;
     email: string;
     email_verified_at?: string;
-    is_activated: boolean
+    is_activated: boolean,
+    role: Role
 }
 
 export type PageProps<

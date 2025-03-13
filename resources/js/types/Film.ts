@@ -1,3 +1,6 @@
+import { User } from ".";
+import { Cover } from "./cover";
+
 export interface Film {
     id: string,
     user_id: number,
@@ -5,5 +8,7 @@ export interface Film {
     description: string,
     release_date: Date,
     is_activated: boolean,
-    likes_count: number
+    likes_count: number,
+    cover: Cover,
+    creator: User
 }

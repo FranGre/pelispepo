@@ -18,7 +18,7 @@
             <div class="columns-2 gap-10 mb-6">
                 <div>
                     <Label text="Pelicula" />
-                    <file-pond name="film" ref="pond" required="true" chunkUploads="true"
+                    <file-pond name="film" ref="pond" chunkUploads="true"
                         labelIdle='Arrastra la pelicula o <span class="filepond--label-action"> Buscala </span>'
                         :server="{
                             process: {
@@ -52,8 +52,8 @@
 
                 <div>
                     <Label text="Portada" />
-                    <file-pond name="cover" required="true" allowFileTypeValidation="false"
-                        :acceptedFileTypes="['image/webp']" labelFileTypeNotAllowed="Extensión inválida"
+                    <file-pond name="cover" allowFileTypeValidation="false" :acceptedFileTypes="['image/webp']"
+                        labelFileTypeNotAllowed="Extensión inválida"
                         :fileValidateTypeLabelExpectedTypesMap="{ 'image/webp': '.webp' }"
                         fileValidateTypeLabelExpectedTypes='Se esperaba .webp'
                         labelIdle='Arrastra la portada o <span class="filepond--label-action"> Buscala </span>' :server="{
@@ -122,7 +122,7 @@ const form = useForm({
     description: '',
     release_date: '',
     selectedGenderIds: [] as string[],
-    film: null,
+    film: '',
     user_id: props.user_id
 });
 

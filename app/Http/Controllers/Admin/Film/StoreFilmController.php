@@ -40,30 +40,35 @@ class StoreFilmController extends Controller
         $film->genders()->attach($request->input('selectedGenderIds'));
 
         // film
-        $filmTemporalPath = $this->filmTemporaryStorageService->temporalPath;
-        $filmAbsolutePath = File::allFiles($filmTemporalPath)[0];
-        $filmDefinitePath = $this->filmStorageService->definitivePath;
+        if (File::allFiles($this->filmTemporaryStorageService->temporalPath)[0] != null) {
+            $filmTemporalPath = $this->filmTemporaryStorageService->temporalPath;
+            $filmAbsolutePath = File::allFiles($filmTemporalPath)[0];
+            $filmDefinitePath = $this->filmStorageService->definitivePath;
 
-        if (!File::exists($filmDefinitePath)) {
-            File::makeDirectory($filmDefinitePath);
+            if (!File::exists($filmDefinitePath)) {
+                File::makeDirectory($filmDefinitePath);
+            }
+            $filmExtension = pathinfo($filmAbsolutePath, PATHINFO_EXTENSION);
+            $filmFilename = "$film->id.$filmExtension";
+            //Storage::move($film, $definitePath);
+            File::move($filmAbsolutePath, $filmDefinitePath . "/$filmFilename");
         }
-        $filmExtension = pathinfo($filmAbsolutePath, PATHINFO_EXTENSION);
-        $filmFilename = "$film->id.$filmExtension";
-        //Storage::move($film, $definitePath);
-        File::move($filmAbsolutePath, $filmDefinitePath . "/$filmFilename");
 
         // cover
-        $coverTemporalPath = $this->coverTemporaryStorageService->temporalPath;
-        $coverAbsolutePath = File::allFiles($coverTemporalPath)[0];
-        $coverDefinitePath = $this->coverStorageService->definitivePath;
+        if (File::allFiles($this->coverTemporaryStorageService->temporalPath)[0] != null) {
+            $coverTemporalPath = $this->coverTemporaryStorageService->temporalPath;
+            $coverAbsolutePath = File::allFiles($coverTemporalPath)[0];
+            $coverDefinitePath = $this->coverStorageService->definitivePath;
 
-        if (!File::exists($coverDefinitePath)) {
-            File::makeDirectory($coverDefinitePath);
+            if (!File::exists($coverDefinitePath)) {
+                File::makeDirectory($coverDefinitePath);
+            }
+
+            $cover = Cover::create(['film_id' => $film->id, 'original_file_name' => $coverAbsolutePath->getFilename(), 'extension' => $coverAbsolutePath->getExtension()]);
+            $coverFilename = $cover->id . "." . $coverAbsolutePath->getExtension();
+            File::move($coverAbsolutePath, $coverDefinitePath . "/$coverFilename");
         }
 
-        $cover = Cover::create(['film_id' => $film->id, 'original_file_name' => $coverAbsolutePath->getFilename(), 'extension' => $coverAbsolutePath->getExtension()]);
-        $coverFilename = $cover->id . "." . $coverAbsolutePath->getExtension();
-        File::move($coverAbsolutePath, $coverDefinitePath . "/$coverFilename");
 
         return redirect(route('admin.films.index'));
     }

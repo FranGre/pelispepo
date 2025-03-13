@@ -20,7 +20,7 @@ const props = defineProps<{
     film: Film
 }>()
 
-const src = `storage/covers/${props.film.cover.id}.${props.film.cover.extension}`
+const src = `storage/covers/${props.film.cover?.id}.${props.film.cover?.extension}`
 
 const emit = defineEmits(['click'])
 

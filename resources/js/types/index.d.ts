@@ -1,7 +1,7 @@
 import { Role } from "./Role";
 
 export interface User {
-    films_likes_count: string;
+    films_likes_count: number;
     id: number;
     role_id: string;
     name: string;

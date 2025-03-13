@@ -1,5 +1,5 @@
 import { User } from ".";
-import { Cover } from "./cover";
+import {Cover} from "./Cover";
 
 export interface Film {
     id: string,

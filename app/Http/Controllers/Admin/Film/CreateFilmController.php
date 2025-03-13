@@ -27,13 +27,13 @@ class CreateFilmController extends Controller
         if (File::exists($temporalFilmPath)) {
             File::deleteDirectory($temporalFilmPath);
         }
-        File::makeDirectory($temporalFilmPath);
+        File::makeDirectory($temporalFilmPath, 755, true);
 
         $temporalCoverPath = $this->coverTemporaryStorageService->temporalPath;
         if (File::exists($temporalCoverPath)) {
             File::deleteDirectory($temporalCoverPath);
         }
-        File::makeDirectory($temporalCoverPath);
+        File::makeDirectory($temporalCoverPath, 755, true);
 
         $genders = Gender::select('id', 'name')->get();
         $csrfToken = csrf_token();

@@ -24,7 +24,7 @@
 
                 <div class="form-control">
                     <Label text="Rol" />
-                    <select class="select" @change="handleRole($event.target?.value)">
+                    <select class="select" @change="handleRole(($event.target as HTMLSelectElement).value)">
                         <option value="">Escoga un rol</option>
                         <option v-for="role in props.roles" :key="role.id" :value="role.id">{{ role.name }}</option>
                     </select>

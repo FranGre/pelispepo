@@ -23,6 +23,7 @@ class CreateFilmController extends Controller
 
     public function __invoke(): Response
     {
+        /*
         $temporalFilmPath = $this->filmTemporaryStorageService->temporalPath;
         if (File::exists($temporalFilmPath)) {
             File::deleteDirectory($temporalFilmPath);
@@ -34,6 +35,7 @@ class CreateFilmController extends Controller
             File::deleteDirectory($temporalCoverPath);
         }
         File::makeDirectory($temporalCoverPath, 755, true);
+        */
 
         $genders = Gender::select('id', 'name')->get();
         $csrfToken = csrf_token();

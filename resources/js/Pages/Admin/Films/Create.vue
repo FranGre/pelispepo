@@ -17,6 +17,12 @@
 
             <div class="columns-2 gap-10 mb-6">
                 <div>
+                    <Label text="URL" />
+                    <InputText v-model="form.url" />
+                    <InputError :message="form.errors.url"></InputError>
+                </div>
+                <!--
+                <div>
                     <Label text="Pelicula" />
                     <file-pond name="film" ref="pond" chunkUploads="true"
                         labelIdle='Arrastra la pelicula o <span class="filepond--label-action"> Buscala </span>'
@@ -37,6 +43,7 @@
                             }
                         }"></file-pond>
                 </div>
+                -->
 
                 <div class="form-control">
                     <Label text="Título" />
@@ -50,6 +57,7 @@
                     <InputError :message="form.errors.release_date"></InputError>
                 </div>
 
+                <!-- 
                 <div>
                     <Label text="Portada" />
                     <file-pond name="cover" allowFileTypeValidation="false" :acceptedFileTypes="['image/webp']"
@@ -67,6 +75,7 @@
                         }">
                     </file-pond>
                 </div>
+                -->
 
                 <div>
                     <Label text="Descripción" />
@@ -97,9 +106,9 @@
 import InputError from '@/Components/InputError.vue';
 import { Gender } from '@/types/Gender';
 import { useForm } from '@inertiajs/vue3';
-import vueFilePond from 'vue-filepond';
-import 'filepond/dist/filepond.min.css';
-import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
+//import vueFilePond from 'vue-filepond';
+//import 'filepond/dist/filepond.min.css';
+//import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type';
 import InputText from '@/Components/InputText.vue';
 import BtnSave from '@/Components/Buttons/BtnSave.vue';
 import Textarea from '@/Components/Textarea.vue';
@@ -122,11 +131,12 @@ const form = useForm({
     description: '',
     release_date: '',
     selectedGenderIds: [] as string[],
+    url: '',
     film: '',
     user_id: props.user_id
 });
 
-const FilePond = vueFilePond(FilePondPluginFileValidateType);
+//const FilePond = vueFilePond(FilePondPluginFileValidateType);
 
 const handleGender = (genderId: string) => {
     if (form.selectedGenderIds.includes(genderId)) {

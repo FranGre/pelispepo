@@ -30,6 +30,7 @@ class StoreFilmRequest extends FormRequest
             'description' => 'required|string|max:600',
             'release_date' => "nullable|date|after:1950-01-01|before_or_equal:$maxDate",
             'is_activated' => 'required|boolean',
+            'url' => 'required|string',
             'selectedGenderIds' => 'nullable|array',
             'selectedGenderIds.*' => 'uuid'
         ];

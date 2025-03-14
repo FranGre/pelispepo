@@ -12,11 +12,11 @@ class WatchFilmController extends Controller
 {
     public function __invoke(string $filmId): Response
     {
-        $film = Film::select('id', 'title', 'description', 'release_date')->find($filmId);
-        $filmsFolder = public_path('storage/films');
-        $filmPath = glob("$filmsFolder/$film->id.*");
+        $film = Film::select('id', 'title', 'url', 'description', 'release_date')->find($filmId);
+        //$filmsFolder = public_path('storage/films');
+        //$filmPath = glob("$filmsFolder/$film->id.*");
 
-        $filmUrl = asset('storage/films/' . basename($filmPath[0]));
+        //$filmUrl = asset('storage/films/' . basename($filmPath[0]));
 
         $likesCounter = (int) $film->likes()->count();
         $like = DB::table('film_user_likes')->where('film_id', '=', $filmId)->where('user_id', '=', auth()->id())->first();
@@ -32,6 +32,6 @@ class WatchFilmController extends Controller
             $hasFavorite = false;
         }
 
-        return Inertia::render('Films/Watch', ['film' => $film, 'path' => $filmUrl, 'likesCounter' => $likesCounter, 'hasLike' => $hasLike, 'hasFavorite' => $hasFavorite]);
+        return Inertia::render('Films/Watch', ['film' => $film, 'likesCounter' => $likesCounter, 'hasLike' => $hasLike, 'hasFavorite' => $hasFavorite]);
     }
 }

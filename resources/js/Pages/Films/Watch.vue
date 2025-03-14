@@ -58,7 +58,7 @@
             </div>
 
             <div class="flex justify-center">
-                <video :src="path" controls="true" class="aspect-video"></video>
+                <iframe :src="film.url" width="1024" height="768" allow="autoplay" class="aspect-video"></iframe>
             </div>
 
         </div>
@@ -73,11 +73,12 @@ import { useForm } from '@inertiajs/vue3';
 
 const props = defineProps<{
     film: Film,
-    path: string,
     likesCounter: number,
     hasLike: boolean,
     hasFavorite: boolean
 }>();
+
+console.log(props.film.url)
 
 const form = useForm({
     filmId: props.film.id

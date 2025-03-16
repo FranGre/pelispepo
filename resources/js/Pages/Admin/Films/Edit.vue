@@ -28,18 +28,19 @@
                 }"></file-pond>
             </div>
             -->
-            <div>
-                <Label text="Url" />
-                <InputText v-model="form.url" />
-                <InputError :message="form.errors.url"></InputError>
-            </div>
 
-            <div class="grid grid-flow-col grid-rows-2 mt-6">
-                <div class="row-span-2">
+            <div class="grid grid-cols-2 gap-10 mb-6">
+                <div>
                     <div class="form-control">
                         <Label text="Título" />
-                        <InputText v-model="form.title" class="w-96" />
+                        <InputText v-model="form.title" />
                         <InputError :message="form.errors.title"></InputError>
+                    </div>
+
+                    <div class="form-control">
+                        <Label text="URL" />
+                        <InputText v-model="form.url" />
+                        <InputError :message="form.errors.url"></InputError>
                     </div>
 
                     <div class="form-control mt-6">
@@ -49,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="row-span-2">
+                <div>
                     <div>
                         <Label text="Descripción" />
                         <Textarea v-model="form.description" class="h-40" />

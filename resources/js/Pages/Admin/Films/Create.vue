@@ -6,21 +6,7 @@
         <H1 text="Películas" />
 
         <form @submit.prevent="submit" enctype="multipart/form-data">
-            <div role="alert" class="alert mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    class="stroke-info h-6 w-6 shrink-0">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <span>No clickes en Crear hasta que la película se haya subido</span>
-            </div>
-
-            <div class="columns-2 gap-10 mb-6">
-                <div>
-                    <Label text="URL" />
-                    <InputText v-model="form.url" />
-                    <InputError :message="form.errors.url"></InputError>
-                </div>
+            <div class="grid grid-cols-2 gap-10 mb-6">
                 <!--
                 <div>
                     <Label text="Pelicula" />
@@ -44,17 +30,32 @@
                         }"></file-pond>
                 </div>
                 -->
+                <div>
+                    <div class="form-control">
+                        <Label text="Título" />
+                        <InputText v-model="form.title" />
+                        <InputError :message="form.errors.title"></InputError>
+                    </div>
 
-                <div class="form-control">
-                    <Label text="Título" />
-                    <InputText v-model="form.title" class="w-96" />
-                    <InputError :message="form.errors.title"></InputError>
+                    <div class="form-control">
+                        <Label text="URL" />
+                        <InputText v-model="form.url" />
+                        <InputError :message="form.errors.url"></InputError>
+                    </div>
+
+                    <div class="form-control mt-6">
+                        <Label text="Fecha lanzamiento" />
+                        <input type="date" class="input w-44" v-model="form.release_date">
+                        <InputError :message="form.errors.release_date"></InputError>
+                    </div>
                 </div>
 
-                <div class="form-control mt-6">
-                    <Label text="Fecha lanzamiento" />
-                    <input type="date" class="input w-44" v-model="form.release_date">
-                    <InputError :message="form.errors.release_date"></InputError>
+                <div>
+                    <div>
+                        <Label text="Descripción" />
+                        <Textarea v-model="form.description" class="h-40" />
+                        <InputError :message="form.errors.description"></InputError>
+                    </div>
                 </div>
 
                 <!-- 
@@ -77,11 +78,7 @@
                 </div>
                 -->
 
-                <div>
-                    <Label text="Descripción" />
-                    <Textarea v-model="form.description" class="h-40" />
-                    <InputError :message="form.errors.description"></InputError>
-                </div>
+
             </div>
 
             <div>

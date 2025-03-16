@@ -1,5 +1,5 @@
 <template>
-    <input class="input input-bordered" v-bind="$attrs" :value="modelValue" @input="onInputChange" />
+    <input class="input input-bordered dark:bg-zinc-800" v-bind="$attrs" :value="modelValue" @input="onInputChange" />
 </template>
 
 <script setup lang="ts">

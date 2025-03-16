@@ -1,14 +1,14 @@
 <template>
-    <li class="card rounded-2xl hover:bg-base-200 bg-base-100 w-full h-full max-w-52 max-h-68 shadow-md cursor-pointer text-center"
+    <li class="card rounded-2xl hover:bg-base-200 bg-base-100 dark:bg-zinc-800 dark:hover:bg-zinc-700 w-full h-full max-w-52 max-h-68 shadow-md cursor-pointer text-center"
         @click="handleClick">
 
         <div class="max-h-54 relative">
-            <small class="badge absolute top-2 left-2">{{ new Date(props.film.release_date).getFullYear() }}</small>
+            <small class="badge absolute top-2 left-2 bg-zinc-900 text-white font-thin">{{ new Date(props.film.release_date).getFullYear() }}</small>
             <img alt="cover" :src="src" class="h-full w-full rounded-t-2xl">
         </div>
 
         <div class="py-3">
-            <h2 class="card-title justify-center">{{ film.title }}</h2>
+            <h2 class="card-title justify-center text-white">{{ film.title }}</h2>
         </div>
     </li>
 </template>

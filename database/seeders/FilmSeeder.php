@@ -186,6 +186,24 @@ class FilmSeeder extends Seeder
                 'release_date' => '2023-11-17',
                 'url' => ''
             ],
+            [
+                'id' => (string) Str::uuid(),
+                'user_id' => 1,
+                'is_activated' => false,
+                'title' => 'Un Lugar en Silencio',
+                'description' => 'En un mundo postapocalíptico, criaturas ciegas pero con una audición ultrasensible han llevado a la humanidad al borde de la extinción. La familia Abbott sobrevive en silencio, comunicándose con lenguaje de señas. Sin embargo, cuando Evelyn debe dar a luz, el peligro se intensifica. Mientras luchan por su vida, descubren una forma de combatir a las criaturas.',
+                'release_date' => '2018-04-06',
+                'url' => ''
+            ],
+            [
+                'id' => (string) Str::uuid(),
+                'user_id' => 1,
+                'is_activated' => false,
+                'title' => 'Un Lugar en Silencio: Parte II',
+                'description' => 'Tras la muerte de Lee, Evelyn y sus hijos buscan refugio en un nuevo mundo devastado. En su viaje, encuentran a Emmett, un viejo amigo que ha perdido la esperanza. Regan, la hija sorda, se embarca en una misión para transmitir la debilidad de los monstruos y dar esperanza a los sobrevivientes, mientras la amenaza sigue acechando.',
+                'release_date' => '2021-05-28',
+                'url' => ''
+            ]
         ];
 
         Film::insert($films);

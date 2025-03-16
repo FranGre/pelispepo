@@ -6,8 +6,8 @@
             <p class="text-xl">{{ film.description }}</p>
 
             <div class="stats shadow mb-6 max-w-64 mt-6">
-                <div class="stat cursor-pointer hover:bg-slate-100" @click="handleLike(props.film.id)">
-                    <div class="stat-title">Total Likes</div>
+                <div class="stat cursor-pointer dark:bg-zinc-800 dark:hover:bg-zinc-700 hover:bg-slate-100" @click="handleLike(props.film.id)">
+                    <div class="stat-title">Likes</div>
                     <div class="flex justify-around">
                         <div class="stat-value text-primary">{{ likesCounter }}</div>
                         <div class="stat-figure text-primary">
@@ -32,7 +32,7 @@
                     </div>
                 </div>
 
-                <div class="stat cursor-pointer hover:bg-slate-100" @click="handleFavorite(props.film.id)">
+                <div class="stat cursor-pointer dark:bg-zinc-800 dark:hover:bg-zinc-700 hover:bg-slate-100" @click="handleFavorite(props.film.id)">
                     <div class="stat-title text-center">Favoritos</div>
                     <div class="flex justify-center">
                         <div class="stat-figure text-primary">

@@ -2,7 +2,7 @@
     <AuthenticatedLayout>
         <H1 text="Admin" />
 
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 place-items-center">
             <div @click="goToViewFilms()"
                 class="card bg-base-100 md:max-w-72 lg:max-w-96 w-full shadow-sm hover:cursor-pointer hover:bg-base-200">
                 <div class="card-body">

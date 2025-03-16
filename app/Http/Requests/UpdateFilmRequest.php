@@ -28,6 +28,7 @@ class UpdateFilmRequest extends FormRequest
             'id' => 'required|uuid|exists:films',
             'user_id' => 'required|integer|exists:users,id',
             'title' => 'required|string|max:50',
+            'url' => 'string',
             'description' => 'required|string|max:600',
             'release_date' => "nullable|date|after:1950-01-01|before_or_equal:$maxDate",
             'is_activated' => 'required|boolean',

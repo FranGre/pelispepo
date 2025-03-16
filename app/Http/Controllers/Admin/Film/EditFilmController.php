@@ -20,13 +20,13 @@ class EditFilmController extends Controller
 
     public function __invoke(string $filmId): Response
     {
-        $film = Film::select('id', 'user_id', 'is_activated', 'title', 'description', 'release_date')->findOrFail($filmId);
+        $film = Film::select('id', 'user_id', 'is_activated', 'title', 'url', 'description', 'release_date')->findOrFail($filmId);
         $film->is_activated = $film->is_activated == 1 ? true : false;
         $selectedGenderIds = $film->genders->pluck('id');
         $genders = Gender::select('id', 'name')->get();
-        $hasVideo = glob($this->filmStorageService->definitivePath . "/$film->id.*") != null ? true : false;
+        //$hasVideo = glob($this->filmStorageService->definitivePath . "/$film->id.*") != null ? true : false;
         $csrfToken = csrf_token();
 
-        return Inertia::render('Admin/Films/Edit', ['film' => $film, 'selectedGenderIds' => $selectedGenderIds, 'genders' => $genders, 'hasVideo' => $hasVideo, 'csrfToken' => $csrfToken]);
+        return Inertia::render('Admin/Films/Edit', ['film' => $film, 'selectedGenderIds' => $selectedGenderIds, 'genders' => $genders, 'csrfToken' => $csrfToken]);
     }
 }

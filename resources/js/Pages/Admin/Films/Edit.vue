@@ -2,9 +2,10 @@
 
     <Head title="Films" />
     <AuthenticatedLayout>
-        <form @submit.prevent="submit" enctype="multipart/form-data" class="mx-32">
+        <form @submit.prevent="submit">
             <H1 :text="film.title" />
 
+            <!--
             <div>
                 <Label text="Pelicula" />
                 <BtnRemove v-if="hasVideo" @click="removeVideo(film.id)"></BtnRemove>
@@ -25,6 +26,12 @@
                         }
                     }
                 }"></file-pond>
+            </div>
+            -->
+            <div>
+                <Label text="Url" />
+                <InputText v-model="form.url" />
+                <InputError :message="form.errors.url"></InputError>
             </div>
 
             <div class="grid grid-flow-col grid-rows-2 mt-6">
@@ -92,7 +99,6 @@ const props = defineProps<{
     film: Film,
     selectedGenderIds: string[]
     genders: Gender[],
-    hasVideo: boolean,
     csrfToken: string
 }>();
 
@@ -102,6 +108,7 @@ const form = useForm({
     id: props.film.id,
     user_id: props.film.user_id,
     title: props.film.title,
+    url: props.film.url,
     description: props.film.description,
     selectedGenderIds: props.selectedGenderIds,
     release_date: props.film.release_date,

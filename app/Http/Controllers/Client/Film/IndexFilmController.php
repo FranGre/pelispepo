@@ -16,8 +16,11 @@ class IndexFilmController extends Controller
         $title = $request->query('title');
 
         if ($title) {
-            $queryFilms = $queryFilms->where('title', 'LIKE', "%$title%");
+            $queryFilms = $queryFilms->where('title', 'LIKE', "%$title%")
+                ->orderBy('release_date');
         }
+
+        $queryFilms = $queryFilms->orderBy('title');
 
         $queryFilms = $queryFilms
             ->with([
@@ -25,7 +28,7 @@ class IndexFilmController extends Controller
                     $query->select(['id', 'film_id', 'extension']);
                 }
             ])
-            ->select(['id', 'title', 'release_date'])
+            ->select(['id', 'cover_url', 'title', 'release_date'])
             ->get();
 
         return Inertia::render('Films/Films', ['films' => $queryFilms]);

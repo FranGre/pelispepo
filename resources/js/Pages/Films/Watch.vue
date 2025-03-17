@@ -1,6 +1,6 @@
 <template>
     <AuthenticatedLayout>
-        <div class="mx-32 text-center items-center">
+        <div class="text-center items-center">
             <H1 :text="film.title" />
 
             <p class="text-xl">{{ film.description }}</p>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="flex justify-center">
-                <iframe :src="film.url" width="1024" height="768" allow="autoplay" class="aspect-video"></iframe>
+                <iframe :src="film.url" width="1024" height="768" allowfullscreen="true" allow="autoplay" class="aspect-video"></iframe>
             </div>
 
         </div>

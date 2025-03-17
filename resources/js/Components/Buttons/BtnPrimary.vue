@@ -1,5 +1,5 @@
 <template>
-    <button type="button" class="btn btn-active" v-bind="$attrs" @click="handleClick">
+    <button type="button" class="btn btn-outline" v-bind="$attrs" @click="handleClick">
         <slot></slot>
     </button>
 </template>

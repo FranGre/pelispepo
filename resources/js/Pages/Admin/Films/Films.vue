@@ -46,7 +46,7 @@
 
         <div v-else>
             <div class="overflow-x-auto">
-                <table class="table text-lg text-center">
+                <table class="table text-lg text-center bg-zinc-300 text-black  dark:bg-zinc-700 dark:text-white">
                     <thead class="text-lg font-bold">
                         <tr>
                             <th>Title</th>
@@ -57,8 +57,8 @@
                             <th>Favoritos</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="bg-base-200 hover:bg-base-300" v-for="film in props.films" :key="film.id">
+                    <tbody class="bg-zinc-200 text-black dark:bg-zinc-800 dark:text-white">
+                        <tr class="hover:bg-zinc-400 text-black dark:hover:bg-zinc-600 dark:text-white" v-for="film in props.films" :key="film.id">
                             <td>{{ film.title }}</td>
                             <td>
                                 <Toggle v-model="film.is_activated" @update:model-value="handleActivated(film.id)">

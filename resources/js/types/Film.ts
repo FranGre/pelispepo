@@ -1,11 +1,12 @@
 import { User } from ".";
-import {Cover} from "./Cover";
+import { Cover } from "./Cover";
 
 export interface Film {
     id: string,
     user_id: number,
     title: string,
     url: string,
+    cover_url: string,
     description: string,
     release_date: Date,
     is_activated: boolean,

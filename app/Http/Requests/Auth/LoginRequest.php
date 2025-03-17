@@ -41,7 +41,7 @@ class LoginRequest extends FormRequest
     public function authenticate(): void
     {
         $this->ensureIsNotRateLimited();
-        $is_activated = User::where('email', '=', $this->only('email'))->pluck('is_activated')->firstOrFail();
+        $is_activated = User::where('email', '=', $this->only('email'))->pluck('is_activated')->first();
 
         if (!$is_activated) {
             throw ValidationException::withMessages([

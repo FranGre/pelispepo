@@ -38,9 +38,15 @@
                     </div>
 
                     <div class="form-control">
-                        <Label text="URL" />
+                        <Label text="Película URL" />
                         <InputText v-model="form.url" />
                         <InputError :message="form.errors.url"></InputError>
+                    </div>
+
+                    <div class="form-control">
+                        <Label text="Portada URL" />
+                        <InputText v-model="form.cover_url" />
+                        <InputError :message="form.errors.cover_url"></InputError>
                     </div>
 
                     <div class="form-control mt-6">
@@ -129,6 +135,7 @@ const form = useForm({
     release_date: '',
     selectedGenderIds: [] as string[],
     url: '',
+    cover_url: '',
     film: '',
     user_id: props.user_id
 });

@@ -18,7 +18,7 @@ class WatchFilmController extends Controller
 
         //$filmUrl = asset('storage/films/' . basename($filmPath[0]));
 
-        $likesCounter = (int) $film->likes()->count();
+        //$likesCounter = (int) $film->likes()->count();
         $like = DB::table('film_user_likes')->where('film_id', '=', $filmId)->where('user_id', '=', auth()->id())->first();
 
         $hasLike = true;
@@ -32,6 +32,6 @@ class WatchFilmController extends Controller
             $hasFavorite = false;
         }
 
-        return Inertia::render('Films/Watch', ['film' => $film, 'likesCounter' => $likesCounter, 'hasLike' => $hasLike, 'hasFavorite' => $hasFavorite]);
+        return Inertia::render('Films/Watch', ['film' => $film, 'likesCounter' => 0, 'hasLike' => $hasLike, 'hasFavorite' => $hasFavorite]);
     }
 }

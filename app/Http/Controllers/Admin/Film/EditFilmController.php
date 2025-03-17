@@ -20,7 +20,7 @@ class EditFilmController extends Controller
 
     public function __invoke(string $filmId): Response
     {
-        $film = Film::select('id', 'user_id', 'is_activated', 'title', 'url', 'description', 'release_date')->findOrFail($filmId);
+        $film = Film::select('id', 'user_id', 'is_activated', 'title', 'url', 'cover_url', 'description', 'release_date')->findOrFail($filmId);
         $film->is_activated = $film->is_activated == 1 ? true : false;
         $selectedGenderIds = $film->genders->pluck('id');
         $genders = Gender::select('id', 'name')->get();

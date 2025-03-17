@@ -15,7 +15,7 @@
 
             <div class="flex">
                 <Label text="Roles" />
-                <select class="select" v-model="searchForm.role" @change="search()">
+                <select class="select bg-info text-black" v-model="searchForm.role" @change="search()">
                     <option value="">Todos</option>
                     <option v-for="role in props.roles" :key="role.id" :value="role.id">{{ role.name }}</option>
                 </select>
@@ -42,7 +42,7 @@
 
         <div v-else>
             <div class="overflow-x-auto">
-                <table class="table text-lg text-center">
+                <table class="table text-lg text-center bg-zinc-300 text-black  dark:bg-zinc-700 dark:text-white">
                     <thead class="text-lg font-bold">
                         <tr>
                             <th>Nombre</th>
@@ -52,8 +52,8 @@
                             <th>Likes</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr class="bg-base-200" v-for="user in props.users" :key="user.id">
+                    <tbody class="bg-zinc-200 text-black dark:bg-zinc-800 dark:text-white">
+                        <tr class="hover:bg-zinc-400 text-black dark:hover:bg-zinc-600 dark:text-white" v-for="user in props.users" :key="user.id">
                             <td>{{ user.name }}</td>
                             <td>
                                 <Toggle v-model="user.is_activated" @update:model-value="handleActivated(user.id)">
@@ -61,7 +61,7 @@
                             </td>
                             <td>{{ user.email }}</td>
                             <td>
-                                <select class="select"
+                                <select class="select bg-info text-black"
                                     @change="changeUserRole(user.id, ($event.target as HTMLSelectElement).value)">
                                     <option v-for="role in props.roles" :key="role.id"
                                         :selected="role.id == user.role_id" :value="role.id">{{ role.name }}

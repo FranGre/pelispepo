@@ -43,6 +43,12 @@
                         <InputError :message="form.errors.url"></InputError>
                     </div>
 
+                    <div class="form-control">
+                        <Label text="Portada URL" />
+                        <InputText v-model="form.cover_url" />
+                        <InputError :message="form.errors.cover_url"></InputError>
+                    </div>
+
                     <div class="form-control mt-6">
                         <Label text="Fecha lanzamiento" />
                         <input type="date" class="input w-44" v-model="form.release_date">
@@ -110,6 +116,7 @@ const form = useForm({
     user_id: props.film.user_id,
     title: props.film.title,
     url: props.film.url,
+    cover_url: props.film.cover_url,
     description: props.film.description,
     selectedGenderIds: props.selectedGenderIds,
     release_date: props.film.release_date,

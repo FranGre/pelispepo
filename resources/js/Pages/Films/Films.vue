@@ -40,12 +40,14 @@ import H1 from '@/Components/Titles/H1.vue';
 import BtnSearch from '@/Components/Buttons/BtnSearch.vue';
 import H2 from '@/Components/Titles/H2.vue';
 
+const urlParams = new URLSearchParams(window.location.search)
+
 const props = defineProps<{
     films: Film[]
 }>();
 
 const form = useForm({
-    title: ''
+    title: urlParams.get('title') || ''
 });
 
 function searchFilms() {

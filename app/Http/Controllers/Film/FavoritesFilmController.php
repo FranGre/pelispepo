@@ -19,9 +19,12 @@ class FavoritesFilmController extends Controller
 
         $search = $request->input('search');
         if ($search) {
-            $filmsQuery = $filmsQuery->where('title', 'LIKE', "%$search%");
+            $filmsQuery = $filmsQuery->where('title', 'LIKE', "%$search%")
+            ->orderBy('release_date');
         }
 
-        return Inertia::render('Films/Favorites', ['films' => $filmsQuery->select(['id', 'title'])->get()]);
+        $filmsQuery = $filmsQuery->orderBy('title');
+
+        return Inertia::render('Films/Favorites', ['films' => $filmsQuery->select(['id', 'title', 'release_date', 'cover_url'])->get()]);
     }
 }

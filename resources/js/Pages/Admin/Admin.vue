@@ -1,4 +1,7 @@
 <template>
+
+    <Head title="PelisPepo"></Head>
+
     <AuthenticatedLayout>
         <H1 text="Admin" />
 
@@ -70,7 +73,7 @@
 <script setup lang="ts">
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
 import H1 from '@/Components/Titles/H1.vue'
-import { router } from '@inertiajs/vue3'
+import { Head, router } from '@inertiajs/vue3'
 
 defineProps({
     filmsCounter: Number,

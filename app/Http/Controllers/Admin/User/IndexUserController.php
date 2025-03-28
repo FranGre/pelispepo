@@ -30,7 +30,7 @@ class IndexUserController extends Controller
 
         $usersQuery = $usersQuery->select(['id', 'role_id', 'name', 'email', 'is_activated'])
             ->withCount([
-                'filmsLikes' => function (Builder $query) {
+                'favoriteFilms' => function (Builder $query) {
                     $query->where('is_activated', true);
                 }
             ])->get();

@@ -8,7 +8,7 @@
                         <div class="flex">
                             <!-- Logo -->
                             <div class="flex shrink-0 items-center">
-                                <Link :href="route('dashboard')">
+                                <Link :href="route('films.index')">
                                 <ApplicationLogo
                                     class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />
                                 </Link>
@@ -17,16 +17,43 @@
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink v-if="page.props.auth.role.name == 'ADMIN'" :href="route('admin')"
-                                    :active="route().current('admin')">
-                                    Admin
+                                    :active="route().current('admin')" class="gap-1">
+                                    <div>
+                                        Admin
+                                    </div>
                                 </NavLink>
 
-                                <NavLink :href="route('films.index')" :active="route().current('films.index')">
-                                    Películas
+                                <NavLink :href="route('films.index')" :active="route().current('films.index')"
+                                    class="gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="icon icon-tabler icons-tabler-outline icon-tabler-device-tv-old">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                                        <path d="M16 3l-4 4l-4 -4" />
+                                        <path d="M15 7v13" />
+                                        <path d="M18 15v.01" />
+                                        <path d="M18 12v.01" />
+                                    </svg>
+                                    <div>
+                                        Películas
+                                    </div>
                                 </NavLink>
 
-                                <NavLink :href="route('films.favorites')" :active="route().current('films.favorites')">
-                                    Favoritas
+                                <NavLink :href="route('films.favorites')" :active="route().current('films.favorites')"
+                                    class="gap-1">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        class="icon icon-tabler icons-tabler-filled icon-tabler-heart">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path
+                                            d="M6.979 3.074a6 6 0 0 1 4.988 1.425l.037 .033l.034 -.03a6 6 0 0 1 4.733 -1.44l.246 .036a6 6 0 0 1 3.364 10.008l-.18 .185l-.048 .041l-7.45 7.379a1 1 0 0 1 -1.313 .082l-.094 -.082l-7.493 -7.422a6 6 0 0 1 3.176 -10.215z" />
+                                    </svg>
+                                    <div>
+                                        Favoritas
+                                    </div>
                                 </NavLink>
                             </div>
                         </div>

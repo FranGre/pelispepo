@@ -1,4 +1,7 @@
 <template>
+
+    <Head title="PelisPepo"></Head>
+
     <AuthenticatedLayout>
         <H1 text="Usuarios" />
 
@@ -49,11 +52,12 @@
                             <th>Activo</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Likes</th>
+                            <th>Pelis Favoritas</th>
                         </tr>
                     </thead>
                     <tbody class="bg-zinc-200 text-black dark:bg-zinc-800 dark:text-white">
-                        <tr class="hover:bg-zinc-400 text-black dark:hover:bg-zinc-600 dark:text-white" v-for="user in props.users" :key="user.id">
+                        <tr class="hover:bg-zinc-400 text-black dark:hover:bg-zinc-600 dark:text-white"
+                            v-for="user in props.users" :key="user.id">
                             <td>{{ user.name }}</td>
                             <td>
                                 <Toggle v-model="user.is_activated" @update:model-value="handleActivated(user.id)">
@@ -70,8 +74,8 @@
                             </td>
                             <td>
                                 <button type="button" class="link link-hover" @click="goToViewUserLikes(user.id)"
-                                    v-if="user.films_likes_count >= 1">
-                                    {{ user.films_likes_count }}
+                                    v-if="user.favorite_films_count >= 1">
+                                    {{ user.favorite_films_count }}
                                 </button>
 
                                 <p v-else>0</p>
@@ -93,7 +97,7 @@ import InputText from '@/Components/InputText.vue'
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue'
 import { User } from '@/types'
 import { Role } from '@/types/Role'
-import { router, useForm } from '@inertiajs/vue3';
+import { Head, router, useForm } from '@inertiajs/vue3';
 import BtnSearch from '@/Components/Buttons/BtnSearch.vue'
 import H2 from '@/Components/Titles/H2.vue'
 import BtnPrimary from '@/Components/Buttons/BtnPrimary.vue'

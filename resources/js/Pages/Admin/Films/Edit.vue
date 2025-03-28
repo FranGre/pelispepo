@@ -1,6 +1,7 @@
 <template>
 
-    <Head title="Films" />
+    <Head title="PelisPepo"></Head>
+
     <AuthenticatedLayout>
         <form @submit.prevent="submit">
             <H1 :text="film.title" />
@@ -87,7 +88,7 @@
 <script setup lang="ts">
 import { Film } from '@/types/Film';
 import { Gender } from '@/types/Gender';
-import { useForm } from '@inertiajs/vue3';
+import { Head, useForm } from '@inertiajs/vue3';
 import vueFilePond from 'vue-filepond';
 import 'filepond/dist/filepond.min.css';
 import InputError from '@/Components/InputError.vue';

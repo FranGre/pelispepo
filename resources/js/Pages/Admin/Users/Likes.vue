@@ -2,8 +2,8 @@
 
     <Head>Películas</Head>
     <AuthenticatedLayout>
-        <H1 text="Películas" />
-        <H2 :text="`que le han gustado a ${props.user.name}`" class="font-light" />
+        <H1 text="Películas" class="mb-3" />
+        <H2 :text="`favoritas de ${props.user.name}`" class="font-light" />
 
         <div class="flex justify-end mb-6">
             <InputText v-model="form.search" />

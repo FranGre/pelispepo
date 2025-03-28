@@ -14,7 +14,7 @@ class LikesUserContoller extends Controller
     public function __invoke(Request $request, $userId)
     {
         $user = User::findOrFail($userId, ['id', 'name']);
-        $idFilmsLikes = DB::table('film_user_likes')->where('user_id', '=', $userId)->select('film_id')->pluck('film_id');
+        $idFilmsLikes = DB::table('film_user_favorites')->where('user_id', '=', $userId)->select('film_id')->pluck('film_id');
 
         $search = $request->input('search');
         $films = Film::where('is_activated', true)->whereIn('id', $idFilmsLikes);
@@ -23,7 +23,7 @@ class LikesUserContoller extends Controller
             $films = $films->where('title', 'LIKE', "%$search%");
         }
 
-        $films = $films->select('id', 'title')->get();
+        $films = $films->select('id', 'title', 'release_date', 'cover_url')->get();
 
         return Inertia::render('Admin/Users/Likes', ['films' => $films, 'user' => $user]);
     }

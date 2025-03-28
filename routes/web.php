@@ -31,6 +31,7 @@ use App\Http\Controllers\Film\FavoritesFilmController;
 use App\Http\Controllers\Film\LikeFilmController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\View\StoreViewController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -84,7 +85,7 @@ Route::middleware('auth')->group(function () {
     Route::post('films/likes', \App\Http\Controllers\Film\LikeFilmController::class)->name('films.like');
     Route::post('films/favorites', FavoriteFilmController::class)->name('films.favorite');
 
-    Route::get('films/favorites', \App\Http\Controllers\Client\Film\FavoriteFilmController::class)->name('films.favorites');
+    //Route::get('films/favorites', \App\Http\Controllers\Client\Film\FavoriteFilmController::class)->name('films.favorites');
 
     Route::delete('admin/films/video/destroy', DestroyVideoController::class)->name('admin.films.video.destroy');
 
@@ -108,7 +109,8 @@ Route::middleware('auth')->group(function () {
 
     Route::delete('admin/users/{userId}/destroy', DestroyUserController::class)->name('admin.users.destroy');
 
-    Route::post('admin/covers/post',PostCoverController::class )->name('admin.covers.post');
+    Route::post('admin/covers/post', PostCoverController::class)->name('admin.covers.post');
+    Route::post('films/views/store', StoreViewController::class)->name('views.store');
 });
 
 require __DIR__ . '/auth.php';

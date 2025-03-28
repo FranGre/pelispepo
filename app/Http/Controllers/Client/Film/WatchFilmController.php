@@ -13,18 +13,6 @@ class WatchFilmController extends Controller
     public function __invoke(string $filmId): Response
     {
         $film = Film::select('id', 'title', 'url', 'description', 'release_date')->find($filmId);
-        //$filmsFolder = public_path('storage/films');
-        //$filmPath = glob("$filmsFolder/$film->id.*");
-
-        //$filmUrl = asset('storage/films/' . basename($filmPath[0]));
-
-        //$likesCounter = (int) $film->likes()->count();
-        $like = DB::table('film_user_likes')->where('film_id', '=', $filmId)->where('user_id', '=', auth()->id())->first();
-
-        $hasLike = true;
-        if ($like == null) {
-            $hasLike = false;
-        }
 
         $favorite = DB::table('film_user_favorites')->where('film_id', '=', $filmId)->where('user_id', '=', auth()->id())->first();
         $hasFavorite = true;
@@ -32,6 +20,8 @@ class WatchFilmController extends Controller
             $hasFavorite = false;
         }
 
-        return Inertia::render('Films/Watch', ['film' => $film, 'likesCounter' => 0, 'hasLike' => $hasLike, 'hasFavorite' => $hasFavorite]);
+        $views_count = DB::table('film_user_views')->where('film_id', '=', $filmId)->count();
+
+        return Inertia::render('Films/Watch', ['film' => $film, 'views_count' => $views_count, 'hasFavorite' => $hasFavorite]);
     }
 }

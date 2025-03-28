@@ -1,0 +1,42 @@
+<?php
+
+namespace Database\Seeders\Film;
+
+use App\Models\Film;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Str;
+
+class LaMujerDeNegro extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $films = [
+            [
+                'id' => (string) Str::uuid(),
+                'user_id' => 1,
+                'is_activated' => false,
+                'title' => 'La mujer de negro',
+                'description' => 'Una joven viuda se enfrenta a fenómenos paranormales mientras trabaja en una mansión remota, donde descubre la presencia de una mujer vestida de negro que causa la muerte de los niños del pueblo.',
+                'release_date' => '2012-02-03',
+                'url' => '',
+                'cover_url' => ''
+            ],
+            [
+                'id' => (string) Str::uuid(),
+                'user_id' => 1,
+                'is_activated' => false,
+                'title' => 'La mujer de negro 2: El ángel de la muerte',
+                'description' => 'Un grupo de personas llega a la mansión, ahora convertida en un refugio para niños durante la Segunda Guerra Mundial. Los horrores del pasado resucitan cuando la presencia de la mujer de negro se desata nuevamente.',
+                'release_date' => '2014-02-13',
+                'url' => '',
+                'cover_url' => ''
+            ]
+        ];
+
+        Film::insert($films);
+    }
+}

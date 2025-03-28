@@ -40,8 +40,10 @@ const props = defineProps<{
     films: Film[]
 }>();
 
+const urlParams = new URLSearchParams(window.location.search)
+
 const form = useForm({
-    search: ''
+    search: urlParams.get('search') || ''
 });
 
 function searchFilms() {

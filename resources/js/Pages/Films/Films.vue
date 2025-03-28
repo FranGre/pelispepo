@@ -1,8 +1,8 @@
 <template>
     <AuthenticatedLayout>
 
-        <Head title="Peliculas"></Head>
-
+        <Head title="PelisPepo"></Head>
+        
         <H1 text="Películas" />
 
         <div class="flex justify-end mb-6">
@@ -33,7 +33,7 @@
 <script setup lang="ts">
 import CardFilm from '@/Components/Cards/CardFilm.vue';
 import { Film } from '@/types/Film';
-import { Link, router, useForm } from '@inertiajs/vue3';
+import { Head, Link, router, useForm } from '@inertiajs/vue3';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import InputText from '@/Components/InputText.vue';
 import H1 from '@/Components/Titles/H1.vue';

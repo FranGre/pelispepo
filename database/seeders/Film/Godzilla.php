@@ -23,7 +23,7 @@ class Godzilla extends Seeder
                 'description' => 'En 1998, Godzilla, un monstruo gigantesco y mutante, llega a Nueva York tras ser despertado por experimentos nucleares. Un equipo de científicos debe encontrar una manera de detener a la criatura antes de que cause más destrucción.',
                 'release_date' => '1998-05-20',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Godzilla+98.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class Godzilla extends Seeder
                 'description' => 'En 2014, una nueva amenaza aparece cuando un antiguo monstruo, Godzilla, resucita después de una catástrofe nuclear. Mientras la humanidad se enfrenta a una amenaza global, un grupo de científicos trata de salvar al mundo.',
                 'release_date' => '2014-05-16',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Godzilla+2014.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -43,7 +43,7 @@ class Godzilla extends Seeder
                 'description' => 'En esta secuela, Godzilla se enfrenta a otras criaturas gigantes, como King Ghidorah, Mothra y Rodan. El mundo está al borde del colapso y el enfrentamiento entre estos titanes podría cambiar el destino de la humanidad.',
                 'release_date' => '2019-05-31',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Godzilla-+Rey+de+los+monstruos.webp'
             ]
         ];
 

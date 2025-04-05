@@ -15,6 +15,7 @@ class DestroyFilmController extends Controller
     {
         DB::table('film_user_likes')->where('film_id', '=', $filmId)->delete();
         DB::table('film_user_favorites')->where('film_id', '=', $filmId)->delete();
+        DB::table('film_user_views')->where('film_id', '=', $filmId)->delete();
 
 
         $cover = Cover::where('film_id', '=', $filmId)->first();

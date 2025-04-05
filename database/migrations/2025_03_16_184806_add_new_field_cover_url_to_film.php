@@ -11,7 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::table('films', function (Blueprint $table) {
-            $table->string('cover_url');
+            $table->string('cover_url', 600);
         });
     }
 };

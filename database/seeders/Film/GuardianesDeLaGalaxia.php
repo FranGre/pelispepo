@@ -23,7 +23,7 @@ class GuardianesDeLaGalaxia extends Seeder
                 'description' => 'Un grupo de inadaptados cósmicos, liderados por Peter Quill, se unen para proteger un artefacto poderoso. A pesar de sus diferencias, se convierten en héroes y deben enfrentarse a un villano que amenaza con destruir el universo.',
                 'release_date' => '2014-08-01',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Guardianes+de+la+galaxia.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class GuardianesDeLaGalaxia extends Seeder
                 'description' => 'Los Guardianes se enfrentan a nuevos desafíos mientras exploran los orígenes de Peter Quill. A medida que surgen conflictos personales, el grupo de héroes debe enfrentarse a nuevas amenazas cósmicas y resolver los misterios de su pasado.',
                 'release_date' => '2017-05-05',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Guardianes+de+la+galaxia+Vol.+2.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -43,7 +43,7 @@ class GuardianesDeLaGalaxia extends Seeder
                 'description' => 'En su última aventura, los Guardianes deben hacer frente a las consecuencias de sus acciones pasadas mientras enfrentan a un enemigo aún más poderoso. El grupo se ve obligado a tomar decisiones difíciles que podrían cambiar sus destinos para siempre.',
                 'release_date' => '2023-05-05',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Guardianes+de+la+galaxia+Vol.+3.webp'
             ]
         ];
 

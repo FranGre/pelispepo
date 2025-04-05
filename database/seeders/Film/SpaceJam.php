@@ -23,7 +23,7 @@ class SpaceJam extends Seeder
                 'description' => 'Michael Jordan se une a los Looney Tunes para salvar a Bugs Bunny y sus amigos de un equipo de extraterrestres, en una mezcla de animación y acción real.',
                 'release_date' => '1996-11-15',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Space+Jam.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class SpaceJam extends Seeder
                 'description' => 'LeBron James se une a los Looney Tunes en una aventura digital en la que debe salvar a su hijo de un algoritmo malvado, mientras compiten en un partido de baloncesto.',
                 'release_date' => '2021-07-16',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Space+Jam-+Nuevas+leyendas.webp'
             ]
         ];
 

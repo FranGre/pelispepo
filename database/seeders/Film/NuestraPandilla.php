@@ -23,7 +23,7 @@ class NuestraPandilla extends Seeder
                 'description' => 'Película de comedia que sigue las travesuras y aventuras de un grupo de niños en un vecindario. A lo largo de la película, los niños enfrentan varios retos y situaciones, mientras mantienen una fuerte amistad.',
                 'release_date' => '1993-07-30',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Nuestra+pandilla.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class NuestraPandilla extends Seeder
                 'description' => 'Secuela que muestra a los niños ahora un poco mayores, enfrentando nuevos desafíos mientras siguen siendo una pandilla unida. La película mantiene el tono de comedia y amistad.',
                 'release_date' => '2005-08-10',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Nuestra+pandilla+2.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -43,7 +43,7 @@ class NuestraPandilla extends Seeder
                 'description' => 'En esta tercera entrega, la pandilla enfrenta nuevos problemas mientras intentan adaptarse a la adolescencia. La película explora temas de crecimiento y cambio, pero siempre con el mismo espíritu de amistad.',
                 'release_date' => '2007-04-01',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Nuestra+pandilla+3.webp'
             ]
         ];
 

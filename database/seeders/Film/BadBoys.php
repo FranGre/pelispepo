@@ -23,7 +23,7 @@ class BadBoys extends Seeder
                 'description' => 'Mike Lowrey y Marcus Burnett son dos detectives de narcóticos de Miami que deben trabajar juntos para resolver un caso de robo de drogas y enfrentarse a una peligrosa banda de criminales.',
                 'release_date' => '1995-04-07',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Bad+Boys.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class BadBoys extends Seeder
                 'description' => 'Mike y Marcus regresan para investigar un nuevo caso relacionado con el tráfico de drogas. La acción y las persecuciones aumentan en esta secuela de la exitosa película de 1995.',
                 'release_date' => '2003-07-18',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Bad+Boys+2.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -43,7 +43,7 @@ class BadBoys extends Seeder
                 'description' => 'Mike y Marcus se ven obligados a reunirse una vez más para enfrentarse a un peligroso cartel de narcotraficantes y lidiar con el envejecimiento, mientras intentan proteger su ciudad y su amistad.',
                 'release_date' => '2020-01-17',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Bad+Boys+for+Life.webp'
             ]
         ];
 

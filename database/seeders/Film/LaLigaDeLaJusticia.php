@@ -23,7 +23,7 @@ class LaLigaDeLaJusticia extends Seeder
                 'description' => 'La Liga de la Justicia debe unirse a los héroes más poderosos de la Tierra, incluidos los miembros de la Liga de la Justicia Oscura, para detener a Darkseid, quien está librando una guerra apocalíptica contra la humanidad.',
                 'release_date' => '2017-10-31',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Liga_de_La_Justicia_Oscura_Apokolips_War.webp'
             ],
         ];
 

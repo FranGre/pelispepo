@@ -23,7 +23,7 @@ class Rambo extends Seeder
                 'description' => 'John Rambo, un veterano de la Guerra de Vietnam, es arrestado en un pequeño pueblo por vagabundeo, lo que provoca una serie de eventos violentos.',
                 'release_date' => '1982-10-22',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Rambo+I.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class Rambo extends Seeder
                 'description' => 'Rambo es liberado de prisión para una misión en Vietnam, con el objetivo de rescatar a prisioneros de guerra estadounidenses.',
                 'release_date' => '1985-05-22',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Rambo+II.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -43,7 +43,7 @@ class Rambo extends Seeder
                 'description' => 'Rambo va a Afganistán para rescatar a su amigo, el teniente coronel Trautman, que ha sido capturado por las fuerzas soviéticas.',
                 'release_date' => '1988-05-25',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Rambo+III.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -53,7 +53,7 @@ class Rambo extends Seeder
                 'description' => 'Rambo, viviendo en Tailandia, ayuda a un grupo de misioneros a rescatar a sus compañeros en Birmania.',
                 'release_date' => '2008-02-22',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Rambo+IV.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -63,7 +63,7 @@ class Rambo extends Seeder
                 'description' => 'Rambo enfrenta a un cartel mexicano de la droga cuando la nieta de una vieja amiga es secuestrada.',
                 'release_date' => '2019-09-20',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Rambo+V-Last+Blood.webp'
             ]
         ];
 

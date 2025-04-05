@@ -23,7 +23,7 @@ class Romace extends Seeder
                 'description' => 'La historia de una relación contada desde la perspectiva de Tom Hansen, quien repasa sus recuerdos con Summer Finn.',
                 'release_date' => '2009-07-17',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/500+di%CC%81as+juntos.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class Romace extends Seeder
                 'description' => 'Nadine, una adolescente complicada, comienza a encontrar un equilibrio en su vida cuando se enfrenta a las dificultades de la adolescencia y las relaciones con su familia y amigos.',
                 'release_date' => '2016-11-18',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Mi+vida+a+los+17.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -53,7 +53,7 @@ class Romace extends Seeder
                 'description' => 'Trescientos días de ausencia se interrumpen cuando Logan Thibault, un soldado veterano de Irak, regresa a la casa de una mujer que él cree que está conectada a su supervivencia.',
                 'release_date' => '2012-04-20',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Cuando+te+encuentre.webp'
             ],
             [
                 'id' => (string) Str::uuid(),

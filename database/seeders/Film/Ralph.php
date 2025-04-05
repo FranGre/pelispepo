@@ -23,7 +23,7 @@ class Ralph extends Seeder
                 'description' => 'Ralph, un villano de un videojuego clásico, busca ser un héroe mientras viaja a través de diferentes mundos de videojuegos.',
                 'release_date' => '2012-11-02',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/%C2%A1Rompe+Ralph!.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class Ralph extends Seeder
                 'description' => 'Ralph y Vanellope viajan al vasto mundo de Internet para encontrar una pieza de repuesto que pueda salvar el juego de Vanellope.',
                 'release_date' => '2018-11-21',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Ralph+rompe+Internet.webp'
             ],
         ];
 

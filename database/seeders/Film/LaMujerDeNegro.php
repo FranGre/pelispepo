@@ -23,7 +23,7 @@ class LaMujerDeNegro extends Seeder
                 'description' => 'Una joven viuda se enfrenta a fenómenos paranormales mientras trabaja en una mansión remota, donde descubre la presencia de una mujer vestida de negro que causa la muerte de los niños del pueblo.',
                 'release_date' => '2012-02-03',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+mujer+de+negro.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class LaMujerDeNegro extends Seeder
                 'description' => 'Un grupo de personas llega a la mansión, ahora convertida en un refugio para niños durante la Segunda Guerra Mundial. Los horrores del pasado resucitan cuando la presencia de la mujer de negro se desata nuevamente.',
                 'release_date' => '2014-02-13',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+mujer+de+negro-+El+a%CC%81ngel+de+la+muerte.webp'
             ]
         ];
 

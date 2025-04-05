@@ -23,7 +23,7 @@ class EscuadronSuicida extends Seeder
                 'description' => 'Un grupo de criminales con habilidades especiales son reclutados por el gobierno para llevar a cabo una misión suicida. El Escuadrón Suicida debe infiltrarse en un territorio hostil para destruir una amenaza mortal, pero ¿quién sobrevivirá?',
                 'release_date' => '2016-08-05',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Escuadro%CC%81n+suicida.webp'
             ],
             [
                 'id' => (string) Str::uuid(),
@@ -33,7 +33,7 @@ class EscuadronSuicida extends Seeder
                 'description' => 'En esta secuela, un nuevo grupo de villanos es reclutado para una misión aún más peligrosa. Esta vez, se enfrentan a una amenaza alienígena y a un villano brutal mientras luchan por sobrevivir y completar su misión.',
                 'release_date' => '2021-08-06',
                 'url' => '',
-                'cover_url' => ''
+                'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/El+Escuadro%CC%81n+Suicida.webp'
             ]
         ];
 

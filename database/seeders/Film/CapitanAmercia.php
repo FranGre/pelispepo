@@ -22,7 +22,7 @@ class CapitanAmercia extends Seeder
                 'title' => 'Capitán América: El primer vengador',
                 'description' => 'Un joven y débil Steve Rogers se ofrece como voluntario para un experimento secreto del gobierno durante la Segunda Guerra Mundial. Tras recibir un suero experimental, se transforma en el superhéroe conocido como el Capitán América. Junto a sus aliados, debe enfrentarse a los nazis y a su enemigo, el Cráneo Rojo, quien busca controlar el mundo con armas de destrucción masiva.',
                 'release_date' => '2011-07-22',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Capitán+América+El+Primer+vengador.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Capita%CC%81n+Ame%CC%81rica-+El+primer+vengador.webp'
             ],
             [
@@ -32,7 +32,7 @@ class CapitanAmercia extends Seeder
                 'title' => 'Capitán América: Soldado de Invierno',
                 'description' => 'El Capitán América, ahora en la era moderna, se enfrenta a una amenaza en forma de un misterioso y mortal enemigo conocido como el Soldado de Invierno. Junto a la Viuda Negra, debe desentrañar una conspiración dentro de S.H.I.E.L.D. que pone en peligro la seguridad mundial. A lo largo de la película, Steve Rogers se enfrenta a la verdad sobre su pasado y la amenaza que el Soldado de Invierno representa para su futuro.',
                 'release_date' => '2014-04-04',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Capitán+América+2+El+Soldado+Del+Invierno.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Capita%CC%81n+Ame%CC%81rica-+El+Soldado+de+Invierno.webp'
             ],
             [
@@ -42,7 +42,7 @@ class CapitanAmercia extends Seeder
                 'title' => 'Capitán América: Civil War',
                 'description' => 'Las tensiones políticas y las diferencias ideológicas dividen a los Vengadores. La aprobación de una ley que regula a los superhéroes provoca un enfrentamiento entre los aliados, liderados por Capitán América, y los que apoyan el control gubernamental, encabezados por Iron Man. La guerra civil entre los héroes más poderosos de la Tierra pone en peligro la unidad del equipo y la seguridad global.',
                 'release_date' => '2016-04-12',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Capitan_America_Civil_war_(2016).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Capita%CC%81n+Ame%CC%81rica-+Civil+War.webp'
             ],
             [

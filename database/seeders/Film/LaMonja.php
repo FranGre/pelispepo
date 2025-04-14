@@ -22,7 +22,7 @@ class LaMonja extends Seeder
                 'title' => 'La monja',
                 'description' => 'En este spin-off de "El Conjuro", una monja demoníaca aterradora es el centro de la historia, causando terror en un convento en Rumania.',
                 'release_date' => '2018-09-07',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+monja+(2018).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+monja.webp'
             ],
             [
@@ -32,7 +32,7 @@ class LaMonja extends Seeder
                 'title' => 'La monja II',
                 'description' => 'La monja demoníaca regresa para aterrorizar a nuevos personajes, ahora en una serie de espeluznantes eventos en un convento en Francia.',
                 'release_date' => '2023-09-08',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+monja+2+(2023).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+monja+2.webp'
             ]
         ];

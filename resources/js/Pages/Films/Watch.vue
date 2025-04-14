@@ -34,11 +34,11 @@
                 </div>
             </div>
 
-            <p class="text-xl mb-4">{{ film.description }}</p>
+            <p class="text-sm md:text-xl mb-4">{{ film.description }}</p>
 
-            <div class="flex justify-center">
-                <iframe :src="film.url" width="1024" height="768" allowfullscreen="true" allow="autoplay"
-                    class="aspect-video rounded-xl"></iframe>
+            <div class="flex justify-center w-full">
+                <iframe :src="film.url" allowfullscreen="true" allow="autoplay"
+                    class="aspect-video rounded-xl max-w-sm md:max-w-xl lg:max-w-2xl w-full"></iframe>
             </div>
 
         </div>

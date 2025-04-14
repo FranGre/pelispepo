@@ -22,7 +22,7 @@ class Megalodon extends Seeder
                 'title' => 'Megalodón 1',
                 'description' => 'Un equipo de investigación submarina debe luchar por su vida cuando descubren al Megalodón, un gigantesco tiburón prehistórico que amenaza con destruirlos. Con una carrera contra el tiempo, los miembros de la tripulación intentan escapar de la bestia marina mientras luchan por sobrevivir.',
                 'release_date' => '2018-08-10',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Megalodon(2018).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Megalodo%CC%81n.webp'
             ],
             [

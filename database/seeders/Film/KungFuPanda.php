@@ -32,7 +32,7 @@ class KungFuPanda extends Seeder
                 'title' => 'Kung Fu Panda 2',
                 'description' => 'Po debe enfrentarse a su pasado mientras trata de detener a un nuevo villano, el ganso Lord Shen, quien planea usar un arma secreta para conquistar China. Po y sus amigos deberán detenerlo antes de que sea demasiado tarde.',
                 'release_date' => '2011-05-26',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Kung_fu_panda_2_(2011).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Kung+Fu+Panda+2.webp'
             ],
             [
@@ -42,7 +42,7 @@ class KungFuPanda extends Seeder
                 'title' => 'Kung Fu Panda 3',
                 'description' => 'Po se reúne con su padre biológico y descubre un pueblo secreto de pandas. Juntos deben enfrentarse al malvado Kai, quien roba el chi de los maestros de kung fu. Po debe enseñarles a los pandas a luchar para detener a Kai.',
                 'release_date' => '2016-01-29',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Kung+fu+panda_(2016).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Kung+Fu+Panda+3.webp'
             ],
             [

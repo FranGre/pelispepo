@@ -22,7 +22,7 @@ class Marvel extends Seeder
                 'title' => 'Black Widow',
                 'description' => 'Natasha Romanoff, conocida como Black Widow, enfrenta su pasado oscuro mientras se enfrenta a viejos enemigos y busca redención antes de los eventos que la llevarán a unirse a los Vengadores.',
                 'release_date' => '2021-07-09',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Black+Widow.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/BlackWidow.webp'
             ],
             [
@@ -32,7 +32,7 @@ class Marvel extends Seeder
                 'title' => 'Shang-Chi y la leyenda de los diez anillos',
                 'description' => 'Shang-Chi, un maestro de kung fu, se ve arrastrado de nuevo al mundo de su padre y la organización criminal de los Diez Anillos, enfrentándose a su destino y a los secretos de su pasado.',
                 'release_date' => '2021-09-03',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Shang-Chi_y_la_leyenda_de_los_diez_anillos.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Shang-Chi+y+la+leyenda+de+los+diez+anillos.webp'
             ],
             [
@@ -42,7 +42,7 @@ class Marvel extends Seeder
                 'title' => 'Doctor Strange: Hechicero Supremo',
                 'description' => 'El Dr. Stephen Strange, un brillante cirujano, busca respuestas después de un accidente que destruyó sus manos. Su búsqueda lo lleva al mundo de las artes místicas, donde se convierte en un hechicero supremo.',
                 'release_date' => '2016-11-04',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Doctor_Strange_hechicero_supremo_(2016).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Doctor+Strange-+Hechicero+Supremo.webp'
             ],
             [
@@ -52,7 +52,7 @@ class Marvel extends Seeder
                 'title' => 'Black Panther',
                 'description' => 'T’Challa regresa a Wakanda para asumir el trono como rey, pero pronto se enfrenta a la amenaza de Killmonger, un rival que busca derrocarlo y apoderarse del reino.',
                 'release_date' => '2018-02-16',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Black_Panther_(2018).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Black+Panther.webp'
             ]
         ];

@@ -42,7 +42,7 @@ class BobEsponja extends Seeder
                 'title' => 'Bob Esponja: Un héroe al rescate',
                 'description' => 'Bob Esponja y sus amigos se embarcan en una nueva aventura para salvar a Fondo de Bikini de una crisis sin precedentes. Con la ayuda de nuevos aliados y enfrentándose a Plankton, deberán arriesgarlo todo para garantizar que la paz y el orden regresen a su hogar bajo el mar.',
                 'release_date' => '2020-02-12',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Bob+Esponja+Un+heroe+al+rescate.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Bob+Esponja+Un+heroe+al+rescate.webp'
             ],
             [

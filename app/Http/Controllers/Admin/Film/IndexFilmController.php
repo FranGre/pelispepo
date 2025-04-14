@@ -39,7 +39,7 @@ class IndexFilmController extends Controller
                 }
             ])->select('id', 'user_id', 'is_activated', 'title', 'release_date')
             ->withCount('likes')
-            ->orderBy('title')->get();
+            ->orderBy('title')->paginate(12);
 
         $adminRoleId = Role::where('name', 'LIKE', "%admin%")->pluck('id')->first();
 

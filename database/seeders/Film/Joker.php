@@ -22,7 +22,7 @@ class Joker extends Seeder
                 'title' => 'Joker',
                 'description' => 'Arthur Fleck es un hombre solitario que lucha por encontrar su lugar en la sociedad. Mientras enfrenta el rechazo y la burla, se convierte en el infame villano conocido como el Joker, desatando caos en Gotham City.',
                 'release_date' => '2019-10-04',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Joker(2019).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Joker.webp'
             ],
             [

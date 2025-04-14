@@ -22,7 +22,7 @@ class MortalKombat extends Seeder
                 'title' => 'Mortal Kombat',
                 'description' => 'En esta nueva versión de Mortal Kombat, un grupo de luchadores se enfrenta a varios campeones de un torneo interdimensional para salvar el mundo de una invasión de una dimensión maligna. La película sigue a Cole Young, un luchador que descubre que posee una marca especial y es reclutado por Raiden para luchar en el torneo.',
                 'release_date' => '2021-04-23',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Mortal+Kombat(2021).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Mortal+Kombat.webp'
             ]
         ];

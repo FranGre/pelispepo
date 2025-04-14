@@ -32,7 +32,7 @@ class It extends Seeder
                 'title' => 'It',
                 'description' => 'En 2017, un grupo de niños de Derry se enfrenta a un mal antiguo encarnado en un payaso demoníaco llamado Pennywise. Juntos deben enfrentarse a sus miedos y detenerlo antes de que el mal vuelva a surgir cada 27 años.',
                 'release_date' => '2017-09-08',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/It+(ESO)+(2017).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/It.webp'
             ],
             [
@@ -42,7 +42,7 @@ class It extends Seeder
                 'title' => 'It - Capítulo 2',
                 'description' => '27 años después, los miembros del grupo de los "Perdedores" se reúnen en Derry para enfrentarse a Pennywise, que ha regresado tras una larga ausencia. Juntos deben hacer frente a sus peores temores y cumplir con la promesa que hicieron de derrotar al monstruo para siempre.',
                 'release_date' => '2019-09-06',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/It+Capítulo+2.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/It.+Capi%CC%81tulo+2+.webp'
             ],
         ];

@@ -29,7 +29,7 @@ class IndexFilmController extends Controller
                 }
             ])
             ->select(['id', 'cover_url', 'title', 'release_date'])
-            ->get();
+            ->paginate(18);
 
         return Inertia::render('Films/Films', ['films' => $queryFilms]);
     }

@@ -22,7 +22,7 @@ class HarryPotter extends Seeder
                 'title' => 'Harry Potter y la Piedra Filosofal',
                 'description' => 'Harry Potter, un niño huérfano, descubre que es un mago y que fue aceptado en Hogwarts. Allí hace amigos, aprende magia y descubre la verdad sobre sus padres y el villano Lord Voldemort. Junto a Ron y Hermione, enfrenta pruebas para evitar que la Piedra Filosofal caiga en manos equivocadas.',
                 'release_date' => '2001-11-16',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Harry_Potter_y_la_piedra_filosofal.mkv',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Harry_Potter_y_la_piedra_filosofal.webp'
             ],
             [
@@ -72,7 +72,7 @@ class HarryPotter extends Seeder
                 'title' => 'Harry Potter y el Misterio del Príncipe',
                 'description' => 'Dumbledore le muestra a Harry recuerdos sobre el pasado de Voldemort, revelando la existencia de los Horrocruxes. Mientras tanto, Draco Malfoy recibe una misión oscura y el amor florece en Hogwarts. La historia culmina con la trágica muerte de Dumbledore a manos de Snape.',
                 'release_date' => '2009-07-15',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Harry_Potter_y_el_misterio_del_príncipe.mkv',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Harry_Potter_y_el_misterio_del_pr%C3%ADncipe.webp'
             ],
             [
@@ -82,7 +82,7 @@ class HarryPotter extends Seeder
                 'title' => 'Harry Potter y las Reliquias de la Muerte - Parte 1',
                 'description' => 'Harry, Ron y Hermione huyen mientras buscan y destruyen los Horrocruxes de Voldemort. La desesperación y la pérdida afectan su amistad, pero descubren la leyenda de las Reliquias de la Muerte. La película culmina con la captura de Harry y la trágica muerte de Dobby.',
                 'release_date' => '2010-11-19',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Harry_Potter_y_las_Reliquias_de_la_Muerte_Parte_1.mkv',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Harry_Potter_y_las_Reliquias_de_la_Muerte_Parte_1.webp'
             ],
             [
@@ -92,7 +92,7 @@ class HarryPotter extends Seeder
                 'title' => 'Harry Potter y las Reliquias de la Muerte - Parte 2',
                 'description' => 'La batalla final por Hogwarts comienza mientras Harry y sus aliados luchan contra las fuerzas de Voldemort. Descubre la verdad sobre Snape y su destino como el Elegido. En el enfrentamiento final, Voldemort es derrotado y la paz regresa al mundo mágico.',
                 'release_date' => '2011-07-15',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Harry_Potter_y_las_Reliquias_de_la_Muerte_Parte_2.mkv',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Harry_Potter_y_las_Reliquias_de_la_Muerte_Parte_2.webp'
             ]
         ];

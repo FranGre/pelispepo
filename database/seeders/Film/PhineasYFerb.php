@@ -22,7 +22,7 @@ class PhineasYFerb extends Seeder
                 'title' => 'Phineas y Ferb, la película: Candace contra el universo',
                 'description' => 'Phineas y Ferb deben rescatar a su hermana Candace, quien ha sido transportada a otro universo. En este viaje, se enfrentan a nuevos desafíos, mientras se embarcan en una misión para salvarla y restaurar el equilibrio del multiverso.',
                 'release_date' => '2020-08-28',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Phineas+y+Ferb+Candace+contra+el+universo.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Phineas+y+Ferb%2C+la+peli%CC%81cula-+Candace+contra+el+universo.webp'
             ]
         ];

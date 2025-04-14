@@ -41,6 +41,7 @@ use Database\Seeders\Film\LaLigaDeLaJusticia;
 use Database\Seeders\Film\LaMatanzaDeTexas;
 use Database\Seeders\Film\LaMonja;
 use Database\Seeders\Film\LaMujerDeNegro;
+use Database\Seeders\Film\LasTortugasNinja;
 use Database\Seeders\Film\LosJuegosDelHambre;
 use Database\Seeders\Film\LosVengadores;
 use Database\Seeders\Film\Madagascar;
@@ -126,6 +127,7 @@ class FilmSeeder extends Seeder
             LaMatanzaDeTexas::class,
             LaMonja::class,
             LaMujerDeNegro::class,
+            LasTortugasNinja::class,
             LosJuegosDelHambre::class,
             LosVengadores::class,
             Madagascar::class,

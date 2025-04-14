@@ -22,7 +22,7 @@ class LaMatanzaDeTexas extends Seeder
                 'title' => 'La matanza de Texas',
                 'description' => 'Un grupo de jóvenes se adentran en una zona rural de Texas y son atacados por una familia de psicópatas, incluido el infame Leatherface.',
                 'release_date' => '1974-10-11',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+masacre+de+Texas+1(1974).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+matanza+de+Texas.webp'
             ],
             [
@@ -32,7 +32,7 @@ class LaMatanzaDeTexas extends Seeder
                 'title' => 'La matanza de Texas 2',
                 'description' => 'Los sobrevivientes del primer ataque se enfrentan nuevamente a la familia de asesinos. Esta secuela mezcla el horror con el humor negro.',
                 'release_date' => '1986-05-23',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+masacre+de+Texas+2(1986).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+matanza+de+Texas+2.webp'
             ],
             [
@@ -42,7 +42,7 @@ class LaMatanzaDeTexas extends Seeder
                 'title' => 'La matanza de Texas 3',
                 'description' => 'Unos jóvenes se ven atrapados por la familia de Leatherface en una zona desolada y deben luchar por sus vidas.',
                 'release_date' => '1990-01-12',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+masacre+de+Texas+3(1990).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+matanza+de+Texas+3.webp'
             ],
             [
@@ -52,7 +52,7 @@ class LaMatanzaDeTexas extends Seeder
                 'title' => 'La matanza de Texas 4: La nueva generación',
                 'description' => 'Un grupo de adolescentes cae en las garras de la familia de Leatherface, que sigue matando en busca de nuevos miembros para su familia.',
                 'release_date' => '1995-09-22',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+masacre+de+Texas+4+La+nueva+generación(1995).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+matanza+de+Texas-+La+nueva+generacio%CC%81n.webp'
             ],
             [
@@ -62,7 +62,7 @@ class LaMatanzaDeTexas extends Seeder
                 'title' => 'La matanza de Texas 5: Una verdad aterradora',
                 'description' => 'En esta película, un grupo de personas busca descubrir la verdad sobre los horrores perpetrados por Leatherface y su familia.',
                 'release_date' => '2006-02-14',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+Masacre+De+Texas+5+Una+verdad+aterradora(2003).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+matanza+de+Texas-+Una+verdad+aterradora.webp'
             ],
             [
@@ -72,7 +72,7 @@ class LaMatanzaDeTexas extends Seeder
                 'title' => 'La matanza de Texas 6: El origen',
                 'description' => 'La película narra los orígenes de Leatherface y su familia, mostrando cómo se convirtieron en los monstruos que aterrorizan a sus víctimas.',
                 'release_date' => '2006-10-06',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+Masacre+De+Texas+6+El+origen(2006).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+matanza+de+Texas-+El+origen.webp'
             ],
             [
@@ -82,7 +82,7 @@ class LaMatanzaDeTexas extends Seeder
                 'title' => 'La matanza de Texas: Herencia maldita',
                 'description' => 'Un joven debe enfrentarse al legado de su familia y a los horrores del pasado que los persiguen.',
                 'release_date' => '2017-10-20',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+Masacre+De+Texas+Herencia+Maldita(2013).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+matanza+de+Texas+3D.webp'
             ],
             [
@@ -92,7 +92,7 @@ class LaMatanzaDeTexas extends Seeder
                 'title' => 'La matanza de Texas',
                 'description' => 'En esta película, un nuevo grupo de jóvenes se enfrenta a la familia de Leatherface en una serie de terroríficas circunstancias.',
                 'release_date' => '2022-02-18',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+Matanza+de+Texas(2022).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+matanza+de+Texas+2022.webp'
             ]
         ];

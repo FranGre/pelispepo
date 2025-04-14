@@ -22,7 +22,7 @@ class KingKong extends Seeder
                 'title' => 'King Kong',
                 'description' => 'En esta nueva versión de la historia clásica, un equipo de cineastas viaja a una misteriosa isla para filmar su película, solo para encontrarse con un enorme gorila llamado King Kong, quien se convierte en el centro de atención.',
                 'release_date' => '2005-12-14',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/KING+KONG(2005).mp4',
                 'cover_url' => ''
             ]
         ];

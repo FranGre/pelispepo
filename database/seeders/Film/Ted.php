@@ -22,7 +22,7 @@ class Ted extends Seeder
                 'title' => 'Ted',
                 'description' => 'John Bennett, un hombre adulto, sigue siendo amigo inseparable de su oso de peluche, Ted, que cobra vida gracias a un deseo hecho cuando era niño. Aunque la amistad entre ellos es inquebrantable, la relación de John con su novia, Lori, se ve afectada por la conducta inmadura de Ted. Juntos enfrentan situaciones cómicas y caóticas, mientras Ted trata de encontrar su lugar en el mundo.',
                 'release_date' => '2012-06-29',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Ted_(2012).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Ted.webp'
             ],
             [
@@ -32,7 +32,7 @@ class Ted extends Seeder
                 'title' => 'Ted 2',
                 'description' => 'Ted se enfrenta a un nuevo reto cuando decide luchar por sus derechos legales para ser reconocido como una persona. Tras casarse con Tami-Lynn, Ted y su amigo John inician una batalla en la corte para que Ted pueda adoptar un niño. La película continúa con su humor irreverente, mientras Ted y John navegan por las complejidades de la vida adulta y enfrentan problemas legales y personales.',
                 'release_date' => '2015-06-26',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Ted_2_(2015).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Ted+2.webp'
             ]
         ];

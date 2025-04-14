@@ -22,7 +22,7 @@ class GuardianesDeLaGalaxia extends Seeder
                 'title' => 'Guardianes de la Galaxia',
                 'description' => 'Un grupo de inadaptados cósmicos, liderados por Peter Quill, se unen para proteger un artefacto poderoso. A pesar de sus diferencias, se convierten en héroes y deben enfrentarse a un villano que amenaza con destruir el universo.',
                 'release_date' => '2014-08-01',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Guardianes_de_la_galaxia_(2014).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Guardianes+de+la+galaxia.webp'
             ],
             [
@@ -32,7 +32,7 @@ class GuardianesDeLaGalaxia extends Seeder
                 'title' => 'Guardianes de la Galaxia Vol. 2',
                 'description' => 'Los Guardianes se enfrentan a nuevos desafíos mientras exploran los orígenes de Peter Quill. A medida que surgen conflictos personales, el grupo de héroes debe enfrentarse a nuevas amenazas cósmicas y resolver los misterios de su pasado.',
                 'release_date' => '2017-05-05',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Guardianes_de_la_galaxia_Vol_2_(2017).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Guardianes+de+la+galaxia+Vol.+2.webp'
             ],
             [

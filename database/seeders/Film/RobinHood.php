@@ -22,7 +22,7 @@ class RobinHood extends Seeder
                 'title' => 'Robin Hood',
                 'description' => 'Una nueva versión de la historia clásica de Robin Hood, el hombre que se convierte en un héroe al robar a los ricos para darle a los pobres.',
                 'release_date' => '2010-05-14',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Robin+Hood(2010).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/RobinHood2010.webp'
             ],
             [
@@ -32,7 +32,7 @@ class RobinHood extends Seeder
                 'title' => 'Robin Hood',
                 'description' => 'En esta película de aventuras, Robin Hood es un forajido que lucha contra la corrupción del sheriff de Nottingham y defiende a los inocentes.',
                 'release_date' => '2018-11-21',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Robin+Hood(2018).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/RobinHood2018.webp'
             ]
         ];

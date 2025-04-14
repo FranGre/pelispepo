@@ -22,7 +22,7 @@ class TomYJerry extends Seeder
                 'title' => 'Tom y Jerry',
                 'description' => 'Tom y Jerry se embarcan en una nueva aventura en la ciudad de Nueva York, donde sus eternas rivalidades llevan a situaciones cómicas mientras causan caos en el hotel donde se celebra una boda de alto perfil. Mientras tanto, Kayla, una joven empleada del hotel, se ve atrapada entre el caos de los dos, enfrentándose a su propia lucha por encajar en un mundo lleno de riqueza y celebridades.',
                 'release_date' => '2021-02-26',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Tom_y_Jerry_(2021).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Tom+y+Jerry.webp'
             ]
         ];

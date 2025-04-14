@@ -52,7 +52,7 @@ class Batman extends Seeder
                 'title' => 'The Batman',
                 'description' => 'Un joven y oscuro Bruce Wayne, aún en sus primeros días como el Caballero Oscuro, investiga una serie de asesinatos cometidos por un villano conocido como el Riddler. Mientras se enfrenta a la corrupción que aún persiste en Gotham, Batman descubre secretos oscuros de su familia y de la ciudad que podrían cambiarlo todo.',
                 'release_date' => '2022-03-04',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/The+Batman.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/The+Batman.webp'
             ]
         ];

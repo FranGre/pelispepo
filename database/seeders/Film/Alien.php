@@ -22,7 +22,7 @@ class Alien extends Seeder
                 'title' => 'Alien: El octavo pasajero',
                 'description' => 'En una misión de regreso a la Tierra, la tripulación de la nave espacial *Nostromo* recibe una señal de socorro de un planeta remoto. Al investigar, descubren una nave alienígena abandonada. Pronto, un miembro de la tripulación es atacado por una criatura extraterrestre que pone en peligro a todos a bordo, desatando una lucha por sobrevivir.',
                 'release_date' => '1979-05-25',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Alien_El_8vo_Pasajero_(1979).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Alien-+El+octavo+pasajero.webp'
             ],
             [
@@ -32,7 +32,7 @@ class Alien extends Seeder
                 'title' => 'Alien: El regreso',
                 'description' => 'Después de sobrevivir al horror de la primera película, la teniente Ellen Ripley regresa al planeta LV-426 junto a un grupo de marines coloniales. Su misión es investigar la pérdida de contacto con una colonia humana. Allí, se enfrentan a una colonia de xenomorfos mucho más peligrosa, lo que desatará una nueva batalla por la supervivencia.',
                 'release_date' => '1986-07-18',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Aliens_El_Regreso.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Aliens-+El+regreso.webp'
             ],
             [

@@ -22,7 +22,7 @@ class Venom extends Seeder
                 'title' => 'Venom',
                 'description' => 'Eddie Brock, un periodista de investigación, se encuentra con un parásito extraterrestre que le otorga habilidades extraordinarias. Tras una lucha interna, Eddie y el simbiótico Venom se convierten en una unidad que lucha por la justicia mientras enfrentan amenazas letales.',
                 'release_date' => '2018-10-05',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Venom_(2018).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Venom.webp'
             ],
             [
@@ -32,7 +32,7 @@ class Venom extends Seeder
                 'title' => 'Venom: Let There Be Carnage',
                 'description' => 'Eddie Brock, junto con Venom, se enfrenta a Cletus Kasady, un asesino en serie que se convierte en el peligroso Carnage. La batalla entre los dos simbióticos es inminente, mientras Eddie lucha por controlar a Venom y enfrentarse a una amenaza aún más peligrosa.',
                 'release_date' => '2021-09-24',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Venom_Let_There_Be_Carnage.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Venom-+Habra%CC%81+matanza.webp'
             ],
             [

@@ -22,7 +22,7 @@ class UnLugarTranquilo extends Seeder
                 'title' => 'Un lugar tranquilo',
                 'description' => 'En un mundo post-apocalíptico, una familia debe vivir en total silencio para evitar ser cazada por criaturas que se guían por el sonido. La familia lucha por sobrevivir mientras enfrentan nuevas amenazas en su entorno mortalmente silencioso.',
                 'release_date' => '2018-04-06',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Un+Lugar+en+Silencio.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Un+lugar+tranquilo.webp'
             ],
             [
@@ -32,7 +32,7 @@ class UnLugarTranquilo extends Seeder
                 'title' => 'Un lugar tranquilo 2',
                 'description' => 'Tras los eventos de la primera película, la familia Abbott se ve obligada a enfrentarse a nuevos desafíos mientras buscan un refugio. A medida que descubren más sobre las criaturas y otros sobrevivientes, deben hacer frente a una nueva serie de pruebas.',
                 'release_date' => '2020-05-28',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/UN_LUGAR_EN_SILENCIO_2.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Un+lugar+tranquilo+2.webp'
             ],
             [

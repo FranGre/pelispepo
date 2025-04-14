@@ -72,7 +72,7 @@ class Spiderman extends Seeder
                 'title' => 'Spider-Man: Homecoming',
                 'description' => 'Peter Parker regresa a casa después de los eventos de "Capitán América: Civil War", decidido a probar su valía como superhéroe. Mientras lucha por equilibrar su vida escolar y su vida como Spider-Man, se enfrenta al Buitre, un villano que amenaza la seguridad de la ciudad. La película explora el crecimiento personal de Peter y su lucha por encontrar su propio camino como héroe.',
                 'release_date' => '2017-07-07',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Spider-man_1_De_Regreso_A_Casa_(2017).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Spider-Man-+Homecoming.webp'
             ],
             [
@@ -82,7 +82,7 @@ class Spiderman extends Seeder
                 'title' => 'Spider-Man: No Way Home',
                 'description' => 'Cuando Peter Parker busca la ayuda de Doctor Strange para borrar la revelación de su identidad secreta, el multiverso se descontrola, trayendo versiones alternativas de Spider-Man y otros villanos. Peter debe enfrentarse a los peligros del multiverso mientras intenta proteger a su mundo y a sus seres queridos. La película explora el impacto del multiverso y el sacrificio personal en aras del bien mayor.',
                 'release_date' => '2021-12-17',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Spiderman_No_Way_Home.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Spiderman_No_Way_Home.webp'
             ],
             [
@@ -92,7 +92,7 @@ class Spiderman extends Seeder
                 'title' => 'Spider-Man: Un nuevo universo',
                 'description' => 'Miles Morales, un joven que adquiere habilidades de Spider-Man en su propio universo, se ve arrastrado a una aventura épica cuando se abre el multiverso. Junto a versiones alternativas de Spider-Man, debe enfrentarse a una amenaza que pone en peligro a todos los universos. La película explora la identidad, el sacrificio y la valentía, a la vez que ofrece una nueva visión en el cine de animación.',
                 'release_date' => '2018-12-14',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Spider-man_Un_nuevo_universo_(2018).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Spider-Man-Un-nuevo-universo.webp'
             ],
             [
@@ -102,7 +102,7 @@ class Spiderman extends Seeder
                 'title' => 'Spider-Man: Lejos de casa',
                 'description' => 'Después de los eventos de "Avengers: Endgame", Peter Parker viaja a Europa con su clase, pero se encuentra con una nueva amenaza: Mysterio, un villano con la habilidad de crear ilusiones. Peter lucha con el legado de Tony Stark y la presión de ser el nuevo héroe que el mundo necesita. La película explora el duelo, la aceptación y la responsabilidad que viene con ser un superhéroe.',
                 'release_date' => '2019-07-02',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/pider-man_Lejos_de_casa_(2019).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Spider-Man-Lejos-de-casa.webp'
             ]
         ];

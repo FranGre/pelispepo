@@ -25,6 +25,6 @@ class FavoritesFilmController extends Controller
 
         $filmsQuery = $filmsQuery->orderBy('title');
 
-        return Inertia::render('Films/Favorites', ['films' => $filmsQuery->select(['id', 'title', 'release_date', 'cover_url'])->get()]);
+        return Inertia::render('Films/Favorites', ['films' => $filmsQuery->select(['id', 'title', 'release_date', 'cover_url'])->paginate(18)]);
     }
 }

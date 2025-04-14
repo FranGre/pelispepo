@@ -32,7 +32,7 @@ class Transformers extends Seeder
                 'title' => 'Transformers: La venganza de los caídos',
                 'description' => 'Tras la batalla en el desierto, Sam descubre un fragmento del Allspark que le da visiones del futuro. Mientras los Autobots y Decepticons se enfrentan nuevamente, Sam se convierte en la clave para detener una amenaza global.',
                 'release_date' => '2009-06-24',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Transformers_La+Venganza+De+Los+Caídos+(2009).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Transformers-+La+venganza+de+los+cai%CC%81dos.webp'
             ],
             [
@@ -52,7 +52,7 @@ class Transformers extends Seeder
                 'title' => 'Transformers: La era de la extinción',
                 'description' => 'Cuatro años después de la batalla de Chicago, los Autobots son perseguidos por el gobierno. Un inventor encuentra a Optimus Prime y juntos deben luchar contra una nueva amenaza que busca destruir a la humanidad.',
                 'release_date' => '2014-06-27',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Transformers_La_Era_de_la_Extinción.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Transformers-+La+era+de+la+extincio%CC%81n.webp'
             ],
             [
@@ -62,7 +62,7 @@ class Transformers extends Seeder
                 'title' => 'Transformers: El último caballero',
                 'description' => 'Optimus Prime ha traicionado a los Autobots. Los humanos y Transformers deben unirse para evitar el apocalipsis, mientras se desvela un misterio que conecta la historia de los Transformers con la de la humanidad.',
                 'release_date' => '2017-06-23',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Transformers_+El+Último+Caballero+(2017).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Transformers-+El+u%CC%81ltimo+caballero.webp'
             ],
             [

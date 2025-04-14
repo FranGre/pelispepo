@@ -22,7 +22,7 @@ class Disney extends Seeder
                 'title' => 'Bambi',
                 'description' => 'Bambi, un pequeño cervatillo, debe aprender a vivir en el bosque tras la trágica muerte de su madre. A lo largo de su vida, enfrenta desafíos, conoce el amor y la amistad, y se convierte en el príncipe del bosque, enfrentando las dificultades de la vida con valentía.',
                 'release_date' => '1942-08-21',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Bambi+(1942).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Bambi.webp'
             ],
             [
@@ -32,7 +32,7 @@ class Disney extends Seeder
                 'title' => 'Dumbo',
                 'description' => 'Dumbo, un elefante bebé con orejas gigantes, es objeto de burla en el circo. Sin embargo, descubrirá que sus orejas le permiten volar, lo que lo convierte en una estrella del espectáculo. Una historia de superación y aceptación personal.',
                 'release_date' => '1941-10-23',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Dumbo+(1941).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Dumbo.webp'
             ],
             [
@@ -42,7 +42,7 @@ class Disney extends Seeder
                 'title' => 'Blancanieves y los siete enanitos',
                 'description' => 'Blancanieves, una princesa huye de su malvada madrastra que quiere deshacerse de ella. En su huida encuentra refugio con siete enanitos. Juntos, lucharán para derrotar a la reina y hacer que Blancanieves recupere su felicidad y amor.',
                 'release_date' => '1937-12-21',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1937+Blanca+Nieves+y+los+siete+enanos.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Blancanieves+y+los+siete+enanitos.webp'
             ],
             [
@@ -52,7 +52,7 @@ class Disney extends Seeder
                 'title' => 'Saludos amigos',
                 'description' => 'Mickey Mouse y sus amigos viajan a América Latina donde se sumergen en diferentes culturas y tradiciones, compartiendo historias y música. Esta película es una mezcla de entretenimiento y aprendizaje sobre la cultura latinoamericana.',
                 'release_date' => '1942-02-06',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Saludos+Amigos+(1942).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Saludos+amigos.webp'
             ],
             [
@@ -62,7 +62,7 @@ class Disney extends Seeder
                 'title' => 'Pinocho',
                 'description' => 'Pinocho es un muñeco de madera que sueña con ser un niño real. Tras varios errores y aventuras, aprende lo que significa ser valiente, honesto y tener un corazón puro. Un cuento sobre el crecimiento personal y la importancia de la bondad.',
                 'release_date' => '1940-02-07',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1940+Pinocho.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Pinocho+.webp'
             ],
             [
@@ -72,7 +72,7 @@ class Disney extends Seeder
                 'title' => 'Fantasía',
                 'description' => 'Una obra maestra que combina animación y música clásica. Diferentes segmentos presentan compositores como Beethoven y Stravinsky, que cobran vida a través de animaciones, llevando al espectador a un viaje visual y sonoro único.',
                 'release_date' => '1940-11-13',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1940+Fantasia.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Fantasi%CC%81a.webp'
             ],
             [
@@ -82,7 +82,7 @@ class Disney extends Seeder
                 'title' => 'La dama y el vagabundo',
                 'description' => 'La historia de un perro de raza alta llamado Lady, quien vive una vida cómoda y tranquila, y un perro callejero llamado Tramp. Juntos viven una serie de aventuras que les enseñan sobre el amor y la amistad en un mundo muy diferente al suyo.',
                 'release_date' => '1955-06-22',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+dama+y+el+vagabundo(1955).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+dama+y+el+vagabundo.webp'
             ],
             [
@@ -92,7 +92,7 @@ class Disney extends Seeder
                 'title' => 'Cenicienta',
                 'description' => 'Cenicienta, maltratada por su madrastra y hermanastras, tiene la oportunidad de asistir al baile real gracias a la magia de su hada madrina. En el baile, captura el corazón del príncipe, quien, tras una búsqueda, la encuentra y cambia su vida para siempre.',
                 'release_date' => '1950-02-15',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Cenicienta+(1950).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+cenicienta.webp'
             ],
             [
@@ -102,7 +102,7 @@ class Disney extends Seeder
                 'title' => 'La bella durmiente',
                 'description' => 'Aurora, una princesa maldita por una hechicera, caerá en un profundo sueño tras pincharse el dedo con un huso. Solo un beso de amor verdadero podrá despertarla. Mientras tanto, sus amigos luchan para derrotar a la maldición y salvarla.',
                 'release_date' => '1959-01-29',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+bella+durmiente(1958).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+bella+durmiente.webp'
             ],
             [
@@ -112,7 +112,7 @@ class Disney extends Seeder
                 'title' => 'Peter Pan',
                 'description' => 'Peter Pan, un niño que nunca crece, lleva a Wendy y a sus hermanos al País de Nunca Jamás, donde viven aventuras con los Niños Perdidos, luchan contra el temido Capitán Garfio y aprenden el valor de la imaginación y la amistad.',
                 'release_date' => '1953-02-05',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Peter+Pan+(1953).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Peter+Pan.webp'
             ],
             [
@@ -122,7 +122,7 @@ class Disney extends Seeder
                 'title' => 'Ritmo y melodia',
                 'description' => 'Una película donde la música y la danza son las estrellas. A través de varios números musicales, se cuentan historias sobre la vida, el amor y la superación, todo bajo la dirección de la animación de Disney.',
                 'release_date' => '1949-01-01',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Ritmo+y+melodia+(1948).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Ritmo+y+Melodi%CC%81a.webp'
             ],
             [
@@ -132,7 +132,7 @@ class Disney extends Seeder
                 'title' => 'Alicia en el país de las maravillas',
                 'description' => 'Alicia sigue al conejo blanco hasta un mundo fantástico y surrealista donde conoce personajes excéntricos como el Sombrerero Loco y la Reina de Corazones. En su viaje, aprende sobre la importancia de la curiosidad y el coraje.',
                 'release_date' => '1951-07-28',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Alicia+en+el+pais+de+las+maravillas+(1951).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Alicia+en+el+pai%CC%81s+de+las+maravillas.webp'
             ],
             [
@@ -142,7 +142,7 @@ class Disney extends Seeder
                 'title' => '101 dálmatas',
                 'description' => 'Pongo y Perdita, dos perros dálmatas, deben luchar por salvar a sus cachorros secuestrados por la malvada Cruella de Vil, quien quiere hacer un abrigo con sus pieles. Una historia de valentía, amistad y trabajo en equipo.',
                 'release_date' => '1961-01-25',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/101+Dalmatas+(1961).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/101+da%CC%81lmatas.webp'
             ],
             [
@@ -152,7 +152,7 @@ class Disney extends Seeder
                 'title' => 'El libro de la selva',
                 'description' => 'Mowgli, un niño criado por lobos, tiene que enfrentarse a los peligros de la selva. Con la ayuda de sus amigos, Baloo el oso y Bagheera la pantera, se enfrenta a la amenaza del malvado tigre Shere Khan.',
                 'release_date' => '1967-10-18',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/El+libro+de+la+selva+(1967).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/El+libro+de+la+selva.webp'
             ],
             [
@@ -162,7 +162,7 @@ class Disney extends Seeder
                 'title' => 'Los tres caballeros',
                 'description' => 'Donald, José Carioca y Panchito buscan vivir nuevas aventuras en América Latina. A través de esta película, exploran la música y las tradiciones de diferentes países del continente, en un viaje lleno de alegría y ritmo.',
                 'release_date' => '1944-02-06',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Los+Tres+Caballeros(1944).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Los+tres+caballeros.webp'
             ],
             [
@@ -172,7 +172,7 @@ class Disney extends Seeder
                 'title' => 'La espada en la piedra',
                 'description' => 'El joven Arturo, con la ayuda de su tutor Merlín, lucha por convertirse en el rey de Inglaterra. Después de extraer la espada de la piedra, demuestra ser el elegido para gobernar, enfrentándose a desafíos y aprendiendo lecciones sobre la sabiduría y el coraje.',
                 'release_date' => '1963-12-25',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+espada+en+la+piedra+(1963).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+espada+en+la+piedra.webp'
             ],
             [
@@ -182,7 +182,7 @@ class Disney extends Seeder
                 'title' => 'El caldero mágico',
                 'description' => 'El joven Taran busca escapar de la malvada bruja que quiere obtener el caldero mágico, que tiene el poder de crear un ejército de muertos. Acompañado de un cerdo profético y varios amigos, Taran deberá evitar que el caldero caiga en las manos equivocadas.',
                 'release_date' => '1985-07-24',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/El+Caldero+Magico+(1985).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/El+caldero+ma%CC%81gico.webp'
             ],
             [
@@ -192,7 +192,7 @@ class Disney extends Seeder
                 'title' => 'Pocahontas',
                 'description' => 'Pocahontas, una joven nativa americana, se encuentra con John Smith, un explorador inglés. A través de su relación, ambos deben superar los prejuicios y los conflictos entre sus pueblos, mientras buscan un entendimiento y respeto mutuo por la naturaleza y la vida.',
                 'release_date' => '1995-06-23',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1995+Pocahontas.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Pocahontas.webp'
             ],
             [
@@ -202,7 +202,7 @@ class Disney extends Seeder
                 'title' => 'Policías y ratones',
                 'description' => 'Un grupo de ratones detectives debe resolver un crimen en el mundo animal. Con la ayuda de sus habilidades y un gran sentido de la justicia, enfrentan a los villanos y demuestran que, sin importar el tamaño, todos pueden ser héroes.',
                 'release_date' => '1999-03-19',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Policias+y+ratones(1986).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Polici%CC%81as+y+ratones.webp'
             ],
             [
@@ -212,7 +212,7 @@ class Disney extends Seeder
                 'title' => 'El zorro y el sabueso',
                 'description' => 'Todd, un zorro huérfano, y Copper, un sabueso, se convierten en grandes amigos mientras son cachorros. Sin embargo, cuando crecen, sus naturalezas instintivas los ponen en conflicto. A pesar de las diferencias, su amistad perdura a lo largo de los años.',
                 'release_date' => '1981-07-10',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/El+zorro+y+el+sabueso+(1981).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/El+zorro+y+el+sabueso.webp'
             ],
             [
@@ -222,7 +222,7 @@ class Disney extends Seeder
                 'title' => 'El Rey León',
                 'description' => 'Simba, un joven león, debe aprender a ser el rey que está destinado a ser, tras la muerte de su padre Mufasa. Acompañado de sus amigos Timón y Pumba, enfrenta retos y villanos, y descubre el significado de la vida, el amor y el coraje.',
                 'release_date' => '1994-06-15',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1994+El+Rey+Leon.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/El+Rey+Leon.webp'
             ],
             [
@@ -232,7 +232,7 @@ class Disney extends Seeder
                 'title' => 'La Sirenita',
                 'description' => 'Ariel, una joven sirena, sueña con vivir en el mundo humano. Después de hacer un trato con la malvada bruja Úrsula, su vida se complica cuando se enamora de un príncipe humano. Ariel debe encontrar una manera de salvarse a sí misma y a su amor.',
                 'release_date' => '1989-11-17',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/La+sirenita(1989).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+Sirenita.webp'
             ],
             [
@@ -242,7 +242,7 @@ class Disney extends Seeder
                 'title' => 'Bernardo y Bianca al rescate',
                 'description' => 'Bernardo y Bianca, dos valientes ratones miembros de la Sociedad Protectora de Animales, deben rescatar a una niña secuestrada por una malvada mujer. Con ingenio y valentía, se embarcan en una peligrosa misión para salvarla.',
                 'release_date' => '1977-06-22',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1977+Bernardo+y+Bianca+al+rescate.mp4',
                 'cover_url' => ''
             ],
             [
@@ -252,7 +252,7 @@ class Disney extends Seeder
                 'title' => 'Hércules',
                 'description' => 'Hércules, hijo de Zeus, es condenado a vivir como un mortal en la Tierra. Tras descubrir su verdadera identidad, lucha por recuperar su lugar entre los dioses del Olimpo. Con la ayuda de sus amigos, enfrenta desafíos y villanos en su camino hacia la redención.',
                 'release_date' => '1997-06-27',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Hercules+(1997).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/He%CC%81rcules.webp'
             ],
             [
@@ -262,7 +262,7 @@ class Disney extends Seeder
                 'title' => 'Aladdín',
                 'description' => 'Aladdín, un joven ladrón, descubre una lámpara mágica que le concede tres deseos. Con la ayuda de un genio y su amiga Jasmine, lucha por detener los malvados planes del hechicero Jafar y demostrar que es digno de ser príncipe.',
                 'release_date' => '1992-11-25',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1992+Aladdin.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Aladdin.webp'
             ],
             [
@@ -272,7 +272,7 @@ class Disney extends Seeder
                 'title' => 'La bella y la bestia',
                 'description' => 'Bella, una joven brillante y curiosa, se enamora de un príncipe maldito que vive como una bestia. A través de su amor y valentía, Bella rompe la maldición, demostrando que la belleza está en el corazón.',
                 'release_date' => '1991-11-22',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1992+La+Bella+y+la+Bestia.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+bella+y+la+bestia.webp'
             ],
             [
@@ -292,7 +292,7 @@ class Disney extends Seeder
                 'title' => 'Las nuevas aventuras de Winnie Pooh',
                 'description' => 'Winnie Pooh y sus amigos del Bosque de los Cien Acres viven nuevas y emocionantes aventuras, donde se enfrentan a desafíos con la ayuda de su amistad y generosidad. Un relato encantador para toda la familia.',
                 'release_date' => '2002-02-12',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1977+Las+nuevas+aventuras+de+Winnie+Pooh.mp4',
                 'cover_url' => ''
             ],
             [
@@ -302,7 +302,7 @@ class Disney extends Seeder
                 'title' => 'El Jorobado de Notre Dame',
                 'description' => 'Quasimodo, el jorobado campanero de Notre Dame, se embarca en una aventura para proteger a la gitana Esmeralda. A pesar de los prejuicios y su aislamiento, lucha por la justicia y por encontrar su lugar en el mundo.',
                 'release_date' => '1996-06-21',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/El+Jorobado+de+Notre+Dame+(1996).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/El+Jorobado+de+Notre+Dame.webp'
             ],
             [
@@ -312,7 +312,7 @@ class Disney extends Seeder
                 'title' => 'Oliver y su pandilla',
                 'description' => 'Oliver, un gatito huérfano, se une a una pandilla de perros callejeros en Nueva York. Juntos enfrentan las amenazas de un villano y aprenden el verdadero valor de la amistad y la lealtad.',
                 'release_date' => '1988-11-18',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Oliver+y+su+Pandilla+(1988).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Oliver+y+su+pandilla.webp'
             ],
             [
@@ -322,7 +322,7 @@ class Disney extends Seeder
                 'title' => 'Robin Hood',
                 'description' => 'Robin Hood, un astuto y valiente forajido, lucha por los pobres robando a los ricos para dar a los necesitados. Junto con su leal compañero, el animalito Little John, desafía al malvado príncipe Juan y restaura la justicia en el reino.',
                 'release_date' => '1973-11-08',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1973+Robin+Hood.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/RobinHood73.webp'
             ],
             [
@@ -332,7 +332,7 @@ class Disney extends Seeder
                 'title' => 'Las locuras del emperador',
                 'description' => 'El emperador Kuzco, un joven y egoísta monarca, es transformado en llama por su malvada consejera. Ahora, con la ayuda de un campesino llamado Pacha, trata de recuperar su trono y su humanidad en una serie de cómicas y divertidas peripecias.',
                 'release_date' => '2000-12-15',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Las+locuras+del+emperador+(2000).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Las+locuras+del+emperador.webp'
             ],
             [
@@ -342,7 +342,7 @@ class Disney extends Seeder
                 'title' => 'Mulan',
                 'description' => 'Mulan, una joven china, se disfraza de hombre para unirse al ejército y defender a su país. Con valentía y astucia, demuestra que la verdadera fuerza viene del corazón y lucha por su familia y su honor.',
                 'release_date' => '1998-06-19',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/1998+Mulan.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Mulan.webp'
             ],
             [
@@ -352,7 +352,7 @@ class Disney extends Seeder
                 'title' => 'Lilo & Stitch',
                 'description' => 'Lilo, una niña hawaiana, adopta a un extraño experimento alienígena llamado Stitch. Juntos, mientras enfrentan desafíos cósmicos, aprenden sobre la familia, la amistad y lo que significa ser diferente.',
                 'release_date' => '2002-06-21',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Lilo+y+Stitch+(2002).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Lilo+%26+Stitch.webp'
             ],
             [
@@ -362,7 +362,7 @@ class Disney extends Seeder
                 'title' => 'Tierra de osos',
                 'description' => 'Un joven llamado Kenai, transformado en oso, debe aprender a ver el mundo desde una nueva perspectiva. A lo largo de su viaje, forma una amistad con un oso llamado Koda y descubre el valor del amor fraternal y la conexión con la naturaleza.',
                 'release_date' => '2003-10-29',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Tierra+de+Osos+(2003).mp4',
                 'cover_url' => ''
             ],
             [
@@ -372,7 +372,7 @@ class Disney extends Seeder
                 'title' => 'Chicken Little',
                 'description' => 'Chicken Little, una pequeña gallina, vive en un pueblo donde se siente incomprendida. Tras un suceso cómico donde cree que el cielo se cae, se embarca en una aventura para salvar a su mundo, demostrando que incluso los más pequeños pueden hacer grandes cosas.',
                 'release_date' => '2005-11-04',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/2005+Chicken+Little.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Chicken+Little.webp'
             ],
             [
@@ -382,7 +382,7 @@ class Disney extends Seeder
                 'title' => 'Los Tres Mosqueteros',
                 'description' => 'Los tres mosqueteros, Mickey, Donald y Goofy, se embarcan en una aventura llena de acción para proteger a la reina y detener los planes malvados del cardenal Richelieu. Con valentía y trabajo en equipo, luchan por la justicia en el reino.',
                 'release_date' => '2004-08-03',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/2004+Los+tres+mosqueteros.mp4',
                 'cover_url' => ''
             ],
             [
@@ -402,7 +402,7 @@ class Disney extends Seeder
                 'title' => 'Bolt: Un perro fuera de serie',
                 'description' => 'Bolt, un perro estrella de un programa de televisión, cree que tiene superpoderes. Cuando se escapa y llega al mundo real, deberá aprender que la verdadera valentía viene del corazón y que la amistad es más poderosa que cualquier poder.',
                 'release_date' => '2008-11-21',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/2008+Bolt+un+perro+fuera+de+serie.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Bolt.webp'
             ],
             [
@@ -412,7 +412,7 @@ class Disney extends Seeder
                 'title' => 'Vacas vaqueras',
                 'description' => 'Un grupo de vacas se enfrenta a una amenaza de un malvado empresario que quiere despojarlas de su rancho. Juntas, idean un plan para salvar su hogar y aprender que no hay desafío demasiado grande cuando trabajan en equipo.',
                 'release_date' => '2004-06-04',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/2004+Vacas+vaqueras.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Vacas+Vaqueras.webp'
             ],
             [
@@ -422,7 +422,7 @@ class Disney extends Seeder
                 'title' => 'Tarzan',
                 'description' => 'Tarzan, un niño criado por gorilas en la selva africana, descubre su verdadero origen humano cuando conoce a Jane. A medida que se enfrenta a su destino, Tarzan lucha por proteger su hogar y encontrar su lugar en el mundo.',
                 'release_date' => '1999-06-18',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Tarzan+(1999).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Tarza%CC%81n.webp'
             ],
             [
@@ -442,7 +442,7 @@ class Disney extends Seeder
                 'title' => 'Vida Salvaje',
                 'description' => 'Un grupo de animales de un zoológico de Nueva York se ve forzado a adaptarse a la vida en la naturaleza cuando accidentalmente son enviados a África. A través de la diversión y el caos, aprenden sobre la verdadera amistad y el valor de la libertad.',
                 'release_date' => '2006-03-31',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Vida+Salvaje+(2006).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Vida+salvaje.webp'
             ],
             [
@@ -452,7 +452,7 @@ class Disney extends Seeder
                 'title' => 'Atlantis',
                 'description' => 'Milo Thatch, un joven aventurero, se une a una expedición para descubrir la mítica ciudad perdida de Atlantis. Mientras explora el misterio de la antigua civilización, enfrenta traiciones y desafíos, y lucha por salvar la ciudad de su destrucción.',
                 'release_date' => '2001-06-15',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Atlantis+(2001).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Atlantis-+El+imperio+perdido.webp'
             ],
             [
@@ -472,7 +472,7 @@ class Disney extends Seeder
                 'title' => 'La princesa y el sapo',
                 'description' => 'Tiana, una joven trabajadora, se ve envuelta en un mundo de magia cuando besa a un sapo que resulta ser un príncipe encantado. Juntos deben encontrar una forma de romper el hechizo y vivir felices, mientras aprenden sobre el amor y los sueños.',
                 'release_date' => '2009-12-11',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/2009+La+princesa+y+el+sapo.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/La+princesa+y+el+sapo.webp'
             ],
             [
@@ -482,7 +482,7 @@ class Disney extends Seeder
                 'title' => 'Frozen',
                 'description' => 'Cuando su reino se ve sumido en un invierno eterno, la princesa Anna se embarca en una peligrosa aventura junto a un grupo de valientes amigos para encontrar a su hermana Elsa, cuyo poder está causando el desastre. En el camino, descubre que el amor verdadero puede romper cualquier hechizo.',
                 'release_date' => '2013-11-27',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Frozen+(2013).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Frozen.webp'
             ],
             [
@@ -492,7 +492,7 @@ class Disney extends Seeder
                 'title' => 'Aviones',
                 'description' => 'Dusty Crophopper, un avión agrícola que sueña con convertirse en un piloto de carreras, debe superar sus miedos y sus limitaciones para competir en el campeonato de vuelos más importante del mundo. A lo largo de su aventura, aprenderá sobre la verdadera amistad y el trabajo en equipo.',
                 'release_date' => '2013-08-09',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Aviones+(2013).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Aviones.webp'
             ],
             [
@@ -502,7 +502,7 @@ class Disney extends Seeder
                 'title' => 'Enredados',
                 'description' => 'Rapunzel, una joven con un largo cabello mágico, escapa de su torre y se embarca en una aventura épica con el ladrón Flynn Rider. Juntos enfrentan peligros y descubren la verdad sobre su pasado, mientras la joven lucha por recuperar su libertad y su identidad.',
                 'release_date' => '2010-11-24',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/2010+Enredados.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Enredados.webp'
             ],
             [
@@ -512,7 +512,7 @@ class Disney extends Seeder
                 'title' => 'Ratatouille',
                 'description' => 'Remy, una rata con un talento increíble para la cocina, sueña con convertirse en chef en París. A pesar de los obstáculos, logra asociarse con un joven cocinero para crear los platos más deliciosos, demostrando que la pasión y la perseverancia pueden superar cualquier barrera.',
                 'release_date' => '2007-06-29',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Ratatouille_(2007).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Ratatouille.webp'
             ],
             [
@@ -522,7 +522,7 @@ class Disney extends Seeder
                 'title' => 'WALL•E',
                 'description' => 'WALL•E es el último robot en la Tierra, encargado de limpiar el planeta abandonado. Mientras realiza su tarea, descubre el amor y se embarca en una misión para salvar a la humanidad. Una historia que toca temas de amor, esperanza y el futuro del planeta.',
                 'release_date' => '2008-06-27',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/WALL·E_2008.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/WALL%E2%80%A2E.webp'
             ]
         ];

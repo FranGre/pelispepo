@@ -22,7 +22,7 @@ class StarWars extends Seeder
                 'title' => 'Star Wars: Episodio I - La amenaza fantasma',
                 'description' => 'En la primera entrega de la trilogía precuela, dos caballeros Jedi, Qui-Gon Jinn y su aprendiz Obi-Wan Kenobi, intentan resolver una disputa comercial que los lleva a un planeta ocupado por la Federación de Comercio. Mientras tanto, descubren a un niño con habilidades excepcionales. La película introduce a Darth Maul y marca el comienzo de la caída de la República Galáctica.',
                 'release_date' => '1999-05-19',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Star_Wars_La_amenaza_Fantasma_(Episodio1).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Star+Wars.+Episodio+I-+La+amenaza+fantasma.webp'
             ],
             [
@@ -32,7 +32,7 @@ class StarWars extends Seeder
                 'title' => 'Star Wars: Episodio II - El ataque de los clones',
                 'description' => 'En la segunda entrega, la República está al borde de la guerra, y el joven Anakin Skywalker se convierte en el aprendiz de Obi-Wan Kenobi. Mientras Anakin y Padmé Amidala se ven envueltos en una peligrosa conspiración, la galaxia se enfrenta a la creación de un ejército clon que servirá como herramienta para la guerra. Esta película profundiza en la caída de la República y la ascensión de Darth Vader.',
                 'release_date' => '2002-05-16',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Star_Wars_El+Ataque_de_los_Clones_(EpisodioII).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Star+Wars.+Episodio+II-+El+ataque+de+los+clones.webp'
             ],
             [
@@ -42,7 +42,7 @@ class StarWars extends Seeder
                 'title' => 'Star Wars: Episodio III - La venganza de los sith',
                 'description' => 'La República Galáctica está en guerra, y Anakin Skywalker se encuentra dividido entre su lealtad a los Jedi y su creciente temor de perder a Padmé. El canciller Palpatine manipula a Anakin para que se convierta en su aprendiz, llevando a la traición que marca el nacimiento del Imperio Galáctico. La película narra el trágico giro de Anakin hacia el lado oscuro y su transformación en Darth Vader.',
                 'release_date' => '2005-05-19',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Star_Wars_La_Venganza_de_los_Sith(Episodio+III).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Star+Wars.+Episodio+III-+La+venganza+de+los+sith.webp'
             ],
             [
@@ -112,7 +112,7 @@ class StarWars extends Seeder
                 'title' => 'Han Solo: Una historia de Star Wars',
                 'description' => 'Esta película cuenta la juventud de Han Solo, desde sus días como un joven ladrón hasta su encuentro con Chewbacca y su participación en el contrabando y la lucha contra el Imperio. La película explora su formación como el icónico personaje que conocemos, y cómo se forjan sus relaciones con personajes clave como Lando Calrissian.',
                 'release_date' => '2018-05-25',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Han+Solo(Una+historia+de+Star+Wars).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Han+Solo-+Una+historia+de+Star+Wars.webp'
             ],
             [

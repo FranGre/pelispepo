@@ -22,7 +22,7 @@ class HeroeDeCentroComercial extends Seeder
                 'title' => 'Héroe de centro comercial',
                 'description' => 'Un guardia de seguridad en un centro comercial se convierte en un héroe cuando se enfrenta a una amenaza terrorista que pone en peligro a los compradores y empleados. Mientras lucha por salvar a todos, descubre un lado de sí mismo que nunca había conocido.',
                 'release_date' => '2009-12-11',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Heroe+de+centro+comercial+(2009).mp4',
                 'cover_url' => ''
             ],
             [
@@ -32,7 +32,7 @@ class HeroeDeCentroComercial extends Seeder
                 'title' => 'Héroe de centro comercial II',
                 'description' => 'El guardia de seguridad regresa para enfrentar nuevas amenazas en el centro comercial, ahora con mayores peligros y desafíos. Junto a su equipo, lucha contra criminales que intentan desmantelar el lugar, mientras lidia con su vida personal y su rol como protector del centro.',
                 'release_date' => '2017-12-15',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Heroe+de+centro+comercial+2+(2015).mp4',
                 'cover_url' => ''
             ]
         ];

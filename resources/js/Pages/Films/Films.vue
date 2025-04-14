@@ -2,7 +2,7 @@
     <AuthenticatedLayout>
 
         <Head title="PelisPepo"></Head>
-        
+
         <H1 text="Películas" />
 
         <div class="flex justify-end mb-6">
@@ -24,8 +24,10 @@
         </div>
 
         <ul v-else class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-7 lg:grid-cols-6">
-            <CardFilm v-for="film in props.films" :key="film.id" @click="goToWatch(film.id)" :film="film" />
+            <CardFilm v-for="film in props.films.data" :key="film.id" @click="goToWatch(film.id)" :film="film" />
         </ul>
+
+        <Pagination :pagination="props.films" />
     </AuthenticatedLayout>
 
 </template>
@@ -39,11 +41,13 @@ import InputText from '@/Components/InputText.vue';
 import H1 from '@/Components/Titles/H1.vue';
 import BtnSearch from '@/Components/Buttons/BtnSearch.vue';
 import H2 from '@/Components/Titles/H2.vue';
+import Pagination from '@/Components/Pagination.vue';
 
 const urlParams = new URLSearchParams(window.location.search)
 
 const props = defineProps<{
     films: Film[]
+    data: {}
 }>();
 
 const form = useForm({

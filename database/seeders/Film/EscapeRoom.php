@@ -22,7 +22,7 @@ class EscapeRoom extends Seeder
                 'title' => 'Escape Room',
                 'description' => 'Seis extraños se encuentran atrapados en una serie de salas de escape que se tornan mortales. A medida que intentan resolver los complejos acertijos, descubren que el juego tiene consecuencias letales si no logran escapar a tiempo.',
                 'release_date' => '2019-01-04',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Escape+Room(2019).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Escape+Room+2-+Mueres+por+salir.webp'
             ],
             [
@@ -32,7 +32,7 @@ class EscapeRoom extends Seeder
                 'title' => 'Escape Room 2: Mueres por salir',
                 'description' => 'Los sobrevivientes de las salas mortales del Escape Room descubren que todo estaba orquestado por una misteriosa organización. Atrapados nuevamente, deberán enfrentarse a nuevos desafíos letales para escapar con vida.',
                 'release_date' => '2021-07-16',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Escape+Room+2+Mueres+por+salir(2021).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Escape+Room.webp'
             ]
         ];

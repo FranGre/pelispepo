@@ -22,7 +22,7 @@ class LosJuegosDelHambre extends Seeder
                 'title' => 'Los juegos del hambre',
                 'description' => 'En un futuro distópico, Katniss Everdeen se ofrece como tributo en los Juegos del Hambre, un evento televisado donde jóvenes de distintos distritos deben pelear a muerte hasta que solo quede uno.',
                 'release_date' => '2012-03-23',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Los+juegos+del+hambre.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Los+juegos+del+hambre.webp'
             ],
             [
@@ -32,7 +32,7 @@ class LosJuegosDelHambre extends Seeder
                 'title' => 'Los juegos del hambre: en llamas',
                 'description' => 'Katniss Everdeen regresa al torneo de los Juegos del Hambre, ahora convertida en símbolo de rebelión, mientras el Capitolio prepara una nueva edición especial del evento con antiguos ganadores.',
                 'release_date' => '2013-11-22',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Los+juegos+del+hambre+En+llamas.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Los+juegos+del+hambre-+En+llamas.webp'
             ],
             [
@@ -42,7 +42,7 @@ class LosJuegosDelHambre extends Seeder
                 'title' => 'Los juegos del hambre: Sinsajo - Parte 1',
                 'description' => 'Katniss lidera la resistencia contra el Capitolio, convirtiéndose en el símbolo de la rebelión mientras enfrenta nuevas amenazas, traiciones y desafíos de los que dependen la libertad de Panem.',
                 'release_date' => '2014-11-21',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Los+juegos+del+hambre+sinsajo+parte+1.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Los+juegos+del+hambre-+Sinsajo.+Parte+1.webp'
             ],
             [
@@ -52,7 +52,7 @@ class LosJuegosDelHambre extends Seeder
                 'title' => 'Los juegos del hambre: Sinsajo - Parte 2',
                 'description' => 'La batalla final para derrocar al Capitolio comienza, con Katniss al frente de un ejército decidido a poner fin a la tiranía de Snow. La guerra será decisiva y determinará el futuro de Panem.',
                 'release_date' => '2015-11-20',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Los+juegos+del+hambre+sinsajo+parte+2.mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Los+juegos+del+hambre-+Sinsajo.+Parte+2.webp'
             ],
             [

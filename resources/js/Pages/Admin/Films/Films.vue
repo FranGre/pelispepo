@@ -58,7 +58,7 @@
                         </tr>
                     </thead>
                     <tbody class="bg-zinc-200 text-black dark:bg-zinc-800 dark:text-white">
-                        <tr class="hover:bg-zinc-400 text-black dark:hover:bg-zinc-600 dark:text-white" v-for="film in props.films" :key="film.id">
+                        <tr class="hover:bg-zinc-400 text-black dark:hover:bg-zinc-600 dark:text-white" v-for="film in props.films.data" :key="film.id">
                             <td>{{ film.title }}</td>
                             <td>
                                 <Toggle v-model="film.is_activated" @update:model-value="handleActivated(film.id)">
@@ -81,6 +81,7 @@
                 </table>
             </div>
         </div>
+        <Pagination :pagination="props.films" />
     </AuthenticatedLayout>
 </template>
 
@@ -99,6 +100,7 @@ import BtnSearch from '@/Components/Buttons/BtnSearch.vue'
 import H2 from '@/Components/Titles/H2.vue'
 import { User } from '@/types'
 import Label from '@/Components/Label.vue'
+import Pagination from '@/Components/Pagination.vue'
 
 const props = defineProps<{
     films: Film[],

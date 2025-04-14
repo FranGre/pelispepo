@@ -22,7 +22,7 @@ class Predator extends Seeder
                 'title' => 'Predator',
                 'description' => 'Un grupo de fuerzas especiales se encuentra con un cazador alienígena que está acechando y cazando a los miembros del grupo en la jungla de América Central.',
                 'release_date' => '1987-06-12',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Predator(1987).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Predator.webp'
             ],
             [
@@ -32,7 +32,7 @@ class Predator extends Seeder
                 'title' => 'Predator 2',
                 'description' => 'En Los Ángeles, en plena ola de calor y crimen, un detective se enfrenta a un Predator que está cazando a los traficantes de drogas en la ciudad.',
                 'release_date' => '1990-11-21',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Predator+2(1990).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Predator+2.webp'
             ],
             [
@@ -62,7 +62,7 @@ class Predator extends Seeder
                 'title' => 'Predators',
                 'description' => 'Un grupo de humanos es secuestrado y llevado a un planeta lejano, donde deben luchar por sobrevivir contra un grupo de Predators que cazan a los humanos como su presa.',
                 'release_date' => '2010-07-09',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Predators(2010).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Predators.webp'
             ],
             [

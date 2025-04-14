@@ -22,7 +22,7 @@ class IronMan extends Seeder
                 'title' => 'Iron Man',
                 'description' => 'Tony Stark, un millonario industrial, es secuestrado por terroristas y obligado a construir un arma de destrucción masiva. En su lugar, crea una armadura avanzada para escapar. Después de regresar a los EE. UU., decide usar su invento para luchar contra el mal como Iron Man.',
                 'release_date' => '2008-05-02',
-                'url' => '',
+                'url' => 'https://f005.backblazeb2.com/file/nochedepelis/pelis/LAT/Iron+Man(2008).mp4',
                 'cover_url' => 'https://f005.backblazeb2.com/file/nochedepelis/portadas/Iron+Man.webp'
             ],
             [

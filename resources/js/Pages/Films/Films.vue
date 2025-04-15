@@ -10,7 +10,7 @@
             <BtnSearch @click="searchFilms"></BtnSearch>
         </div>
 
-        <div v-if="props.films.length == 0" class="flex justify-center items-center">
+        <div v-if="props.films.data.length == 0" class="flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-mood-empty">
@@ -23,11 +23,12 @@
             <H2 text="No hay peliculas" />
         </div>
 
-        <ul v-else class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-7 lg:grid-cols-6">
-            <CardFilm v-for="film in props.films.data" :key="film.id" @click="goToWatch(film.id)" :film="film" />
-        </ul>
-
-        <Pagination :pagination="props.films" />
+        <div v-else>
+            <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-7 lg:grid-cols-6">
+                <CardFilm v-for="film in props.films.data" :key="film.id" @click="goToWatch(film.id)" :film="film" />
+            </ul>
+            <Pagination :pagination="props.films" />
+        </div>
     </AuthenticatedLayout>
 
 </template>

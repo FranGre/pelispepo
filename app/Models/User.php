@@ -73,5 +73,11 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Film::class, 'film_user_favorites');
     }
+
+    public function filmsViews(): BelongsToMany
+    {
+        return $this->belongsToMany(Film::class, 'film_user_views');
+    }
+
 }
 

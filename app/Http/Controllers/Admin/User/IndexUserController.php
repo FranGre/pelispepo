@@ -33,7 +33,8 @@ class IndexUserController extends Controller
                 'favoriteFilms' => function (Builder $query) {
                     $query->where('is_activated', true);
                 }
-            ])->get();
+            ])->withCount('filmsViews')
+            ->get();
 
         $roles = Role::select('id', 'name')->get();
 

@@ -52,7 +52,8 @@
                             <th>Activo</th>
                             <th>Email</th>
                             <th>Role</th>
-                            <th>Pelis Favoritas</th>
+                            <th>Favoritas</th>
+                            <th>Vistas</th>
                         </tr>
                     </thead>
                     <tbody class="bg-zinc-200 text-black dark:bg-zinc-800 dark:text-white">
@@ -80,6 +81,7 @@
 
                                 <p v-else>0</p>
                             </td>
+                            <td>{{ user.films_views_count }}</td>
                             <td>
                                 <BtnRemove @click="remove(user.id)" />
                             </td>

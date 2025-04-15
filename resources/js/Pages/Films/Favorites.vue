@@ -20,12 +20,12 @@
             <H2 text="No hay peliculas" />
         </div>
 
-        <ul v-else class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-7 lg:grid-cols-6">
-            <CardFilm v-for="film in props.films.data" :key="film.id" @click="goToWatch(film.id)" :film="film" />
-        </ul>
-
-        <Pagination :pagination="props.films" />
-
+        <div v-else>
+            <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 md:gap-7 lg:grid-cols-6">
+                <CardFilm v-for="film in props.films.data" :key="film.id" @click="goToWatch(film.id)" :film="film" />
+            </ul>
+            <Pagination :pagination="props.films" />
+        </div>
     </AuthenticatedLayout>
 </template>
 

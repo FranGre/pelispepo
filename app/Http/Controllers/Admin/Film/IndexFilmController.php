@@ -31,15 +31,16 @@ class IndexFilmController extends Controller
             $filmsQuery = $filmsQuery->where('user_id', '=', $createdBy);
         }
 
-        // favorites
         $filmsQuery = $filmsQuery
             ->with([
                 'creator' => function ($query) {
                     $query->select('id', 'email');
                 }
             ])->select('id', 'user_id', 'is_activated', 'title', 'release_date')
-            ->withCount('likes')
+            ->withCount('favorites')
+            ->withCount('views')
             ->orderBy('title')->paginate(12);
+
 
         $adminRoleId = Role::where('name', 'LIKE', "%admin%")->pluck('id')->first();
 

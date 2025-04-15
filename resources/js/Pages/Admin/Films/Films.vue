@@ -31,7 +31,7 @@
 
         </div>
 
-        <div v-if="props.films.length == 0" class="flex justify-center items-center">
+        <div v-if="props.films.data.length == 0" class="flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="icon icon-tabler icons-tabler-outline icon-tabler-mood-empty">
@@ -53,12 +53,13 @@
                             <th>Visible</th>
                             <th>Creado Por</th>
                             <th>Fecha Lanzamiento</th>
-                            <th>Likes</th>
                             <th>Favoritos</th>
+                            <th>Visitas</th>
                         </tr>
                     </thead>
                     <tbody class="bg-zinc-200 text-black dark:bg-zinc-800 dark:text-white">
-                        <tr class="hover:bg-zinc-400 text-black dark:hover:bg-zinc-600 dark:text-white" v-for="film in props.films.data" :key="film.id">
+                        <tr class="hover:bg-zinc-400 text-black dark:hover:bg-zinc-600 dark:text-white"
+                            v-for="film in props.films.data" :key="film.id">
                             <td>{{ film.title }}</td>
                             <td>
                                 <Toggle v-model="film.is_activated" @update:model-value="handleActivated(film.id)">
@@ -68,10 +69,10 @@
                             <td>{{ film.release_date }}</td>
                             <td>
                                 <button class="link link-hover" @click="goToViewLikes(film.id)">
-                                    {{ film.likes_count }}
+                                    {{ film.favorites_count }}
                                 </button>
                             </td>
-                            <td>100 favoritos</td>
+                            <td>{{ film.views_count }}</td>
                             <td class="flex gap-3">
                                 <BtnEdit @click="goToEdit(film.id)">Editar</BtnEdit>
                                 <BtnRemove @click="remove(film.id)" />
@@ -80,8 +81,9 @@
                     </tbody>
                 </table>
             </div>
+
+            <Pagination :pagination="props.films" />
         </div>
-        <Pagination :pagination="props.films" />
     </AuthenticatedLayout>
 </template>
 

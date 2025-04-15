@@ -37,6 +37,16 @@ class Film extends Model
         return $this->belongsToMany(User::class, 'film_user_likes');
     }
 
+    public function favorites(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'film_user_favorites');
+    }
+
+    public function views(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'film_user_views');
+    }
+
     public function creator(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');

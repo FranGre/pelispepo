@@ -9,9 +9,42 @@
 
         <div class="mockup-browser border-base-300 border w-full mt-12">
             <div class="mockup-browser-toolbar">
-                <div class="input">https://nochedepelis.xyz</div>
+                <div class="input">nochedepelis.xyz</div>
             </div>
-            <div class="grid place-content-center border-t border-base-300 h-80">Hola!!!</div>
+            <div class="grid place-content-center border-t border-base-300 h-80">
+                <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 place-items-center">
+                    <div
+                        class="card bg-base-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 md:max-w-72 lg:max-w-96 w-full shadow-sm">
+                        <div class="card-body">
+                            <div class="flex justify-between">
+                                <div class="flex gap-1 text-lg">
+                                    <div class="card-title">+300</div>Películas
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card bg-base-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 md:max-w-72 lg:max-w-96 w-full shadow-sm">
+                        <div class="card-body">
+                            <div class="flex justify-between">
+                                <div class="flex gap-1 text-lg">
+                                    <div class="card-title">+20</div>Usuarios
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="card bg-base-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 md:max-w-72 lg:max-w-96 w-full shadow-sm">
+                        <div class="card-body">
+                            <div class="flex justify-between">
+                                <div class="flex gap-1 text-lg">
+                                    <div class="card-title">+2000</div>Visitas
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>

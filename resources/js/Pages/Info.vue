@@ -11,7 +11,7 @@
             <div tabindex="0" class="collapse bg-base-100 border-base-300 border">
                 <div class="collapse-title font-semibold">¿Cómo obtengo una cuenta?</div>
                 <div class="collapse-content text-sm">
-                    Mándame un mail a <strong>frangregori61@gmail.com</strong> con el plan que te interesa
+                    Mándame un mail a <strong>frannochedepelis@gmail.com</strong> con el plan que te interesa
                     <strong>(Mensual,
                         Trimestral o Anual)</strong> y te
                     creo tu cuenta enseguida.
@@ -21,7 +21,7 @@
                 <div class="collapse-title font-semibold">¿Cómo se realiza el pago?</div>
                 <div class="collapse-content text-sm">
                     Aceptamos pagos a través de <strong>Bizum o PayPal.</strong>
-                    Una vez que me envíes un correo a <strong>frangregori61@gmail.com</strong> con el plan de suscripción que has escogido, te daremos los datos para completar el pago.
+                    Una vez que me envíes un correo a <strong>frannochedepelis@gmail.com</strong> con el plan de suscripción que has escogido, te daremos los datos para completar el pago.
                 </div>
             </div>
 
@@ -78,7 +78,7 @@
                         </li>
                     </ul>
                     <div class="mt-6">
-                        <a href="mailto:frangregori61@gmail.com?Subject=nochedepelis%20Quiero%20el%20plan%20mensual"
+                        <a href="mailto:frannochedepelis@gmail.com?Subject=nochedepelis%20Quiero%20el%20plan%20mensual"
                             class="btn btn-primary btn-block">Obtener</a>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
                         </li>
                     </ul>
                     <div class="mt-6">
-                        <a href="mailto:frangregori61@gmail.com?Subject=nochedepelis%20Quiero%20el%20plan%20trimestral"
+                        <a href="mailto:frannochedepelis@gmail.com?Subject=nochedepelis%20Quiero%20el%20plan%20trimestral"
                             class="btn btn-primary btn-block">Obtener</a>
                     </div>
                 </div>
@@ -172,7 +172,7 @@
                         </li>
                     </ul>
                     <div class="mt-6">
-                        <a href="mailto:frangregori61@gmail.com?Subject=nochedepelis%20Quiero%20el%20plan%20anual"
+                        <a href="mailto:frannochedepelis@gmail.com?Subject=nochedepelis%20Quiero%20el%20plan%20anual"
                             class="btn btn-primary btn-block">Obtener</a>
                     </div>
                 </div>

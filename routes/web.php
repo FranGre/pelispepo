@@ -41,7 +41,7 @@ Route::get('/', function () {
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register')
     ]);
-});
+})->name('welcome');
 
 Route::get('/info', function () {
     return Inertia::render('Info');

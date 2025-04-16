@@ -2,7 +2,9 @@
 
     <Head title="Info" />
 
+    <Link :href="route('welcome')">
     <H1 text="NocheDePelis"></H1>
+    </Link>
 
     <div class="mx-12">
         <div class="grid gap-4">
@@ -19,7 +21,7 @@
                 <div class="collapse-title font-semibold">¿Cómo se realiza el pago?</div>
                 <div class="collapse-content text-sm">
                     Aceptamos pagos a través de <strong>Bizum o PayPal.</strong>
-                    Una vez que elijas tu suscripción y envíes el correo, te daremos los datos para completar el pago.
+                    Una vez que me envíes un correo a <strong>frangregori61@gmail.com</strong> con el plan de suscripción que has escogido, te daremos los datos para completar el pago.
                 </div>
             </div>
 
@@ -34,10 +36,10 @@
         </div>
 
         <H2 text="Suscripciones" class="mt-12 mb-6"></H2>
-        <div class="grid grid-cols-1 md:grid-cols-3">
+        <div class="grid gap-5 place-items-center grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
             <div class="card w-96 bg-base-100 shadow-sm">
                 <div class="card-body">
-                    <div class="flex justify-between">
+                    <div class="flex justify-between items-center">
                         <h2 class="text-3xl font-bold">Mensual</h2>
                         <span class="text-xl">2,5€/mes</span>
                     </div>
@@ -84,7 +86,7 @@
 
             <div class="card w-96 bg-base-200 shadow-sm">
                 <div class="card-body">
-                    <div class="flex justify-between">
+                    <div class="flex justify-between items-center">
                         <h2 class="text-3xl font-bold">Trimestral</h2>
                         <span class="text-xl">2€/mes</span>
                     </div>
@@ -131,7 +133,7 @@
 
             <div class="card w-96 bg-base-100 shadow-sm">
                 <div class="card-body">
-                    <div class="flex justify-between">
+                    <div class="flex justify-between items-center">
                         <h2 class="text-3xl font-bold">Anual</h2>
                         <span class="text-xl">18€/año</span>
                     </div>

@@ -12,6 +12,8 @@
                 <div class="input">nochedepelis.xyz</div>
             </div>
             <div class="grid place-content-center border-t border-base-300 h-96 md:h-80">
+                <Link class="btn btn-link flex place-content-center mb-4" :href="route('info')">Crear mi cuenta</Link>
+
                 <div class="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6 place-items-center">
                     <div
                         class="card bg-base-200 dark:bg-zinc-800 dark:hover:bg-zinc-700 md:max-w-72 lg:max-w-96 w-full shadow-sm">

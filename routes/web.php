@@ -45,7 +45,7 @@ Route::get('/', function () {
 
 Route::get('/info', function () {
     return Inertia::render('Info');
-});
+})->name('info');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
